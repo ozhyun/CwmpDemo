@@ -12,8 +12,9 @@
 
 #import "cwmp.h"
 
+
 struct SOAP_ENV__Header {
-        mustUnderstand char *ID;
+        mustUnderstand char* cwmp__ID;
 };
 
 

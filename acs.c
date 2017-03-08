@@ -5,7 +5,7 @@ int main(int argc, char **argv)
 {
 	SOAP_SOCKET m, s; /* master and slave sockets */
 	struct soap soap;
-	soap_init(&soap);
+	soap_init1(&soap, SOAP_XML_IGNORENS);
 
 	if (argc < 2) {
 		soap_serve(&soap); /* serve as CGI application */
@@ -45,7 +45,7 @@ int cwmp__Inform(struct soap *soap, struct cwmp__DeviceIdStruct *DeviceId,
 	struct soap *soaptmp = soap_new();
 
 	if(soap->header) {
-		fprintf(stderr, "%s: get header ID:%s\n", __FUNCTION__, soap->header->ID);
+		fprintf(stderr, "%s: get header ID:%s\n", __FUNCTION__, soap->header->cwmp__ID);
 	}
 
 	soap_write_cwmp__DeviceIdStruct(soaptmp, DeviceId);
@@ -56,7 +56,7 @@ int cwmp__Inform(struct soap *soap, struct cwmp__DeviceIdStruct *DeviceId,
 	soap_end(soaptmp); 					  // delete other data
 	soap_free(soaptmp);					  // we're done
 
-	response->MaxEnvelopes = 5;
+	response->MaxEnvelopes = 1;
 
 	return SOAP_OK;
 }

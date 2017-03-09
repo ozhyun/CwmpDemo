@@ -5,7 +5,7 @@ int main(int argc, char **argv)
 {
 	SOAP_SOCKET m, s; /* master and slave sockets */
 	struct soap soap;
-	soap_init1(&soap, SOAP_XML_IGNORENS);
+	soap_init1(&soap, SOAP_XML_IGNORENS|SOAP_IO_KEEPALIVE);
 
 	if (argc < 2) {
 		soap_serve(&soap); /* serve as CGI application */

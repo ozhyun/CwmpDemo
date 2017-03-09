@@ -6,8 +6,8 @@ PROG=acs cpe
 
 CC = gcc
 CFLAGS:=-DLINUX
-CFLAGS += -g -DSOAP_DEBUG
-#LDFLAGS:=-L${libdir} -lgsoap -lm
+CFLAGS += -g 
+#CFLAGS += -DSOAP_DEBUG
 LDFLAGS:= -lm
 
 SOAP=soapcpp2

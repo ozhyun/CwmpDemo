@@ -77,7 +77,7 @@ int main(int argc, char **argv)
 		exit(1);
 	}
 	else {
-		printf("result = %g\n", response.MaxEnvelopes);
+		printf("result = %ld\n", response.MaxEnvelopes);
 	}
 
 	soap_destroy(&soap);

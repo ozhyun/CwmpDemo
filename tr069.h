@@ -3,8 +3,8 @@
 //gsoap cwmp service method-protocol:    SOAP1.1
 //gsoap cwmp service style:       rpc
 //gsoap cwmp service encoding:    encoded
-//gsoap cwmp service namespace:   http://service.qunxuehui.com:7547/cwmp.wsdl
-//gsoap cwmp service location:    http://service.qunxuehui.com:7547/cwmpserver.cgi
+//gsoap cwmp service namespace:   http://127.0.0.1:7547/cwmp.wsdl
+//gsoap cwmp service location:    http://127.0.0.1:7547/cwmpserver.cgi
 //
 //gsoap cwmp schema namespace:    urn:dslforum-org:cwmp-1-2
 //

@@ -20,13 +20,13 @@ A commercial use license is available from Genivia Inc., contact@genivia.com
 extern "C" {
 #endif
 
-SOAP_SOURCE_STAMP("@(#) soapClient.c ver 2.8.44 2017-03-09 09:29:49 GMT")
+SOAP_SOURCE_STAMP("@(#) soapClient.c ver 2.8.44 2017-03-09 09:34:19 GMT")
 
 
 SOAP_FMAC5 int SOAP_FMAC6 soap_call_cwmp__Inform(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct cwmp__DeviceIdStruct *DeviceId, struct EventList *Event, unsigned int MaxEnvelopes, time_t CurrentTime, unsigned int RetryCount, struct ParameterValueList *ParameterList, struct cwmp__InformResponse *response)
 {	struct cwmp__Inform soap_tmp_cwmp__Inform;
 	if (soap_endpoint == NULL)
-		soap_endpoint = "http://service.qunxuehui.com:7547/cwmpserver.cgi";
+		soap_endpoint = "http://127.0.0.1:7547/cwmpserver.cgi";
 	soap_tmp_cwmp__Inform.DeviceId = DeviceId;
 	soap_tmp_cwmp__Inform.Event = Event;
 	soap_tmp_cwmp__Inform.MaxEnvelopes = MaxEnvelopes;

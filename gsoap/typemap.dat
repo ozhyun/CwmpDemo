@@ -540,5 +540,6 @@ xliff__priorityValue = typedef int xliff__priorityValue 1:10;
 
 #	Prefix binding for TR069
 
-cwmp	= "urn:dslforum-org:cwmp-1-2"
+#cwmp	= "urn:dslforum-org:cwmp-1-2"
+cwmp	= "urn:dslforum-org:cwmp-1-0"
 

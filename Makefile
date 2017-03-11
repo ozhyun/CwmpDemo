@@ -13,6 +13,7 @@ LDFLAGS:= -lm
 SOAP=soapcpp2
 SOAPFLAGS = -ctL
 SOAP_HEADERFILE=cwmp.h
+IGD_HEADERFILE=igd.h
 TR069_H_FILE = tr069.h
 SOAP_C_CORE=soapC.c
 
@@ -52,7 +53,11 @@ CLEANFILES = $(SOAP_HEADERFILE) \
 
 all: PRE $(PROG)
 
-$(SOAP_HEADERFILE): datamodels/cwmp-1-2.xsd
+#$(SOAP_HEADERFILE): datamodels/cwmp-1-2.xsd
+$(SOAP_HEADERFILE): datamodels/cwmp-1-0.xsd
+	wsdl2h -t gsoap/typemap.dat -c -o $@ $<
+
+$(IGD_HEADERFILE): datamodels/tr-098-1-8-0-full.xml
 	wsdl2h -t gsoap/typemap.dat -c -o $@ $<
 
 $(TR069_H_FILE): $(SOAP_HEADERFILE)
@@ -87,4 +92,6 @@ tt:acs.c
 
 clean:
 	-rm -rf $(DEPDIR)
-	-rm -f *.o $(PROG) $(CLEANFILES) *.o *.wsdl *.xsd
+	-rm -f *.o $(PROG) $(CLEANFILES)
+	-rm -f *.wsdl *.xsd
+	-rm -f *.log

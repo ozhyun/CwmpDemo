@@ -48,6 +48,9 @@ int cwmp__Inform(struct soap *soap, struct cwmp__DeviceIdStruct *DeviceId,
 		fprintf(stderr, "%s: get header ID:%s\n", __FUNCTION__, soap->header->cwmp__ID);
 	}
 
+	//indicate more requests to send to cpe
+	soap->header->cwmp__HoldRequests = xsd__boolean__true_;
+
 	soap_write_cwmp__DeviceIdStruct(soaptmp, DeviceId);
 	soap_write_EventList(soaptmp, Event);
 	soap_write_ParameterValueList(soaptmp, ParameterList);

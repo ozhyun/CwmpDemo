@@ -14,7 +14,8 @@
 
 
 struct SOAP_ENV__Header {
-        mustUnderstand char* cwmp__ID;
+	mustUnderstand char* cwmp__ID;
+	mustUnderstand enum xsd__boolean cwmp__HoldRequests;	
 };
 
 

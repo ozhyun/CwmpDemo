@@ -23,6 +23,10 @@ struct cwmp__InformResponse {
 	unsigned int MaxEnvelopes;
 };
 
+/**
+ *	impliment in ACS for CPE calling
+ *
+ */
 //int cwmp__Inform(struct _cwmp__Inform *inform, struct _cwmp__InformResponse *response);
 int cwmp__Inform(struct cwmp__DeviceIdStruct *DeviceId,
 	struct EventList 		*Event,
@@ -31,4 +35,24 @@ int cwmp__Inform(struct cwmp__DeviceIdStruct *DeviceId,
 	unsigned int			RetryCount,
 	struct ParameterValueList	*ParameterList,
 	struct cwmp__InformResponse *response);
+
+/**
+ * can imliment in both ACS and CPE, mainly impliment in CPE
+ *
+ */
+//int cwmp__GetRPCMethods();
+
+/**
+ * impliment in CPE for ACS calling
+ *
+ */
+int cwmp__GetParameterValues(struct ParameterNames *ParameterNames, struct ParameterValueList *ParameterList);
+
+
+/**
+ * impliment in CPE for ACS calling
+ *
+ */
+//int cwmp__SetParameterValues(struct ParameterValueList *values, char *ParamterKey);
+
 

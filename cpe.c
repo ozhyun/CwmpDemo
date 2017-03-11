@@ -12,28 +12,20 @@ int main(int argc, char **argv)
 		"1234567",
 	};
 
-	struct _cwmp__Inform inform;
-	struct cwmp__InformResponse response;
 	if (argc < 2)
 	{
-		fprintf(stderr, "Usage: [Inform|] \n");
+		fprintf(stderr, "Usage: [Inform|SetParameterValues|GetParameterValues] \n");
 		exit(0);
 	}
 
-	soap_init1(&soap, SOAP_XML_INDENT);
+	soap_init1(&soap, SOAP_XML_INDENT|SOAP_IO_KEEPALIVE);
 	soap.header = &header;
-
-	soap_default__cwmp__Inform(&soap, &inform);
-	//soap_default__cwmp__InformResponse(&soap, &response);
-
-	inform.MaxEnvelopes = 1;
-	time(&inform.CurrentTime);
 
 	switch (*argv[1])
 	{
 	case 'I':
 	{
-		//soap_call_cwmp__Inform(&soap, server, "", &inform,  &response);
+		struct cwmp__InformResponse response;
 		struct cwmp__DeviceIdStruct DeviceId;
 		DeviceId.Manufacturer = "Abloomy";
 		DeviceId.OUI = "00193b";
@@ -64,6 +56,47 @@ int main(int argc, char **argv)
 
 		soap_call_cwmp__Inform(&soap, server, "", &DeviceId, &Event, (unsigned int)1, 
 						time(NULL), (unsigned int)0, &ParameterList, &response);
+		if (soap.error)	{
+			soap_print_fault(&soap, stderr);
+			exit(1);
+		}
+		else {
+			printf("result = %ld\n", response.MaxEnvelopes);
+		}
+
+		break;
+	}
+
+	case 'S':
+	{
+		printf("Not support now\n");
+
+		break;
+	}
+
+	case 'G':
+	{
+		struct ParameterNames params;
+		struct ParameterValueList response;
+
+		char *nameList[3] = {
+			"InternetGatewayDevice.DeviceInfo.ProvisioningCode",
+			"InternetGatewayDevice.ManagementServer.ConnectionRequestURL",
+			"InternetGatewayDevice.ManagementServer.Username",
+		};
+
+		params.__ptrstring = nameList;
+		params.__size = 3;
+
+		soap_call_cwmp__GetParameterValues(&soap, server, "", &params, &response);
+		if (soap.error)	{
+			soap_print_fault(&soap, stderr);
+			exit(1);
+		}
+		else {
+			printf("result = %ld\n", response.__size);
+		}
+
 
 		break;
 	}
@@ -72,16 +105,9 @@ int main(int argc, char **argv)
 		exit(0);
 	}
 
-	if (soap.error)	{
-		soap_print_fault(&soap, stderr);
-		exit(1);
-	}
-	else {
-		printf("result = %ld\n", response.MaxEnvelopes);
-	}
-
 	soap_destroy(&soap);
 	soap_end(&soap);
 	soap_done(&soap);
+
 	return 0;
 }

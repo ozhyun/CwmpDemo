@@ -166,256 +166,6 @@ SOAP_FMAC3 unsigned char * SOAP_FMAC4 soap_get_unsignedByte(struct soap*, unsign
 
 #endif
 
-#ifndef SOAP_TYPE_cwmp__ACSVendorFaultCodeType_DEFINED
-#define SOAP_TYPE_cwmp__ACSVendorFaultCodeType_DEFINED
-
-#ifdef SOAP_DEFAULT_cwmp__ACSVendorFaultCodeType
-#define soap_default_cwmp__ACSVendorFaultCodeType(soap, a) (*(a) = SOAP_DEFAULT_cwmp__ACSVendorFaultCodeType)
-#else
-#define soap_default_cwmp__ACSVendorFaultCodeType(soap, a) (*(a) = (unsigned int)0)
-#endif
-
-#define soap_cwmp__ACSVendorFaultCodeType2s soap_unsignedInt2s
-
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__ACSVendorFaultCodeType(struct soap*, const char*, int, const unsigned int *, const char*);
-SOAP_FMAC3S int SOAP_FMAC4S soap_s2cwmp__ACSVendorFaultCodeType(struct soap*, const char*, unsigned int *);
-SOAP_FMAC3 unsigned int * SOAP_FMAC4 soap_in_cwmp__ACSVendorFaultCodeType(struct soap*, const char*, unsigned int *, const char*);
-#define soap_new_cwmp__ACSVendorFaultCodeType soap_new_unsignedInt
-
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__ACSVendorFaultCodeType(struct soap*, const unsigned int *, const char*, const char*);
-
-#ifndef soap_write_cwmp__ACSVendorFaultCodeType
-#define soap_write_cwmp__ACSVendorFaultCodeType(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_cwmp__ACSVendorFaultCodeType(soap, data, "cwmp:ACSVendorFaultCodeType", "cwmp:ACSVendorFaultCodeType") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__ACSVendorFaultCodeType
-#define soap_PUT_cwmp__ACSVendorFaultCodeType(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_cwmp__ACSVendorFaultCodeType(soap, data, "cwmp:ACSVendorFaultCodeType", "cwmp:ACSVendorFaultCodeType") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_cwmp__ACSVendorFaultCodeType
-#define soap_POST_send_cwmp__ACSVendorFaultCodeType(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_cwmp__ACSVendorFaultCodeType(soap, data, "cwmp:ACSVendorFaultCodeType", "cwmp:ACSVendorFaultCodeType") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 unsigned int * SOAP_FMAC4 soap_get_cwmp__ACSVendorFaultCodeType(struct soap*, unsigned int *, const char*, const char*);
-
-#ifndef soap_read_cwmp__ACSVendorFaultCodeType
-#define soap_read_cwmp__ACSVendorFaultCodeType(soap, data) ( soap_begin_recv(soap) || !soap_get_cwmp__ACSVendorFaultCodeType(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_cwmp__ACSVendorFaultCodeType
-#define soap_GET_cwmp__ACSVendorFaultCodeType(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__ACSVendorFaultCodeType(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_cwmp__ACSVendorFaultCodeType
-#define soap_POST_recv_cwmp__ACSVendorFaultCodeType(soap, data) ( soap_read_cwmp__ACSVendorFaultCodeType(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE_cwmp__ACSFaultCodeType_DEFINED
-#define SOAP_TYPE_cwmp__ACSFaultCodeType_DEFINED
-
-#ifdef SOAP_DEFAULT_cwmp__ACSFaultCodeType
-#define soap_default_cwmp__ACSFaultCodeType(soap, a) (*(a) = SOAP_DEFAULT_cwmp__ACSFaultCodeType)
-#else
-#define soap_default_cwmp__ACSFaultCodeType(soap, a) (*(a) = (unsigned int)0)
-#endif
-
-#define soap_cwmp__ACSFaultCodeType2s soap_unsignedInt2s
-
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__ACSFaultCodeType(struct soap*, const char*, int, const unsigned int *, const char*);
-SOAP_FMAC3S int SOAP_FMAC4S soap_s2cwmp__ACSFaultCodeType(struct soap*, const char*, unsigned int *);
-SOAP_FMAC3 unsigned int * SOAP_FMAC4 soap_in_cwmp__ACSFaultCodeType(struct soap*, const char*, unsigned int *, const char*);
-#define soap_new_cwmp__ACSFaultCodeType soap_new_unsignedInt
-
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__ACSFaultCodeType(struct soap*, const unsigned int *, const char*, const char*);
-
-#ifndef soap_write_cwmp__ACSFaultCodeType
-#define soap_write_cwmp__ACSFaultCodeType(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_cwmp__ACSFaultCodeType(soap, data, "cwmp:ACSFaultCodeType", "cwmp:ACSFaultCodeType") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__ACSFaultCodeType
-#define soap_PUT_cwmp__ACSFaultCodeType(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_cwmp__ACSFaultCodeType(soap, data, "cwmp:ACSFaultCodeType", "cwmp:ACSFaultCodeType") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_cwmp__ACSFaultCodeType
-#define soap_POST_send_cwmp__ACSFaultCodeType(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_cwmp__ACSFaultCodeType(soap, data, "cwmp:ACSFaultCodeType", "cwmp:ACSFaultCodeType") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 unsigned int * SOAP_FMAC4 soap_get_cwmp__ACSFaultCodeType(struct soap*, unsigned int *, const char*, const char*);
-
-#ifndef soap_read_cwmp__ACSFaultCodeType
-#define soap_read_cwmp__ACSFaultCodeType(soap, data) ( soap_begin_recv(soap) || !soap_get_cwmp__ACSFaultCodeType(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_cwmp__ACSFaultCodeType
-#define soap_GET_cwmp__ACSFaultCodeType(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__ACSFaultCodeType(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_cwmp__ACSFaultCodeType
-#define soap_POST_recv_cwmp__ACSFaultCodeType(soap, data) ( soap_read_cwmp__ACSFaultCodeType(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE_cwmp__CPEVendorFaultCodeType_DEFINED
-#define SOAP_TYPE_cwmp__CPEVendorFaultCodeType_DEFINED
-
-#ifdef SOAP_DEFAULT_cwmp__CPEVendorFaultCodeType
-#define soap_default_cwmp__CPEVendorFaultCodeType(soap, a) (*(a) = SOAP_DEFAULT_cwmp__CPEVendorFaultCodeType)
-#else
-#define soap_default_cwmp__CPEVendorFaultCodeType(soap, a) (*(a) = (unsigned int)0)
-#endif
-
-#define soap_cwmp__CPEVendorFaultCodeType2s soap_unsignedInt2s
-
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__CPEVendorFaultCodeType(struct soap*, const char*, int, const unsigned int *, const char*);
-SOAP_FMAC3S int SOAP_FMAC4S soap_s2cwmp__CPEVendorFaultCodeType(struct soap*, const char*, unsigned int *);
-SOAP_FMAC3 unsigned int * SOAP_FMAC4 soap_in_cwmp__CPEVendorFaultCodeType(struct soap*, const char*, unsigned int *, const char*);
-#define soap_new_cwmp__CPEVendorFaultCodeType soap_new_unsignedInt
-
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__CPEVendorFaultCodeType(struct soap*, const unsigned int *, const char*, const char*);
-
-#ifndef soap_write_cwmp__CPEVendorFaultCodeType
-#define soap_write_cwmp__CPEVendorFaultCodeType(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_cwmp__CPEVendorFaultCodeType(soap, data, "cwmp:CPEVendorFaultCodeType", "cwmp:CPEVendorFaultCodeType") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__CPEVendorFaultCodeType
-#define soap_PUT_cwmp__CPEVendorFaultCodeType(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_cwmp__CPEVendorFaultCodeType(soap, data, "cwmp:CPEVendorFaultCodeType", "cwmp:CPEVendorFaultCodeType") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_cwmp__CPEVendorFaultCodeType
-#define soap_POST_send_cwmp__CPEVendorFaultCodeType(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_cwmp__CPEVendorFaultCodeType(soap, data, "cwmp:CPEVendorFaultCodeType", "cwmp:CPEVendorFaultCodeType") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 unsigned int * SOAP_FMAC4 soap_get_cwmp__CPEVendorFaultCodeType(struct soap*, unsigned int *, const char*, const char*);
-
-#ifndef soap_read_cwmp__CPEVendorFaultCodeType
-#define soap_read_cwmp__CPEVendorFaultCodeType(soap, data) ( soap_begin_recv(soap) || !soap_get_cwmp__CPEVendorFaultCodeType(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_cwmp__CPEVendorFaultCodeType
-#define soap_GET_cwmp__CPEVendorFaultCodeType(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__CPEVendorFaultCodeType(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_cwmp__CPEVendorFaultCodeType
-#define soap_POST_recv_cwmp__CPEVendorFaultCodeType(soap, data) ( soap_read_cwmp__CPEVendorFaultCodeType(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE_cwmp__CPEExtensionFaultCodeType_DEFINED
-#define SOAP_TYPE_cwmp__CPEExtensionFaultCodeType_DEFINED
-
-#ifdef SOAP_DEFAULT_cwmp__CPEExtensionFaultCodeType
-#define soap_default_cwmp__CPEExtensionFaultCodeType(soap, a) (*(a) = SOAP_DEFAULT_cwmp__CPEExtensionFaultCodeType)
-#else
-#define soap_default_cwmp__CPEExtensionFaultCodeType(soap, a) (*(a) = (unsigned int)0)
-#endif
-
-#define soap_cwmp__CPEExtensionFaultCodeType2s soap_unsignedInt2s
-
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__CPEExtensionFaultCodeType(struct soap*, const char*, int, const unsigned int *, const char*);
-SOAP_FMAC3S int SOAP_FMAC4S soap_s2cwmp__CPEExtensionFaultCodeType(struct soap*, const char*, unsigned int *);
-SOAP_FMAC3 unsigned int * SOAP_FMAC4 soap_in_cwmp__CPEExtensionFaultCodeType(struct soap*, const char*, unsigned int *, const char*);
-#define soap_new_cwmp__CPEExtensionFaultCodeType soap_new_unsignedInt
-
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__CPEExtensionFaultCodeType(struct soap*, const unsigned int *, const char*, const char*);
-
-#ifndef soap_write_cwmp__CPEExtensionFaultCodeType
-#define soap_write_cwmp__CPEExtensionFaultCodeType(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_cwmp__CPEExtensionFaultCodeType(soap, data, "cwmp:CPEExtensionFaultCodeType", "cwmp:CPEExtensionFaultCodeType") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__CPEExtensionFaultCodeType
-#define soap_PUT_cwmp__CPEExtensionFaultCodeType(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_cwmp__CPEExtensionFaultCodeType(soap, data, "cwmp:CPEExtensionFaultCodeType", "cwmp:CPEExtensionFaultCodeType") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_cwmp__CPEExtensionFaultCodeType
-#define soap_POST_send_cwmp__CPEExtensionFaultCodeType(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_cwmp__CPEExtensionFaultCodeType(soap, data, "cwmp:CPEExtensionFaultCodeType", "cwmp:CPEExtensionFaultCodeType") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 unsigned int * SOAP_FMAC4 soap_get_cwmp__CPEExtensionFaultCodeType(struct soap*, unsigned int *, const char*, const char*);
-
-#ifndef soap_read_cwmp__CPEExtensionFaultCodeType
-#define soap_read_cwmp__CPEExtensionFaultCodeType(soap, data) ( soap_begin_recv(soap) || !soap_get_cwmp__CPEExtensionFaultCodeType(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_cwmp__CPEExtensionFaultCodeType
-#define soap_GET_cwmp__CPEExtensionFaultCodeType(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__CPEExtensionFaultCodeType(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_cwmp__CPEExtensionFaultCodeType
-#define soap_POST_recv_cwmp__CPEExtensionFaultCodeType(soap, data) ( soap_read_cwmp__CPEExtensionFaultCodeType(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE_cwmp__CPEFaultCodeType_DEFINED
-#define SOAP_TYPE_cwmp__CPEFaultCodeType_DEFINED
-
-#ifdef SOAP_DEFAULT_cwmp__CPEFaultCodeType
-#define soap_default_cwmp__CPEFaultCodeType(soap, a) (*(a) = SOAP_DEFAULT_cwmp__CPEFaultCodeType)
-#else
-#define soap_default_cwmp__CPEFaultCodeType(soap, a) (*(a) = (unsigned int)0)
-#endif
-
-#define soap_cwmp__CPEFaultCodeType2s soap_unsignedInt2s
-
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__CPEFaultCodeType(struct soap*, const char*, int, const unsigned int *, const char*);
-SOAP_FMAC3S int SOAP_FMAC4S soap_s2cwmp__CPEFaultCodeType(struct soap*, const char*, unsigned int *);
-SOAP_FMAC3 unsigned int * SOAP_FMAC4 soap_in_cwmp__CPEFaultCodeType(struct soap*, const char*, unsigned int *, const char*);
-#define soap_new_cwmp__CPEFaultCodeType soap_new_unsignedInt
-
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__CPEFaultCodeType(struct soap*, const unsigned int *, const char*, const char*);
-
-#ifndef soap_write_cwmp__CPEFaultCodeType
-#define soap_write_cwmp__CPEFaultCodeType(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_cwmp__CPEFaultCodeType(soap, data, "cwmp:CPEFaultCodeType", "cwmp:CPEFaultCodeType") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__CPEFaultCodeType
-#define soap_PUT_cwmp__CPEFaultCodeType(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_cwmp__CPEFaultCodeType(soap, data, "cwmp:CPEFaultCodeType", "cwmp:CPEFaultCodeType") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_cwmp__CPEFaultCodeType
-#define soap_POST_send_cwmp__CPEFaultCodeType(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_cwmp__CPEFaultCodeType(soap, data, "cwmp:CPEFaultCodeType", "cwmp:CPEFaultCodeType") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 unsigned int * SOAP_FMAC4 soap_get_cwmp__CPEFaultCodeType(struct soap*, unsigned int *, const char*, const char*);
-
-#ifndef soap_read_cwmp__CPEFaultCodeType
-#define soap_read_cwmp__CPEFaultCodeType(soap, data) ( soap_begin_recv(soap) || !soap_get_cwmp__CPEFaultCodeType(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_cwmp__CPEFaultCodeType
-#define soap_GET_cwmp__CPEFaultCodeType(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__CPEFaultCodeType(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_cwmp__CPEFaultCodeType
-#define soap_POST_recv_cwmp__CPEFaultCodeType(soap, data) ( soap_read_cwmp__CPEFaultCodeType(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
 #ifndef SOAP_TYPE_unsignedInt_DEFINED
 #define SOAP_TYPE_unsignedInt_DEFINED
 
@@ -892,338 +642,194 @@ SOAP_FMAC3 enum _cwmp__OptionStruct_State * SOAP_FMAC4 soap_get__cwmp__OptionStr
 
 #endif
 
-#ifndef SOAP_TYPE_cwmp__DeploymentUnitCPEFaultCodeType_DEFINED
-#define SOAP_TYPE_cwmp__DeploymentUnitCPEFaultCodeType_DEFINED
+#ifndef SOAP_TYPE__cwmp__QueuedTransferStruct_State_DEFINED
+#define SOAP_TYPE__cwmp__QueuedTransferStruct_State_DEFINED
 
-#ifdef SOAP_DEFAULT_cwmp__DeploymentUnitCPEFaultCodeType
-#define soap_default_cwmp__DeploymentUnitCPEFaultCodeType(soap, a) (*(a) = SOAP_DEFAULT_cwmp__DeploymentUnitCPEFaultCodeType)
+#ifdef SOAP_DEFAULT__cwmp__QueuedTransferStruct_State
+#define soap_default__cwmp__QueuedTransferStruct_State(soap, a) (*(a) = SOAP_DEFAULT__cwmp__QueuedTransferStruct_State)
 #else
-#define soap_default_cwmp__DeploymentUnitCPEFaultCodeType(soap, a) (*(a) = (enum cwmp__DeploymentUnitCPEFaultCodeType)0)
+#define soap_default__cwmp__QueuedTransferStruct_State(soap, a) (*(a) = (enum _cwmp__QueuedTransferStruct_State)0)
 #endif
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__DeploymentUnitCPEFaultCodeType(struct soap*, const char*, int, const enum cwmp__DeploymentUnitCPEFaultCodeType *, const char*);
-SOAP_FMAC3S const char* SOAP_FMAC4S soap_cwmp__DeploymentUnitCPEFaultCodeType2s(struct soap*, enum cwmp__DeploymentUnitCPEFaultCodeType);
-SOAP_FMAC3 enum cwmp__DeploymentUnitCPEFaultCodeType * SOAP_FMAC4 soap_in_cwmp__DeploymentUnitCPEFaultCodeType(struct soap*, const char*, enum cwmp__DeploymentUnitCPEFaultCodeType *, const char*);
-SOAP_FMAC3S int SOAP_FMAC4S soap_s2cwmp__DeploymentUnitCPEFaultCodeType(struct soap*, const char*, enum cwmp__DeploymentUnitCPEFaultCodeType *);
+SOAP_FMAC3 int SOAP_FMAC4 soap_out__cwmp__QueuedTransferStruct_State(struct soap*, const char*, int, const enum _cwmp__QueuedTransferStruct_State *, const char*);
+SOAP_FMAC3S const char* SOAP_FMAC4S soap__cwmp__QueuedTransferStruct_State2s(struct soap*, enum _cwmp__QueuedTransferStruct_State);
+SOAP_FMAC3 enum _cwmp__QueuedTransferStruct_State * SOAP_FMAC4 soap_in__cwmp__QueuedTransferStruct_State(struct soap*, const char*, enum _cwmp__QueuedTransferStruct_State *, const char*);
+SOAP_FMAC3S int SOAP_FMAC4S soap_s2_cwmp__QueuedTransferStruct_State(struct soap*, const char*, enum _cwmp__QueuedTransferStruct_State *);
 
-SOAP_FMAC3 enum cwmp__DeploymentUnitCPEFaultCodeType * SOAP_FMAC4 soap_new_cwmp__DeploymentUnitCPEFaultCodeType(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__DeploymentUnitCPEFaultCodeType(struct soap*, const enum cwmp__DeploymentUnitCPEFaultCodeType *, const char*, const char*);
+SOAP_FMAC3 enum _cwmp__QueuedTransferStruct_State * SOAP_FMAC4 soap_new__cwmp__QueuedTransferStruct_State(struct soap *soap, int n);
+SOAP_FMAC3 int SOAP_FMAC4 soap_put__cwmp__QueuedTransferStruct_State(struct soap*, const enum _cwmp__QueuedTransferStruct_State *, const char*, const char*);
 
-#ifndef soap_write_cwmp__DeploymentUnitCPEFaultCodeType
-#define soap_write_cwmp__DeploymentUnitCPEFaultCodeType(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_cwmp__DeploymentUnitCPEFaultCodeType(soap, data, "cwmp:DeploymentUnitCPEFaultCodeType", "cwmp:DeploymentUnitCPEFaultCodeType") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__DeploymentUnitCPEFaultCodeType
-#define soap_PUT_cwmp__DeploymentUnitCPEFaultCodeType(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_cwmp__DeploymentUnitCPEFaultCodeType(soap, data, "cwmp:DeploymentUnitCPEFaultCodeType", "cwmp:DeploymentUnitCPEFaultCodeType") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
+#ifndef soap_write__cwmp__QueuedTransferStruct_State
+#define soap_write__cwmp__QueuedTransferStruct_State(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put__cwmp__QueuedTransferStruct_State(soap, data, "cwmp:QueuedTransferStruct-State", "cwmp:QueuedTransferStruct-State") || soap_end_send(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_POST_send_cwmp__DeploymentUnitCPEFaultCodeType
-#define soap_POST_send_cwmp__DeploymentUnitCPEFaultCodeType(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_cwmp__DeploymentUnitCPEFaultCodeType(soap, data, "cwmp:DeploymentUnitCPEFaultCodeType", "cwmp:DeploymentUnitCPEFaultCodeType") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 enum cwmp__DeploymentUnitCPEFaultCodeType * SOAP_FMAC4 soap_get_cwmp__DeploymentUnitCPEFaultCodeType(struct soap*, enum cwmp__DeploymentUnitCPEFaultCodeType *, const char*, const char*);
-
-#ifndef soap_read_cwmp__DeploymentUnitCPEFaultCodeType
-#define soap_read_cwmp__DeploymentUnitCPEFaultCodeType(soap, data) ( soap_begin_recv(soap) || !soap_get_cwmp__DeploymentUnitCPEFaultCodeType(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
+#ifndef soap_PUT__cwmp__QueuedTransferStruct_State
+#define soap_PUT__cwmp__QueuedTransferStruct_State(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put__cwmp__QueuedTransferStruct_State(soap, data, "cwmp:QueuedTransferStruct-State", "cwmp:QueuedTransferStruct-State") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_GET_cwmp__DeploymentUnitCPEFaultCodeType
-#define soap_GET_cwmp__DeploymentUnitCPEFaultCodeType(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__DeploymentUnitCPEFaultCodeType(soap, (data)), (soap)->error )
+#ifndef soap_POST_send__cwmp__QueuedTransferStruct_State
+#define soap_POST_send__cwmp__QueuedTransferStruct_State(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put__cwmp__QueuedTransferStruct_State(soap, data, "cwmp:QueuedTransferStruct-State", "cwmp:QueuedTransferStruct-State") || soap_end_send(soap), (soap)->error )
+#endif
+
+SOAP_FMAC3 enum _cwmp__QueuedTransferStruct_State * SOAP_FMAC4 soap_get__cwmp__QueuedTransferStruct_State(struct soap*, enum _cwmp__QueuedTransferStruct_State *, const char*, const char*);
+
+#ifndef soap_read__cwmp__QueuedTransferStruct_State
+#define soap_read__cwmp__QueuedTransferStruct_State(soap, data) ( soap_begin_recv(soap) || !soap_get__cwmp__QueuedTransferStruct_State(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_POST_recv_cwmp__DeploymentUnitCPEFaultCodeType
-#define soap_POST_recv_cwmp__DeploymentUnitCPEFaultCodeType(soap, data) ( soap_read_cwmp__DeploymentUnitCPEFaultCodeType(soap, (data)) || soap_closesock(soap), (soap)->error )
+#ifndef soap_GET__cwmp__QueuedTransferStruct_State
+#define soap_GET__cwmp__QueuedTransferStruct_State(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read__cwmp__QueuedTransferStruct_State(soap, (data)), (soap)->error )
+#endif
+
+
+#ifndef soap_POST_recv__cwmp__QueuedTransferStruct_State
+#define soap_POST_recv__cwmp__QueuedTransferStruct_State(soap, data) ( soap_read__cwmp__QueuedTransferStruct_State(soap, (data)) || soap_closesock(soap), (soap)->error )
 #endif
 
 #endif
 
-#ifndef SOAP_TYPE_cwmp__TransferCompleteCPEFaultCodeType_DEFINED
-#define SOAP_TYPE_cwmp__TransferCompleteCPEFaultCodeType_DEFINED
+#ifndef SOAP_TYPE__cwmp__ParameterAttributeStruct_Notification_DEFINED
+#define SOAP_TYPE__cwmp__ParameterAttributeStruct_Notification_DEFINED
 
-#ifdef SOAP_DEFAULT_cwmp__TransferCompleteCPEFaultCodeType
-#define soap_default_cwmp__TransferCompleteCPEFaultCodeType(soap, a) (*(a) = SOAP_DEFAULT_cwmp__TransferCompleteCPEFaultCodeType)
+#ifdef SOAP_DEFAULT__cwmp__ParameterAttributeStruct_Notification
+#define soap_default__cwmp__ParameterAttributeStruct_Notification(soap, a) (*(a) = SOAP_DEFAULT__cwmp__ParameterAttributeStruct_Notification)
 #else
-#define soap_default_cwmp__TransferCompleteCPEFaultCodeType(soap, a) (*(a) = (enum cwmp__TransferCompleteCPEFaultCodeType)0)
+#define soap_default__cwmp__ParameterAttributeStruct_Notification(soap, a) (*(a) = (enum _cwmp__ParameterAttributeStruct_Notification)0)
 #endif
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__TransferCompleteCPEFaultCodeType(struct soap*, const char*, int, const enum cwmp__TransferCompleteCPEFaultCodeType *, const char*);
-SOAP_FMAC3S const char* SOAP_FMAC4S soap_cwmp__TransferCompleteCPEFaultCodeType2s(struct soap*, enum cwmp__TransferCompleteCPEFaultCodeType);
-SOAP_FMAC3 enum cwmp__TransferCompleteCPEFaultCodeType * SOAP_FMAC4 soap_in_cwmp__TransferCompleteCPEFaultCodeType(struct soap*, const char*, enum cwmp__TransferCompleteCPEFaultCodeType *, const char*);
-SOAP_FMAC3S int SOAP_FMAC4S soap_s2cwmp__TransferCompleteCPEFaultCodeType(struct soap*, const char*, enum cwmp__TransferCompleteCPEFaultCodeType *);
+SOAP_FMAC3 int SOAP_FMAC4 soap_out__cwmp__ParameterAttributeStruct_Notification(struct soap*, const char*, int, const enum _cwmp__ParameterAttributeStruct_Notification *, const char*);
+SOAP_FMAC3S const char* SOAP_FMAC4S soap__cwmp__ParameterAttributeStruct_Notification2s(struct soap*, enum _cwmp__ParameterAttributeStruct_Notification);
+SOAP_FMAC3 enum _cwmp__ParameterAttributeStruct_Notification * SOAP_FMAC4 soap_in__cwmp__ParameterAttributeStruct_Notification(struct soap*, const char*, enum _cwmp__ParameterAttributeStruct_Notification *, const char*);
+SOAP_FMAC3S int SOAP_FMAC4S soap_s2_cwmp__ParameterAttributeStruct_Notification(struct soap*, const char*, enum _cwmp__ParameterAttributeStruct_Notification *);
 
-SOAP_FMAC3 enum cwmp__TransferCompleteCPEFaultCodeType * SOAP_FMAC4 soap_new_cwmp__TransferCompleteCPEFaultCodeType(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__TransferCompleteCPEFaultCodeType(struct soap*, const enum cwmp__TransferCompleteCPEFaultCodeType *, const char*, const char*);
+SOAP_FMAC3 enum _cwmp__ParameterAttributeStruct_Notification * SOAP_FMAC4 soap_new__cwmp__ParameterAttributeStruct_Notification(struct soap *soap, int n);
+SOAP_FMAC3 int SOAP_FMAC4 soap_put__cwmp__ParameterAttributeStruct_Notification(struct soap*, const enum _cwmp__ParameterAttributeStruct_Notification *, const char*, const char*);
 
-#ifndef soap_write_cwmp__TransferCompleteCPEFaultCodeType
-#define soap_write_cwmp__TransferCompleteCPEFaultCodeType(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_cwmp__TransferCompleteCPEFaultCodeType(soap, data, "cwmp:TransferCompleteCPEFaultCodeType", "cwmp:TransferCompleteCPEFaultCodeType") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__TransferCompleteCPEFaultCodeType
-#define soap_PUT_cwmp__TransferCompleteCPEFaultCodeType(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_cwmp__TransferCompleteCPEFaultCodeType(soap, data, "cwmp:TransferCompleteCPEFaultCodeType", "cwmp:TransferCompleteCPEFaultCodeType") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
+#ifndef soap_write__cwmp__ParameterAttributeStruct_Notification
+#define soap_write__cwmp__ParameterAttributeStruct_Notification(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put__cwmp__ParameterAttributeStruct_Notification(soap, data, "cwmp:ParameterAttributeStruct-Notification", "cwmp:ParameterAttributeStruct-Notification") || soap_end_send(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_POST_send_cwmp__TransferCompleteCPEFaultCodeType
-#define soap_POST_send_cwmp__TransferCompleteCPEFaultCodeType(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_cwmp__TransferCompleteCPEFaultCodeType(soap, data, "cwmp:TransferCompleteCPEFaultCodeType", "cwmp:TransferCompleteCPEFaultCodeType") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 enum cwmp__TransferCompleteCPEFaultCodeType * SOAP_FMAC4 soap_get_cwmp__TransferCompleteCPEFaultCodeType(struct soap*, enum cwmp__TransferCompleteCPEFaultCodeType *, const char*, const char*);
-
-#ifndef soap_read_cwmp__TransferCompleteCPEFaultCodeType
-#define soap_read_cwmp__TransferCompleteCPEFaultCodeType(soap, data) ( soap_begin_recv(soap) || !soap_get_cwmp__TransferCompleteCPEFaultCodeType(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
+#ifndef soap_PUT__cwmp__ParameterAttributeStruct_Notification
+#define soap_PUT__cwmp__ParameterAttributeStruct_Notification(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put__cwmp__ParameterAttributeStruct_Notification(soap, data, "cwmp:ParameterAttributeStruct-Notification", "cwmp:ParameterAttributeStruct-Notification") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_GET_cwmp__TransferCompleteCPEFaultCodeType
-#define soap_GET_cwmp__TransferCompleteCPEFaultCodeType(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__TransferCompleteCPEFaultCodeType(soap, (data)), (soap)->error )
+#ifndef soap_POST_send__cwmp__ParameterAttributeStruct_Notification
+#define soap_POST_send__cwmp__ParameterAttributeStruct_Notification(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put__cwmp__ParameterAttributeStruct_Notification(soap, data, "cwmp:ParameterAttributeStruct-Notification", "cwmp:ParameterAttributeStruct-Notification") || soap_end_send(soap), (soap)->error )
+#endif
+
+SOAP_FMAC3 enum _cwmp__ParameterAttributeStruct_Notification * SOAP_FMAC4 soap_get__cwmp__ParameterAttributeStruct_Notification(struct soap*, enum _cwmp__ParameterAttributeStruct_Notification *, const char*, const char*);
+
+#ifndef soap_read__cwmp__ParameterAttributeStruct_Notification
+#define soap_read__cwmp__ParameterAttributeStruct_Notification(soap, data) ( soap_begin_recv(soap) || !soap_get__cwmp__ParameterAttributeStruct_Notification(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_POST_recv_cwmp__TransferCompleteCPEFaultCodeType
-#define soap_POST_recv_cwmp__TransferCompleteCPEFaultCodeType(soap, data) ( soap_read_cwmp__TransferCompleteCPEFaultCodeType(soap, (data)) || soap_closesock(soap), (soap)->error )
+#ifndef soap_GET__cwmp__ParameterAttributeStruct_Notification
+#define soap_GET__cwmp__ParameterAttributeStruct_Notification(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read__cwmp__ParameterAttributeStruct_Notification(soap, (data)), (soap)->error )
+#endif
+
+
+#ifndef soap_POST_recv__cwmp__ParameterAttributeStruct_Notification
+#define soap_POST_recv__cwmp__ParameterAttributeStruct_Notification(soap, data) ( soap_read__cwmp__ParameterAttributeStruct_Notification(soap, (data)) || soap_closesock(soap), (soap)->error )
 #endif
 
 #endif
 
-#ifndef SOAP_TYPE_cwmp__DefaultDeploymentUnitOperationType_DEFINED
-#define SOAP_TYPE_cwmp__DefaultDeploymentUnitOperationType_DEFINED
+#ifndef SOAP_TYPE__cwmp__SetParameterAttributesStruct_Notification_DEFINED
+#define SOAP_TYPE__cwmp__SetParameterAttributesStruct_Notification_DEFINED
 
-#ifdef SOAP_DEFAULT_cwmp__DefaultDeploymentUnitOperationType
-#define soap_default_cwmp__DefaultDeploymentUnitOperationType(soap, a) (*(a) = SOAP_DEFAULT_cwmp__DefaultDeploymentUnitOperationType)
+#ifdef SOAP_DEFAULT__cwmp__SetParameterAttributesStruct_Notification
+#define soap_default__cwmp__SetParameterAttributesStruct_Notification(soap, a) (*(a) = SOAP_DEFAULT__cwmp__SetParameterAttributesStruct_Notification)
 #else
-#define soap_default_cwmp__DefaultDeploymentUnitOperationType(soap, a) (*(a) = (enum cwmp__DefaultDeploymentUnitOperationType)0)
+#define soap_default__cwmp__SetParameterAttributesStruct_Notification(soap, a) (*(a) = (enum _cwmp__SetParameterAttributesStruct_Notification)0)
 #endif
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__DefaultDeploymentUnitOperationType(struct soap*, const char*, int, const enum cwmp__DefaultDeploymentUnitOperationType *, const char*);
-SOAP_FMAC3S const char* SOAP_FMAC4S soap_cwmp__DefaultDeploymentUnitOperationType2s(struct soap*, enum cwmp__DefaultDeploymentUnitOperationType);
-SOAP_FMAC3 enum cwmp__DefaultDeploymentUnitOperationType * SOAP_FMAC4 soap_in_cwmp__DefaultDeploymentUnitOperationType(struct soap*, const char*, enum cwmp__DefaultDeploymentUnitOperationType *, const char*);
-SOAP_FMAC3S int SOAP_FMAC4S soap_s2cwmp__DefaultDeploymentUnitOperationType(struct soap*, const char*, enum cwmp__DefaultDeploymentUnitOperationType *);
+SOAP_FMAC3 int SOAP_FMAC4 soap_out__cwmp__SetParameterAttributesStruct_Notification(struct soap*, const char*, int, const enum _cwmp__SetParameterAttributesStruct_Notification *, const char*);
+SOAP_FMAC3S const char* SOAP_FMAC4S soap__cwmp__SetParameterAttributesStruct_Notification2s(struct soap*, enum _cwmp__SetParameterAttributesStruct_Notification);
+SOAP_FMAC3 enum _cwmp__SetParameterAttributesStruct_Notification * SOAP_FMAC4 soap_in__cwmp__SetParameterAttributesStruct_Notification(struct soap*, const char*, enum _cwmp__SetParameterAttributesStruct_Notification *, const char*);
+SOAP_FMAC3S int SOAP_FMAC4S soap_s2_cwmp__SetParameterAttributesStruct_Notification(struct soap*, const char*, enum _cwmp__SetParameterAttributesStruct_Notification *);
 
-SOAP_FMAC3 enum cwmp__DefaultDeploymentUnitOperationType * SOAP_FMAC4 soap_new_cwmp__DefaultDeploymentUnitOperationType(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__DefaultDeploymentUnitOperationType(struct soap*, const enum cwmp__DefaultDeploymentUnitOperationType *, const char*, const char*);
+SOAP_FMAC3 enum _cwmp__SetParameterAttributesStruct_Notification * SOAP_FMAC4 soap_new__cwmp__SetParameterAttributesStruct_Notification(struct soap *soap, int n);
+SOAP_FMAC3 int SOAP_FMAC4 soap_put__cwmp__SetParameterAttributesStruct_Notification(struct soap*, const enum _cwmp__SetParameterAttributesStruct_Notification *, const char*, const char*);
 
-#ifndef soap_write_cwmp__DefaultDeploymentUnitOperationType
-#define soap_write_cwmp__DefaultDeploymentUnitOperationType(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_cwmp__DefaultDeploymentUnitOperationType(soap, data, "cwmp:DefaultDeploymentUnitOperationType", "cwmp:DefaultDeploymentUnitOperationType") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__DefaultDeploymentUnitOperationType
-#define soap_PUT_cwmp__DefaultDeploymentUnitOperationType(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_cwmp__DefaultDeploymentUnitOperationType(soap, data, "cwmp:DefaultDeploymentUnitOperationType", "cwmp:DefaultDeploymentUnitOperationType") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
+#ifndef soap_write__cwmp__SetParameterAttributesStruct_Notification
+#define soap_write__cwmp__SetParameterAttributesStruct_Notification(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put__cwmp__SetParameterAttributesStruct_Notification(soap, data, "cwmp:SetParameterAttributesStruct-Notification", "cwmp:SetParameterAttributesStruct-Notification") || soap_end_send(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_POST_send_cwmp__DefaultDeploymentUnitOperationType
-#define soap_POST_send_cwmp__DefaultDeploymentUnitOperationType(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_cwmp__DefaultDeploymentUnitOperationType(soap, data, "cwmp:DefaultDeploymentUnitOperationType", "cwmp:DefaultDeploymentUnitOperationType") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 enum cwmp__DefaultDeploymentUnitOperationType * SOAP_FMAC4 soap_get_cwmp__DefaultDeploymentUnitOperationType(struct soap*, enum cwmp__DefaultDeploymentUnitOperationType *, const char*, const char*);
-
-#ifndef soap_read_cwmp__DefaultDeploymentUnitOperationType
-#define soap_read_cwmp__DefaultDeploymentUnitOperationType(soap, data) ( soap_begin_recv(soap) || !soap_get_cwmp__DefaultDeploymentUnitOperationType(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
+#ifndef soap_PUT__cwmp__SetParameterAttributesStruct_Notification
+#define soap_PUT__cwmp__SetParameterAttributesStruct_Notification(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put__cwmp__SetParameterAttributesStruct_Notification(soap, data, "cwmp:SetParameterAttributesStruct-Notification", "cwmp:SetParameterAttributesStruct-Notification") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_GET_cwmp__DefaultDeploymentUnitOperationType
-#define soap_GET_cwmp__DefaultDeploymentUnitOperationType(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__DefaultDeploymentUnitOperationType(soap, (data)), (soap)->error )
+#ifndef soap_POST_send__cwmp__SetParameterAttributesStruct_Notification
+#define soap_POST_send__cwmp__SetParameterAttributesStruct_Notification(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put__cwmp__SetParameterAttributesStruct_Notification(soap, data, "cwmp:SetParameterAttributesStruct-Notification", "cwmp:SetParameterAttributesStruct-Notification") || soap_end_send(soap), (soap)->error )
+#endif
+
+SOAP_FMAC3 enum _cwmp__SetParameterAttributesStruct_Notification * SOAP_FMAC4 soap_get__cwmp__SetParameterAttributesStruct_Notification(struct soap*, enum _cwmp__SetParameterAttributesStruct_Notification *, const char*, const char*);
+
+#ifndef soap_read__cwmp__SetParameterAttributesStruct_Notification
+#define soap_read__cwmp__SetParameterAttributesStruct_Notification(soap, data) ( soap_begin_recv(soap) || !soap_get__cwmp__SetParameterAttributesStruct_Notification(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_POST_recv_cwmp__DefaultDeploymentUnitOperationType
-#define soap_POST_recv_cwmp__DefaultDeploymentUnitOperationType(soap, data) ( soap_read_cwmp__DefaultDeploymentUnitOperationType(soap, (data)) || soap_closesock(soap), (soap)->error )
+#ifndef soap_GET__cwmp__SetParameterAttributesStruct_Notification
+#define soap_GET__cwmp__SetParameterAttributesStruct_Notification(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read__cwmp__SetParameterAttributesStruct_Notification(soap, (data)), (soap)->error )
+#endif
+
+
+#ifndef soap_POST_recv__cwmp__SetParameterAttributesStruct_Notification
+#define soap_POST_recv__cwmp__SetParameterAttributesStruct_Notification(soap, data) ( soap_read__cwmp__SetParameterAttributesStruct_Notification(soap, (data)) || soap_closesock(soap), (soap)->error )
 #endif
 
 #endif
 
-#ifndef SOAP_TYPE_cwmp__DeploymentUnitState_DEFINED
-#define SOAP_TYPE_cwmp__DeploymentUnitState_DEFINED
+#ifndef SOAP_TYPE__cwmp__FaultStruct_FaultCode_DEFINED
+#define SOAP_TYPE__cwmp__FaultStruct_FaultCode_DEFINED
 
-#ifdef SOAP_DEFAULT_cwmp__DeploymentUnitState
-#define soap_default_cwmp__DeploymentUnitState(soap, a) (*(a) = SOAP_DEFAULT_cwmp__DeploymentUnitState)
+#ifdef SOAP_DEFAULT__cwmp__FaultStruct_FaultCode
+#define soap_default__cwmp__FaultStruct_FaultCode(soap, a) (*(a) = SOAP_DEFAULT__cwmp__FaultStruct_FaultCode)
 #else
-#define soap_default_cwmp__DeploymentUnitState(soap, a) (*(a) = (enum cwmp__DeploymentUnitState)0)
+#define soap_default__cwmp__FaultStruct_FaultCode(soap, a) (*(a) = (enum _cwmp__FaultStruct_FaultCode)0)
 #endif
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__DeploymentUnitState(struct soap*, const char*, int, const enum cwmp__DeploymentUnitState *, const char*);
-SOAP_FMAC3S const char* SOAP_FMAC4S soap_cwmp__DeploymentUnitState2s(struct soap*, enum cwmp__DeploymentUnitState);
-SOAP_FMAC3 enum cwmp__DeploymentUnitState * SOAP_FMAC4 soap_in_cwmp__DeploymentUnitState(struct soap*, const char*, enum cwmp__DeploymentUnitState *, const char*);
-SOAP_FMAC3S int SOAP_FMAC4S soap_s2cwmp__DeploymentUnitState(struct soap*, const char*, enum cwmp__DeploymentUnitState *);
+SOAP_FMAC3 int SOAP_FMAC4 soap_out__cwmp__FaultStruct_FaultCode(struct soap*, const char*, int, const enum _cwmp__FaultStruct_FaultCode *, const char*);
+SOAP_FMAC3S const char* SOAP_FMAC4S soap__cwmp__FaultStruct_FaultCode2s(struct soap*, enum _cwmp__FaultStruct_FaultCode);
+SOAP_FMAC3 enum _cwmp__FaultStruct_FaultCode * SOAP_FMAC4 soap_in__cwmp__FaultStruct_FaultCode(struct soap*, const char*, enum _cwmp__FaultStruct_FaultCode *, const char*);
+SOAP_FMAC3S int SOAP_FMAC4S soap_s2_cwmp__FaultStruct_FaultCode(struct soap*, const char*, enum _cwmp__FaultStruct_FaultCode *);
 
-SOAP_FMAC3 enum cwmp__DeploymentUnitState * SOAP_FMAC4 soap_new_cwmp__DeploymentUnitState(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__DeploymentUnitState(struct soap*, const enum cwmp__DeploymentUnitState *, const char*, const char*);
+SOAP_FMAC3 enum _cwmp__FaultStruct_FaultCode * SOAP_FMAC4 soap_new__cwmp__FaultStruct_FaultCode(struct soap *soap, int n);
+SOAP_FMAC3 int SOAP_FMAC4 soap_put__cwmp__FaultStruct_FaultCode(struct soap*, const enum _cwmp__FaultStruct_FaultCode *, const char*, const char*);
 
-#ifndef soap_write_cwmp__DeploymentUnitState
-#define soap_write_cwmp__DeploymentUnitState(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_cwmp__DeploymentUnitState(soap, data, "cwmp:DeploymentUnitState", "cwmp:DeploymentUnitState") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__DeploymentUnitState
-#define soap_PUT_cwmp__DeploymentUnitState(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_cwmp__DeploymentUnitState(soap, data, "cwmp:DeploymentUnitState", "cwmp:DeploymentUnitState") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
+#ifndef soap_write__cwmp__FaultStruct_FaultCode
+#define soap_write__cwmp__FaultStruct_FaultCode(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put__cwmp__FaultStruct_FaultCode(soap, data, "cwmp:FaultStruct-FaultCode", "cwmp:FaultStruct-FaultCode") || soap_end_send(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_POST_send_cwmp__DeploymentUnitState
-#define soap_POST_send_cwmp__DeploymentUnitState(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_cwmp__DeploymentUnitState(soap, data, "cwmp:DeploymentUnitState", "cwmp:DeploymentUnitState") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 enum cwmp__DeploymentUnitState * SOAP_FMAC4 soap_get_cwmp__DeploymentUnitState(struct soap*, enum cwmp__DeploymentUnitState *, const char*, const char*);
-
-#ifndef soap_read_cwmp__DeploymentUnitState
-#define soap_read_cwmp__DeploymentUnitState(soap, data) ( soap_begin_recv(soap) || !soap_get_cwmp__DeploymentUnitState(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
+#ifndef soap_PUT__cwmp__FaultStruct_FaultCode
+#define soap_PUT__cwmp__FaultStruct_FaultCode(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put__cwmp__FaultStruct_FaultCode(soap, data, "cwmp:FaultStruct-FaultCode", "cwmp:FaultStruct-FaultCode") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_GET_cwmp__DeploymentUnitState
-#define soap_GET_cwmp__DeploymentUnitState(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__DeploymentUnitState(soap, (data)), (soap)->error )
+#ifndef soap_POST_send__cwmp__FaultStruct_FaultCode
+#define soap_POST_send__cwmp__FaultStruct_FaultCode(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put__cwmp__FaultStruct_FaultCode(soap, data, "cwmp:FaultStruct-FaultCode", "cwmp:FaultStruct-FaultCode") || soap_end_send(soap), (soap)->error )
+#endif
+
+SOAP_FMAC3 enum _cwmp__FaultStruct_FaultCode * SOAP_FMAC4 soap_get__cwmp__FaultStruct_FaultCode(struct soap*, enum _cwmp__FaultStruct_FaultCode *, const char*, const char*);
+
+#ifndef soap_read__cwmp__FaultStruct_FaultCode
+#define soap_read__cwmp__FaultStruct_FaultCode(soap, data) ( soap_begin_recv(soap) || !soap_get__cwmp__FaultStruct_FaultCode(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_POST_recv_cwmp__DeploymentUnitState
-#define soap_POST_recv_cwmp__DeploymentUnitState(soap, data) ( soap_read_cwmp__DeploymentUnitState(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE_cwmp__TransferStateType_DEFINED
-#define SOAP_TYPE_cwmp__TransferStateType_DEFINED
-
-#ifdef SOAP_DEFAULT_cwmp__TransferStateType
-#define soap_default_cwmp__TransferStateType(soap, a) (*(a) = SOAP_DEFAULT_cwmp__TransferStateType)
-#else
-#define soap_default_cwmp__TransferStateType(soap, a) (*(a) = (enum cwmp__TransferStateType)0)
-#endif
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__TransferStateType(struct soap*, const char*, int, const enum cwmp__TransferStateType *, const char*);
-SOAP_FMAC3S const char* SOAP_FMAC4S soap_cwmp__TransferStateType2s(struct soap*, enum cwmp__TransferStateType);
-SOAP_FMAC3 enum cwmp__TransferStateType * SOAP_FMAC4 soap_in_cwmp__TransferStateType(struct soap*, const char*, enum cwmp__TransferStateType *, const char*);
-SOAP_FMAC3S int SOAP_FMAC4S soap_s2cwmp__TransferStateType(struct soap*, const char*, enum cwmp__TransferStateType *);
-
-SOAP_FMAC3 enum cwmp__TransferStateType * SOAP_FMAC4 soap_new_cwmp__TransferStateType(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__TransferStateType(struct soap*, const enum cwmp__TransferStateType *, const char*, const char*);
-
-#ifndef soap_write_cwmp__TransferStateType
-#define soap_write_cwmp__TransferStateType(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_cwmp__TransferStateType(soap, data, "cwmp:TransferStateType", "cwmp:TransferStateType") || soap_end_send(soap), (soap)->error )
+#ifndef soap_GET__cwmp__FaultStruct_FaultCode
+#define soap_GET__cwmp__FaultStruct_FaultCode(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read__cwmp__FaultStruct_FaultCode(soap, (data)), (soap)->error )
 #endif
 
 
-#ifndef soap_PUT_cwmp__TransferStateType
-#define soap_PUT_cwmp__TransferStateType(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_cwmp__TransferStateType(soap, data, "cwmp:TransferStateType", "cwmp:TransferStateType") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_cwmp__TransferStateType
-#define soap_POST_send_cwmp__TransferStateType(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_cwmp__TransferStateType(soap, data, "cwmp:TransferStateType", "cwmp:TransferStateType") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 enum cwmp__TransferStateType * SOAP_FMAC4 soap_get_cwmp__TransferStateType(struct soap*, enum cwmp__TransferStateType *, const char*, const char*);
-
-#ifndef soap_read_cwmp__TransferStateType
-#define soap_read_cwmp__TransferStateType(soap, data) ( soap_begin_recv(soap) || !soap_get_cwmp__TransferStateType(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_cwmp__TransferStateType
-#define soap_GET_cwmp__TransferStateType(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__TransferStateType(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_cwmp__TransferStateType
-#define soap_POST_recv_cwmp__TransferStateType(soap, data) ( soap_read_cwmp__TransferStateType(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE_cwmp__ParameterAttributeNotificationValueType_DEFINED
-#define SOAP_TYPE_cwmp__ParameterAttributeNotificationValueType_DEFINED
-
-#ifdef SOAP_DEFAULT_cwmp__ParameterAttributeNotificationValueType
-#define soap_default_cwmp__ParameterAttributeNotificationValueType(soap, a) (*(a) = SOAP_DEFAULT_cwmp__ParameterAttributeNotificationValueType)
-#else
-#define soap_default_cwmp__ParameterAttributeNotificationValueType(soap, a) (*(a) = (enum cwmp__ParameterAttributeNotificationValueType)0)
-#endif
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__ParameterAttributeNotificationValueType(struct soap*, const char*, int, const enum cwmp__ParameterAttributeNotificationValueType *, const char*);
-SOAP_FMAC3S const char* SOAP_FMAC4S soap_cwmp__ParameterAttributeNotificationValueType2s(struct soap*, enum cwmp__ParameterAttributeNotificationValueType);
-SOAP_FMAC3 enum cwmp__ParameterAttributeNotificationValueType * SOAP_FMAC4 soap_in_cwmp__ParameterAttributeNotificationValueType(struct soap*, const char*, enum cwmp__ParameterAttributeNotificationValueType *, const char*);
-SOAP_FMAC3S int SOAP_FMAC4S soap_s2cwmp__ParameterAttributeNotificationValueType(struct soap*, const char*, enum cwmp__ParameterAttributeNotificationValueType *);
-
-SOAP_FMAC3 enum cwmp__ParameterAttributeNotificationValueType * SOAP_FMAC4 soap_new_cwmp__ParameterAttributeNotificationValueType(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__ParameterAttributeNotificationValueType(struct soap*, const enum cwmp__ParameterAttributeNotificationValueType *, const char*, const char*);
-
-#ifndef soap_write_cwmp__ParameterAttributeNotificationValueType
-#define soap_write_cwmp__ParameterAttributeNotificationValueType(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_cwmp__ParameterAttributeNotificationValueType(soap, data, "cwmp:ParameterAttributeNotificationValueType", "cwmp:ParameterAttributeNotificationValueType") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__ParameterAttributeNotificationValueType
-#define soap_PUT_cwmp__ParameterAttributeNotificationValueType(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_cwmp__ParameterAttributeNotificationValueType(soap, data, "cwmp:ParameterAttributeNotificationValueType", "cwmp:ParameterAttributeNotificationValueType") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_cwmp__ParameterAttributeNotificationValueType
-#define soap_POST_send_cwmp__ParameterAttributeNotificationValueType(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_cwmp__ParameterAttributeNotificationValueType(soap, data, "cwmp:ParameterAttributeNotificationValueType", "cwmp:ParameterAttributeNotificationValueType") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 enum cwmp__ParameterAttributeNotificationValueType * SOAP_FMAC4 soap_get_cwmp__ParameterAttributeNotificationValueType(struct soap*, enum cwmp__ParameterAttributeNotificationValueType *, const char*, const char*);
-
-#ifndef soap_read_cwmp__ParameterAttributeNotificationValueType
-#define soap_read_cwmp__ParameterAttributeNotificationValueType(soap, data) ( soap_begin_recv(soap) || !soap_get_cwmp__ParameterAttributeNotificationValueType(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_cwmp__ParameterAttributeNotificationValueType
-#define soap_GET_cwmp__ParameterAttributeNotificationValueType(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__ParameterAttributeNotificationValueType(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_cwmp__ParameterAttributeNotificationValueType
-#define soap_POST_recv_cwmp__ParameterAttributeNotificationValueType(soap, data) ( soap_read_cwmp__ParameterAttributeNotificationValueType(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE_cwmp__AccessListValueType_DEFINED
-#define SOAP_TYPE_cwmp__AccessListValueType_DEFINED
-
-#ifdef SOAP_DEFAULT_cwmp__AccessListValueType
-#define soap_default_cwmp__AccessListValueType(soap, a) (*(a) = SOAP_DEFAULT_cwmp__AccessListValueType)
-#else
-#define soap_default_cwmp__AccessListValueType(soap, a) (*(a) = (enum cwmp__AccessListValueType)0)
-#endif
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__AccessListValueType(struct soap*, const char*, int, const enum cwmp__AccessListValueType *, const char*);
-SOAP_FMAC3S const char* SOAP_FMAC4S soap_cwmp__AccessListValueType2s(struct soap*, enum cwmp__AccessListValueType);
-SOAP_FMAC3 enum cwmp__AccessListValueType * SOAP_FMAC4 soap_in_cwmp__AccessListValueType(struct soap*, const char*, enum cwmp__AccessListValueType *, const char*);
-SOAP_FMAC3S int SOAP_FMAC4S soap_s2cwmp__AccessListValueType(struct soap*, const char*, enum cwmp__AccessListValueType *);
-
-SOAP_FMAC3 enum cwmp__AccessListValueType * SOAP_FMAC4 soap_new_cwmp__AccessListValueType(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__AccessListValueType(struct soap*, const enum cwmp__AccessListValueType *, const char*, const char*);
-
-#ifndef soap_write_cwmp__AccessListValueType
-#define soap_write_cwmp__AccessListValueType(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_cwmp__AccessListValueType(soap, data, "cwmp:AccessListValueType", "cwmp:AccessListValueType") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__AccessListValueType
-#define soap_PUT_cwmp__AccessListValueType(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_cwmp__AccessListValueType(soap, data, "cwmp:AccessListValueType", "cwmp:AccessListValueType") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_cwmp__AccessListValueType
-#define soap_POST_send_cwmp__AccessListValueType(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_cwmp__AccessListValueType(soap, data, "cwmp:AccessListValueType", "cwmp:AccessListValueType") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 enum cwmp__AccessListValueType * SOAP_FMAC4 soap_get_cwmp__AccessListValueType(struct soap*, enum cwmp__AccessListValueType *, const char*, const char*);
-
-#ifndef soap_read_cwmp__AccessListValueType
-#define soap_read_cwmp__AccessListValueType(soap, data) ( soap_begin_recv(soap) || !soap_get_cwmp__AccessListValueType(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_cwmp__AccessListValueType
-#define soap_GET_cwmp__AccessListValueType(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__AccessListValueType(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_cwmp__AccessListValueType
-#define soap_POST_recv_cwmp__AccessListValueType(soap, data) ( soap_read_cwmp__AccessListValueType(soap, (data)) || soap_closesock(soap), (soap)->error )
+#ifndef soap_POST_recv__cwmp__FaultStruct_FaultCode
+#define soap_POST_recv__cwmp__FaultStruct_FaultCode(soap, data) ( soap_read__cwmp__FaultStruct_FaultCode(soap, (data)) || soap_closesock(soap), (soap)->error )
 #endif
 
 #endif
@@ -1674,342 +1280,6 @@ SOAP_FMAC3 struct _cwmp__ID * SOAP_FMAC4 soap_get__cwmp__ID(struct soap*, struct
 
 #endif
 
-#ifndef SOAP_TYPE_cwmp__UninstallOpStruct_DEFINED
-#define SOAP_TYPE_cwmp__UninstallOpStruct_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default_cwmp__UninstallOpStruct(struct soap*, struct cwmp__UninstallOpStruct *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__UninstallOpStruct(struct soap*, const struct cwmp__UninstallOpStruct *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__UninstallOpStruct(struct soap*, const char*, int, const struct cwmp__UninstallOpStruct *, const char*);
-SOAP_FMAC3 struct cwmp__UninstallOpStruct * SOAP_FMAC4 soap_in_cwmp__UninstallOpStruct(struct soap*, const char*, struct cwmp__UninstallOpStruct *, const char*);
-
-SOAP_FMAC3 struct cwmp__UninstallOpStruct * SOAP_FMAC4 soap_new_cwmp__UninstallOpStruct(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__UninstallOpStruct(struct soap*, const struct cwmp__UninstallOpStruct *, const char*, const char*);
-
-#ifndef soap_write_cwmp__UninstallOpStruct
-#define soap_write_cwmp__UninstallOpStruct(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize_cwmp__UninstallOpStruct(soap, data), 0) || soap_put_cwmp__UninstallOpStruct(soap, data, "cwmp:UninstallOpStruct", "cwmp:UninstallOpStruct") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__UninstallOpStruct
-#define soap_PUT_cwmp__UninstallOpStruct(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize_cwmp__UninstallOpStruct(soap, data), 0) || soap_put_cwmp__UninstallOpStruct(soap, data, "cwmp:UninstallOpStruct", "cwmp:UninstallOpStruct") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_cwmp__UninstallOpStruct
-#define soap_POST_send_cwmp__UninstallOpStruct(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize_cwmp__UninstallOpStruct(soap, data), 0) || soap_put_cwmp__UninstallOpStruct(soap, data, "cwmp:UninstallOpStruct", "cwmp:UninstallOpStruct") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct cwmp__UninstallOpStruct * SOAP_FMAC4 soap_get_cwmp__UninstallOpStruct(struct soap*, struct cwmp__UninstallOpStruct *, const char*, const char*);
-
-#ifndef soap_read_cwmp__UninstallOpStruct
-#define soap_read_cwmp__UninstallOpStruct(soap, data) ( ((data) ? (soap_default_cwmp__UninstallOpStruct(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get_cwmp__UninstallOpStruct(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_cwmp__UninstallOpStruct
-#define soap_GET_cwmp__UninstallOpStruct(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__UninstallOpStruct(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_cwmp__UninstallOpStruct
-#define soap_POST_recv_cwmp__UninstallOpStruct(soap, data) ( soap_read_cwmp__UninstallOpStruct(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE_cwmp__UpdateOpStruct_DEFINED
-#define SOAP_TYPE_cwmp__UpdateOpStruct_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default_cwmp__UpdateOpStruct(struct soap*, struct cwmp__UpdateOpStruct *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__UpdateOpStruct(struct soap*, const struct cwmp__UpdateOpStruct *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__UpdateOpStruct(struct soap*, const char*, int, const struct cwmp__UpdateOpStruct *, const char*);
-SOAP_FMAC3 struct cwmp__UpdateOpStruct * SOAP_FMAC4 soap_in_cwmp__UpdateOpStruct(struct soap*, const char*, struct cwmp__UpdateOpStruct *, const char*);
-
-SOAP_FMAC3 struct cwmp__UpdateOpStruct * SOAP_FMAC4 soap_new_cwmp__UpdateOpStruct(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__UpdateOpStruct(struct soap*, const struct cwmp__UpdateOpStruct *, const char*, const char*);
-
-#ifndef soap_write_cwmp__UpdateOpStruct
-#define soap_write_cwmp__UpdateOpStruct(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize_cwmp__UpdateOpStruct(soap, data), 0) || soap_put_cwmp__UpdateOpStruct(soap, data, "cwmp:UpdateOpStruct", "cwmp:UpdateOpStruct") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__UpdateOpStruct
-#define soap_PUT_cwmp__UpdateOpStruct(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize_cwmp__UpdateOpStruct(soap, data), 0) || soap_put_cwmp__UpdateOpStruct(soap, data, "cwmp:UpdateOpStruct", "cwmp:UpdateOpStruct") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_cwmp__UpdateOpStruct
-#define soap_POST_send_cwmp__UpdateOpStruct(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize_cwmp__UpdateOpStruct(soap, data), 0) || soap_put_cwmp__UpdateOpStruct(soap, data, "cwmp:UpdateOpStruct", "cwmp:UpdateOpStruct") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct cwmp__UpdateOpStruct * SOAP_FMAC4 soap_get_cwmp__UpdateOpStruct(struct soap*, struct cwmp__UpdateOpStruct *, const char*, const char*);
-
-#ifndef soap_read_cwmp__UpdateOpStruct
-#define soap_read_cwmp__UpdateOpStruct(soap, data) ( ((data) ? (soap_default_cwmp__UpdateOpStruct(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get_cwmp__UpdateOpStruct(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_cwmp__UpdateOpStruct
-#define soap_GET_cwmp__UpdateOpStruct(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__UpdateOpStruct(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_cwmp__UpdateOpStruct
-#define soap_POST_recv_cwmp__UpdateOpStruct(soap, data) ( soap_read_cwmp__UpdateOpStruct(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE_cwmp__InstallOpStruct_DEFINED
-#define SOAP_TYPE_cwmp__InstallOpStruct_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default_cwmp__InstallOpStruct(struct soap*, struct cwmp__InstallOpStruct *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__InstallOpStruct(struct soap*, const struct cwmp__InstallOpStruct *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__InstallOpStruct(struct soap*, const char*, int, const struct cwmp__InstallOpStruct *, const char*);
-SOAP_FMAC3 struct cwmp__InstallOpStruct * SOAP_FMAC4 soap_in_cwmp__InstallOpStruct(struct soap*, const char*, struct cwmp__InstallOpStruct *, const char*);
-
-SOAP_FMAC3 struct cwmp__InstallOpStruct * SOAP_FMAC4 soap_new_cwmp__InstallOpStruct(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__InstallOpStruct(struct soap*, const struct cwmp__InstallOpStruct *, const char*, const char*);
-
-#ifndef soap_write_cwmp__InstallOpStruct
-#define soap_write_cwmp__InstallOpStruct(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize_cwmp__InstallOpStruct(soap, data), 0) || soap_put_cwmp__InstallOpStruct(soap, data, "cwmp:InstallOpStruct", "cwmp:InstallOpStruct") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__InstallOpStruct
-#define soap_PUT_cwmp__InstallOpStruct(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize_cwmp__InstallOpStruct(soap, data), 0) || soap_put_cwmp__InstallOpStruct(soap, data, "cwmp:InstallOpStruct", "cwmp:InstallOpStruct") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_cwmp__InstallOpStruct
-#define soap_POST_send_cwmp__InstallOpStruct(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize_cwmp__InstallOpStruct(soap, data), 0) || soap_put_cwmp__InstallOpStruct(soap, data, "cwmp:InstallOpStruct", "cwmp:InstallOpStruct") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct cwmp__InstallOpStruct * SOAP_FMAC4 soap_get_cwmp__InstallOpStruct(struct soap*, struct cwmp__InstallOpStruct *, const char*, const char*);
-
-#ifndef soap_read_cwmp__InstallOpStruct
-#define soap_read_cwmp__InstallOpStruct(soap, data) ( ((data) ? (soap_default_cwmp__InstallOpStruct(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get_cwmp__InstallOpStruct(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_cwmp__InstallOpStruct
-#define soap_GET_cwmp__InstallOpStruct(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__InstallOpStruct(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_cwmp__InstallOpStruct
-#define soap_POST_recv_cwmp__InstallOpStruct(soap, data) ( soap_read_cwmp__InstallOpStruct(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE__cwmp__AutonomousDUStateChangeCompleteResponse_DEFINED
-#define SOAP_TYPE__cwmp__AutonomousDUStateChangeCompleteResponse_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default__cwmp__AutonomousDUStateChangeCompleteResponse(struct soap*, struct _cwmp__AutonomousDUStateChangeCompleteResponse *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize__cwmp__AutonomousDUStateChangeCompleteResponse(struct soap*, const struct _cwmp__AutonomousDUStateChangeCompleteResponse *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out__cwmp__AutonomousDUStateChangeCompleteResponse(struct soap*, const char*, int, const struct _cwmp__AutonomousDUStateChangeCompleteResponse *, const char*);
-SOAP_FMAC3 struct _cwmp__AutonomousDUStateChangeCompleteResponse * SOAP_FMAC4 soap_in__cwmp__AutonomousDUStateChangeCompleteResponse(struct soap*, const char*, struct _cwmp__AutonomousDUStateChangeCompleteResponse *, const char*);
-
-SOAP_FMAC3 struct _cwmp__AutonomousDUStateChangeCompleteResponse * SOAP_FMAC4 soap_new__cwmp__AutonomousDUStateChangeCompleteResponse(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put__cwmp__AutonomousDUStateChangeCompleteResponse(struct soap*, const struct _cwmp__AutonomousDUStateChangeCompleteResponse *, const char*, const char*);
-
-#ifndef soap_write__cwmp__AutonomousDUStateChangeCompleteResponse
-#define soap_write__cwmp__AutonomousDUStateChangeCompleteResponse(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize__cwmp__AutonomousDUStateChangeCompleteResponse(soap, data), 0) || soap_put__cwmp__AutonomousDUStateChangeCompleteResponse(soap, data, "cwmp:AutonomousDUStateChangeCompleteResponse", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT__cwmp__AutonomousDUStateChangeCompleteResponse
-#define soap_PUT__cwmp__AutonomousDUStateChangeCompleteResponse(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize__cwmp__AutonomousDUStateChangeCompleteResponse(soap, data), 0) || soap_put__cwmp__AutonomousDUStateChangeCompleteResponse(soap, data, "cwmp:AutonomousDUStateChangeCompleteResponse", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send__cwmp__AutonomousDUStateChangeCompleteResponse
-#define soap_POST_send__cwmp__AutonomousDUStateChangeCompleteResponse(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize__cwmp__AutonomousDUStateChangeCompleteResponse(soap, data), 0) || soap_put__cwmp__AutonomousDUStateChangeCompleteResponse(soap, data, "cwmp:AutonomousDUStateChangeCompleteResponse", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct _cwmp__AutonomousDUStateChangeCompleteResponse * SOAP_FMAC4 soap_get__cwmp__AutonomousDUStateChangeCompleteResponse(struct soap*, struct _cwmp__AutonomousDUStateChangeCompleteResponse *, const char*, const char*);
-
-#ifndef soap_read__cwmp__AutonomousDUStateChangeCompleteResponse
-#define soap_read__cwmp__AutonomousDUStateChangeCompleteResponse(soap, data) ( ((data) ? (soap_default__cwmp__AutonomousDUStateChangeCompleteResponse(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get__cwmp__AutonomousDUStateChangeCompleteResponse(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET__cwmp__AutonomousDUStateChangeCompleteResponse
-#define soap_GET__cwmp__AutonomousDUStateChangeCompleteResponse(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read__cwmp__AutonomousDUStateChangeCompleteResponse(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv__cwmp__AutonomousDUStateChangeCompleteResponse
-#define soap_POST_recv__cwmp__AutonomousDUStateChangeCompleteResponse(soap, data) ( soap_read__cwmp__AutonomousDUStateChangeCompleteResponse(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE_cwmp__AutonOpResultStruct_DEFINED
-#define SOAP_TYPE_cwmp__AutonOpResultStruct_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default_cwmp__AutonOpResultStruct(struct soap*, struct cwmp__AutonOpResultStruct *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__AutonOpResultStruct(struct soap*, const struct cwmp__AutonOpResultStruct *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__AutonOpResultStruct(struct soap*, const char*, int, const struct cwmp__AutonOpResultStruct *, const char*);
-SOAP_FMAC3 struct cwmp__AutonOpResultStruct * SOAP_FMAC4 soap_in_cwmp__AutonOpResultStruct(struct soap*, const char*, struct cwmp__AutonOpResultStruct *, const char*);
-
-SOAP_FMAC3 struct cwmp__AutonOpResultStruct * SOAP_FMAC4 soap_new_cwmp__AutonOpResultStruct(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__AutonOpResultStruct(struct soap*, const struct cwmp__AutonOpResultStruct *, const char*, const char*);
-
-#ifndef soap_write_cwmp__AutonOpResultStruct
-#define soap_write_cwmp__AutonOpResultStruct(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize_cwmp__AutonOpResultStruct(soap, data), 0) || soap_put_cwmp__AutonOpResultStruct(soap, data, "cwmp:AutonOpResultStruct", "cwmp:AutonOpResultStruct") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__AutonOpResultStruct
-#define soap_PUT_cwmp__AutonOpResultStruct(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize_cwmp__AutonOpResultStruct(soap, data), 0) || soap_put_cwmp__AutonOpResultStruct(soap, data, "cwmp:AutonOpResultStruct", "cwmp:AutonOpResultStruct") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_cwmp__AutonOpResultStruct
-#define soap_POST_send_cwmp__AutonOpResultStruct(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize_cwmp__AutonOpResultStruct(soap, data), 0) || soap_put_cwmp__AutonOpResultStruct(soap, data, "cwmp:AutonOpResultStruct", "cwmp:AutonOpResultStruct") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct cwmp__AutonOpResultStruct * SOAP_FMAC4 soap_get_cwmp__AutonOpResultStruct(struct soap*, struct cwmp__AutonOpResultStruct *, const char*, const char*);
-
-#ifndef soap_read_cwmp__AutonOpResultStruct
-#define soap_read_cwmp__AutonOpResultStruct(soap, data) ( ((data) ? (soap_default_cwmp__AutonOpResultStruct(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get_cwmp__AutonOpResultStruct(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_cwmp__AutonOpResultStruct
-#define soap_GET_cwmp__AutonOpResultStruct(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__AutonOpResultStruct(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_cwmp__AutonOpResultStruct
-#define soap_POST_recv_cwmp__AutonOpResultStruct(soap, data) ( soap_read_cwmp__AutonOpResultStruct(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE__cwmp__AutonomousDUStateChangeComplete_DEFINED
-#define SOAP_TYPE__cwmp__AutonomousDUStateChangeComplete_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default__cwmp__AutonomousDUStateChangeComplete(struct soap*, struct _cwmp__AutonomousDUStateChangeComplete *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize__cwmp__AutonomousDUStateChangeComplete(struct soap*, const struct _cwmp__AutonomousDUStateChangeComplete *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out__cwmp__AutonomousDUStateChangeComplete(struct soap*, const char*, int, const struct _cwmp__AutonomousDUStateChangeComplete *, const char*);
-SOAP_FMAC3 struct _cwmp__AutonomousDUStateChangeComplete * SOAP_FMAC4 soap_in__cwmp__AutonomousDUStateChangeComplete(struct soap*, const char*, struct _cwmp__AutonomousDUStateChangeComplete *, const char*);
-
-SOAP_FMAC3 struct _cwmp__AutonomousDUStateChangeComplete * SOAP_FMAC4 soap_new__cwmp__AutonomousDUStateChangeComplete(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put__cwmp__AutonomousDUStateChangeComplete(struct soap*, const struct _cwmp__AutonomousDUStateChangeComplete *, const char*, const char*);
-
-#ifndef soap_write__cwmp__AutonomousDUStateChangeComplete
-#define soap_write__cwmp__AutonomousDUStateChangeComplete(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize__cwmp__AutonomousDUStateChangeComplete(soap, data), 0) || soap_put__cwmp__AutonomousDUStateChangeComplete(soap, data, "cwmp:AutonomousDUStateChangeComplete", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT__cwmp__AutonomousDUStateChangeComplete
-#define soap_PUT__cwmp__AutonomousDUStateChangeComplete(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize__cwmp__AutonomousDUStateChangeComplete(soap, data), 0) || soap_put__cwmp__AutonomousDUStateChangeComplete(soap, data, "cwmp:AutonomousDUStateChangeComplete", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send__cwmp__AutonomousDUStateChangeComplete
-#define soap_POST_send__cwmp__AutonomousDUStateChangeComplete(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize__cwmp__AutonomousDUStateChangeComplete(soap, data), 0) || soap_put__cwmp__AutonomousDUStateChangeComplete(soap, data, "cwmp:AutonomousDUStateChangeComplete", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct _cwmp__AutonomousDUStateChangeComplete * SOAP_FMAC4 soap_get__cwmp__AutonomousDUStateChangeComplete(struct soap*, struct _cwmp__AutonomousDUStateChangeComplete *, const char*, const char*);
-
-#ifndef soap_read__cwmp__AutonomousDUStateChangeComplete
-#define soap_read__cwmp__AutonomousDUStateChangeComplete(soap, data) ( ((data) ? (soap_default__cwmp__AutonomousDUStateChangeComplete(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get__cwmp__AutonomousDUStateChangeComplete(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET__cwmp__AutonomousDUStateChangeComplete
-#define soap_GET__cwmp__AutonomousDUStateChangeComplete(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read__cwmp__AutonomousDUStateChangeComplete(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv__cwmp__AutonomousDUStateChangeComplete
-#define soap_POST_recv__cwmp__AutonomousDUStateChangeComplete(soap, data) ( soap_read__cwmp__AutonomousDUStateChangeComplete(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE__cwmp__DUStateChangeCompleteResponse_DEFINED
-#define SOAP_TYPE__cwmp__DUStateChangeCompleteResponse_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default__cwmp__DUStateChangeCompleteResponse(struct soap*, struct _cwmp__DUStateChangeCompleteResponse *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize__cwmp__DUStateChangeCompleteResponse(struct soap*, const struct _cwmp__DUStateChangeCompleteResponse *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out__cwmp__DUStateChangeCompleteResponse(struct soap*, const char*, int, const struct _cwmp__DUStateChangeCompleteResponse *, const char*);
-SOAP_FMAC3 struct _cwmp__DUStateChangeCompleteResponse * SOAP_FMAC4 soap_in__cwmp__DUStateChangeCompleteResponse(struct soap*, const char*, struct _cwmp__DUStateChangeCompleteResponse *, const char*);
-
-SOAP_FMAC3 struct _cwmp__DUStateChangeCompleteResponse * SOAP_FMAC4 soap_new__cwmp__DUStateChangeCompleteResponse(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put__cwmp__DUStateChangeCompleteResponse(struct soap*, const struct _cwmp__DUStateChangeCompleteResponse *, const char*, const char*);
-
-#ifndef soap_write__cwmp__DUStateChangeCompleteResponse
-#define soap_write__cwmp__DUStateChangeCompleteResponse(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize__cwmp__DUStateChangeCompleteResponse(soap, data), 0) || soap_put__cwmp__DUStateChangeCompleteResponse(soap, data, "cwmp:DUStateChangeCompleteResponse", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT__cwmp__DUStateChangeCompleteResponse
-#define soap_PUT__cwmp__DUStateChangeCompleteResponse(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize__cwmp__DUStateChangeCompleteResponse(soap, data), 0) || soap_put__cwmp__DUStateChangeCompleteResponse(soap, data, "cwmp:DUStateChangeCompleteResponse", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send__cwmp__DUStateChangeCompleteResponse
-#define soap_POST_send__cwmp__DUStateChangeCompleteResponse(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize__cwmp__DUStateChangeCompleteResponse(soap, data), 0) || soap_put__cwmp__DUStateChangeCompleteResponse(soap, data, "cwmp:DUStateChangeCompleteResponse", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct _cwmp__DUStateChangeCompleteResponse * SOAP_FMAC4 soap_get__cwmp__DUStateChangeCompleteResponse(struct soap*, struct _cwmp__DUStateChangeCompleteResponse *, const char*, const char*);
-
-#ifndef soap_read__cwmp__DUStateChangeCompleteResponse
-#define soap_read__cwmp__DUStateChangeCompleteResponse(soap, data) ( ((data) ? (soap_default__cwmp__DUStateChangeCompleteResponse(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get__cwmp__DUStateChangeCompleteResponse(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET__cwmp__DUStateChangeCompleteResponse
-#define soap_GET__cwmp__DUStateChangeCompleteResponse(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read__cwmp__DUStateChangeCompleteResponse(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv__cwmp__DUStateChangeCompleteResponse
-#define soap_POST_recv__cwmp__DUStateChangeCompleteResponse(soap, data) ( soap_read__cwmp__DUStateChangeCompleteResponse(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE__cwmp__DUStateChangeComplete_DEFINED
-#define SOAP_TYPE__cwmp__DUStateChangeComplete_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default__cwmp__DUStateChangeComplete(struct soap*, struct _cwmp__DUStateChangeComplete *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize__cwmp__DUStateChangeComplete(struct soap*, const struct _cwmp__DUStateChangeComplete *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out__cwmp__DUStateChangeComplete(struct soap*, const char*, int, const struct _cwmp__DUStateChangeComplete *, const char*);
-SOAP_FMAC3 struct _cwmp__DUStateChangeComplete * SOAP_FMAC4 soap_in__cwmp__DUStateChangeComplete(struct soap*, const char*, struct _cwmp__DUStateChangeComplete *, const char*);
-
-SOAP_FMAC3 struct _cwmp__DUStateChangeComplete * SOAP_FMAC4 soap_new__cwmp__DUStateChangeComplete(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put__cwmp__DUStateChangeComplete(struct soap*, const struct _cwmp__DUStateChangeComplete *, const char*, const char*);
-
-#ifndef soap_write__cwmp__DUStateChangeComplete
-#define soap_write__cwmp__DUStateChangeComplete(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize__cwmp__DUStateChangeComplete(soap, data), 0) || soap_put__cwmp__DUStateChangeComplete(soap, data, "cwmp:DUStateChangeComplete", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT__cwmp__DUStateChangeComplete
-#define soap_PUT__cwmp__DUStateChangeComplete(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize__cwmp__DUStateChangeComplete(soap, data), 0) || soap_put__cwmp__DUStateChangeComplete(soap, data, "cwmp:DUStateChangeComplete", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send__cwmp__DUStateChangeComplete
-#define soap_POST_send__cwmp__DUStateChangeComplete(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize__cwmp__DUStateChangeComplete(soap, data), 0) || soap_put__cwmp__DUStateChangeComplete(soap, data, "cwmp:DUStateChangeComplete", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct _cwmp__DUStateChangeComplete * SOAP_FMAC4 soap_get__cwmp__DUStateChangeComplete(struct soap*, struct _cwmp__DUStateChangeComplete *, const char*, const char*);
-
-#ifndef soap_read__cwmp__DUStateChangeComplete
-#define soap_read__cwmp__DUStateChangeComplete(soap, data) ( ((data) ? (soap_default__cwmp__DUStateChangeComplete(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get__cwmp__DUStateChangeComplete(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET__cwmp__DUStateChangeComplete
-#define soap_GET__cwmp__DUStateChangeComplete(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read__cwmp__DUStateChangeComplete(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv__cwmp__DUStateChangeComplete
-#define soap_POST_recv__cwmp__DUStateChangeComplete(soap, data) ( soap_read__cwmp__DUStateChangeComplete(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
 #ifndef SOAP_TYPE__cwmp__RequestDownloadResponse_DEFINED
 #define SOAP_TYPE__cwmp__RequestDownloadResponse_DEFINED
 SOAP_FMAC3 void SOAP_FMAC4 soap_default__cwmp__RequestDownloadResponse(struct soap*, struct _cwmp__RequestDownloadResponse *);
@@ -2220,90 +1490,6 @@ SOAP_FMAC3 struct _cwmp__Kicked * SOAP_FMAC4 soap_get__cwmp__Kicked(struct soap*
 
 #endif
 
-#ifndef SOAP_TYPE__cwmp__AutonomousTransferCompleteResponse_DEFINED
-#define SOAP_TYPE__cwmp__AutonomousTransferCompleteResponse_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default__cwmp__AutonomousTransferCompleteResponse(struct soap*, struct _cwmp__AutonomousTransferCompleteResponse *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize__cwmp__AutonomousTransferCompleteResponse(struct soap*, const struct _cwmp__AutonomousTransferCompleteResponse *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out__cwmp__AutonomousTransferCompleteResponse(struct soap*, const char*, int, const struct _cwmp__AutonomousTransferCompleteResponse *, const char*);
-SOAP_FMAC3 struct _cwmp__AutonomousTransferCompleteResponse * SOAP_FMAC4 soap_in__cwmp__AutonomousTransferCompleteResponse(struct soap*, const char*, struct _cwmp__AutonomousTransferCompleteResponse *, const char*);
-
-SOAP_FMAC3 struct _cwmp__AutonomousTransferCompleteResponse * SOAP_FMAC4 soap_new__cwmp__AutonomousTransferCompleteResponse(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put__cwmp__AutonomousTransferCompleteResponse(struct soap*, const struct _cwmp__AutonomousTransferCompleteResponse *, const char*, const char*);
-
-#ifndef soap_write__cwmp__AutonomousTransferCompleteResponse
-#define soap_write__cwmp__AutonomousTransferCompleteResponse(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize__cwmp__AutonomousTransferCompleteResponse(soap, data), 0) || soap_put__cwmp__AutonomousTransferCompleteResponse(soap, data, "cwmp:AutonomousTransferCompleteResponse", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT__cwmp__AutonomousTransferCompleteResponse
-#define soap_PUT__cwmp__AutonomousTransferCompleteResponse(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize__cwmp__AutonomousTransferCompleteResponse(soap, data), 0) || soap_put__cwmp__AutonomousTransferCompleteResponse(soap, data, "cwmp:AutonomousTransferCompleteResponse", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send__cwmp__AutonomousTransferCompleteResponse
-#define soap_POST_send__cwmp__AutonomousTransferCompleteResponse(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize__cwmp__AutonomousTransferCompleteResponse(soap, data), 0) || soap_put__cwmp__AutonomousTransferCompleteResponse(soap, data, "cwmp:AutonomousTransferCompleteResponse", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct _cwmp__AutonomousTransferCompleteResponse * SOAP_FMAC4 soap_get__cwmp__AutonomousTransferCompleteResponse(struct soap*, struct _cwmp__AutonomousTransferCompleteResponse *, const char*, const char*);
-
-#ifndef soap_read__cwmp__AutonomousTransferCompleteResponse
-#define soap_read__cwmp__AutonomousTransferCompleteResponse(soap, data) ( ((data) ? (soap_default__cwmp__AutonomousTransferCompleteResponse(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get__cwmp__AutonomousTransferCompleteResponse(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET__cwmp__AutonomousTransferCompleteResponse
-#define soap_GET__cwmp__AutonomousTransferCompleteResponse(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read__cwmp__AutonomousTransferCompleteResponse(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv__cwmp__AutonomousTransferCompleteResponse
-#define soap_POST_recv__cwmp__AutonomousTransferCompleteResponse(soap, data) ( soap_read__cwmp__AutonomousTransferCompleteResponse(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE__cwmp__AutonomousTransferComplete_DEFINED
-#define SOAP_TYPE__cwmp__AutonomousTransferComplete_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default__cwmp__AutonomousTransferComplete(struct soap*, struct _cwmp__AutonomousTransferComplete *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize__cwmp__AutonomousTransferComplete(struct soap*, const struct _cwmp__AutonomousTransferComplete *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out__cwmp__AutonomousTransferComplete(struct soap*, const char*, int, const struct _cwmp__AutonomousTransferComplete *, const char*);
-SOAP_FMAC3 struct _cwmp__AutonomousTransferComplete * SOAP_FMAC4 soap_in__cwmp__AutonomousTransferComplete(struct soap*, const char*, struct _cwmp__AutonomousTransferComplete *, const char*);
-
-SOAP_FMAC3 struct _cwmp__AutonomousTransferComplete * SOAP_FMAC4 soap_new__cwmp__AutonomousTransferComplete(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put__cwmp__AutonomousTransferComplete(struct soap*, const struct _cwmp__AutonomousTransferComplete *, const char*, const char*);
-
-#ifndef soap_write__cwmp__AutonomousTransferComplete
-#define soap_write__cwmp__AutonomousTransferComplete(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize__cwmp__AutonomousTransferComplete(soap, data), 0) || soap_put__cwmp__AutonomousTransferComplete(soap, data, "cwmp:AutonomousTransferComplete", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT__cwmp__AutonomousTransferComplete
-#define soap_PUT__cwmp__AutonomousTransferComplete(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize__cwmp__AutonomousTransferComplete(soap, data), 0) || soap_put__cwmp__AutonomousTransferComplete(soap, data, "cwmp:AutonomousTransferComplete", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send__cwmp__AutonomousTransferComplete
-#define soap_POST_send__cwmp__AutonomousTransferComplete(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize__cwmp__AutonomousTransferComplete(soap, data), 0) || soap_put__cwmp__AutonomousTransferComplete(soap, data, "cwmp:AutonomousTransferComplete", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct _cwmp__AutonomousTransferComplete * SOAP_FMAC4 soap_get__cwmp__AutonomousTransferComplete(struct soap*, struct _cwmp__AutonomousTransferComplete *, const char*, const char*);
-
-#ifndef soap_read__cwmp__AutonomousTransferComplete
-#define soap_read__cwmp__AutonomousTransferComplete(soap, data) ( ((data) ? (soap_default__cwmp__AutonomousTransferComplete(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get__cwmp__AutonomousTransferComplete(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET__cwmp__AutonomousTransferComplete
-#define soap_GET__cwmp__AutonomousTransferComplete(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read__cwmp__AutonomousTransferComplete(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv__cwmp__AutonomousTransferComplete
-#define soap_POST_recv__cwmp__AutonomousTransferComplete(soap, data) ( soap_read__cwmp__AutonomousTransferComplete(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
 #ifndef SOAP_TYPE__cwmp__TransferCompleteResponse_DEFINED
 #define SOAP_TYPE__cwmp__TransferCompleteResponse_DEFINED
 SOAP_FMAC3 void SOAP_FMAC4 soap_default__cwmp__TransferCompleteResponse(struct soap*, struct _cwmp__TransferCompleteResponse *);
@@ -2510,426 +1696,6 @@ SOAP_FMAC3 struct _cwmp__Inform * SOAP_FMAC4 soap_get__cwmp__Inform(struct soap*
 
 #ifndef soap_POST_recv__cwmp__Inform
 #define soap_POST_recv__cwmp__Inform(soap, data) ( soap_read__cwmp__Inform(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE__cwmp__ChangeDUStateResponse_DEFINED
-#define SOAP_TYPE__cwmp__ChangeDUStateResponse_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default__cwmp__ChangeDUStateResponse(struct soap*, struct _cwmp__ChangeDUStateResponse *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize__cwmp__ChangeDUStateResponse(struct soap*, const struct _cwmp__ChangeDUStateResponse *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out__cwmp__ChangeDUStateResponse(struct soap*, const char*, int, const struct _cwmp__ChangeDUStateResponse *, const char*);
-SOAP_FMAC3 struct _cwmp__ChangeDUStateResponse * SOAP_FMAC4 soap_in__cwmp__ChangeDUStateResponse(struct soap*, const char*, struct _cwmp__ChangeDUStateResponse *, const char*);
-
-SOAP_FMAC3 struct _cwmp__ChangeDUStateResponse * SOAP_FMAC4 soap_new__cwmp__ChangeDUStateResponse(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put__cwmp__ChangeDUStateResponse(struct soap*, const struct _cwmp__ChangeDUStateResponse *, const char*, const char*);
-
-#ifndef soap_write__cwmp__ChangeDUStateResponse
-#define soap_write__cwmp__ChangeDUStateResponse(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize__cwmp__ChangeDUStateResponse(soap, data), 0) || soap_put__cwmp__ChangeDUStateResponse(soap, data, "cwmp:ChangeDUStateResponse", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT__cwmp__ChangeDUStateResponse
-#define soap_PUT__cwmp__ChangeDUStateResponse(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize__cwmp__ChangeDUStateResponse(soap, data), 0) || soap_put__cwmp__ChangeDUStateResponse(soap, data, "cwmp:ChangeDUStateResponse", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send__cwmp__ChangeDUStateResponse
-#define soap_POST_send__cwmp__ChangeDUStateResponse(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize__cwmp__ChangeDUStateResponse(soap, data), 0) || soap_put__cwmp__ChangeDUStateResponse(soap, data, "cwmp:ChangeDUStateResponse", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct _cwmp__ChangeDUStateResponse * SOAP_FMAC4 soap_get__cwmp__ChangeDUStateResponse(struct soap*, struct _cwmp__ChangeDUStateResponse *, const char*, const char*);
-
-#ifndef soap_read__cwmp__ChangeDUStateResponse
-#define soap_read__cwmp__ChangeDUStateResponse(soap, data) ( ((data) ? (soap_default__cwmp__ChangeDUStateResponse(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get__cwmp__ChangeDUStateResponse(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET__cwmp__ChangeDUStateResponse
-#define soap_GET__cwmp__ChangeDUStateResponse(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read__cwmp__ChangeDUStateResponse(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv__cwmp__ChangeDUStateResponse
-#define soap_POST_recv__cwmp__ChangeDUStateResponse(soap, data) ( soap_read__cwmp__ChangeDUStateResponse(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE__cwmp__ChangeDUState_DEFINED
-#define SOAP_TYPE__cwmp__ChangeDUState_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default__cwmp__ChangeDUState(struct soap*, struct _cwmp__ChangeDUState *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize__cwmp__ChangeDUState(struct soap*, const struct _cwmp__ChangeDUState *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out__cwmp__ChangeDUState(struct soap*, const char*, int, const struct _cwmp__ChangeDUState *, const char*);
-SOAP_FMAC3 struct _cwmp__ChangeDUState * SOAP_FMAC4 soap_in__cwmp__ChangeDUState(struct soap*, const char*, struct _cwmp__ChangeDUState *, const char*);
-
-SOAP_FMAC3 struct _cwmp__ChangeDUState * SOAP_FMAC4 soap_new__cwmp__ChangeDUState(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put__cwmp__ChangeDUState(struct soap*, const struct _cwmp__ChangeDUState *, const char*, const char*);
-
-#ifndef soap_write__cwmp__ChangeDUState
-#define soap_write__cwmp__ChangeDUState(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize__cwmp__ChangeDUState(soap, data), 0) || soap_put__cwmp__ChangeDUState(soap, data, "cwmp:ChangeDUState", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT__cwmp__ChangeDUState
-#define soap_PUT__cwmp__ChangeDUState(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize__cwmp__ChangeDUState(soap, data), 0) || soap_put__cwmp__ChangeDUState(soap, data, "cwmp:ChangeDUState", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send__cwmp__ChangeDUState
-#define soap_POST_send__cwmp__ChangeDUState(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize__cwmp__ChangeDUState(soap, data), 0) || soap_put__cwmp__ChangeDUState(soap, data, "cwmp:ChangeDUState", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct _cwmp__ChangeDUState * SOAP_FMAC4 soap_get__cwmp__ChangeDUState(struct soap*, struct _cwmp__ChangeDUState *, const char*, const char*);
-
-#ifndef soap_read__cwmp__ChangeDUState
-#define soap_read__cwmp__ChangeDUState(soap, data) ( ((data) ? (soap_default__cwmp__ChangeDUState(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get__cwmp__ChangeDUState(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET__cwmp__ChangeDUState
-#define soap_GET__cwmp__ChangeDUState(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read__cwmp__ChangeDUState(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv__cwmp__ChangeDUState
-#define soap_POST_recv__cwmp__ChangeDUState(soap, data) ( soap_read__cwmp__ChangeDUState(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE__cwmp__CancelTransferResponse_DEFINED
-#define SOAP_TYPE__cwmp__CancelTransferResponse_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default__cwmp__CancelTransferResponse(struct soap*, struct _cwmp__CancelTransferResponse *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize__cwmp__CancelTransferResponse(struct soap*, const struct _cwmp__CancelTransferResponse *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out__cwmp__CancelTransferResponse(struct soap*, const char*, int, const struct _cwmp__CancelTransferResponse *, const char*);
-SOAP_FMAC3 struct _cwmp__CancelTransferResponse * SOAP_FMAC4 soap_in__cwmp__CancelTransferResponse(struct soap*, const char*, struct _cwmp__CancelTransferResponse *, const char*);
-
-SOAP_FMAC3 struct _cwmp__CancelTransferResponse * SOAP_FMAC4 soap_new__cwmp__CancelTransferResponse(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put__cwmp__CancelTransferResponse(struct soap*, const struct _cwmp__CancelTransferResponse *, const char*, const char*);
-
-#ifndef soap_write__cwmp__CancelTransferResponse
-#define soap_write__cwmp__CancelTransferResponse(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize__cwmp__CancelTransferResponse(soap, data), 0) || soap_put__cwmp__CancelTransferResponse(soap, data, "cwmp:CancelTransferResponse", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT__cwmp__CancelTransferResponse
-#define soap_PUT__cwmp__CancelTransferResponse(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize__cwmp__CancelTransferResponse(soap, data), 0) || soap_put__cwmp__CancelTransferResponse(soap, data, "cwmp:CancelTransferResponse", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send__cwmp__CancelTransferResponse
-#define soap_POST_send__cwmp__CancelTransferResponse(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize__cwmp__CancelTransferResponse(soap, data), 0) || soap_put__cwmp__CancelTransferResponse(soap, data, "cwmp:CancelTransferResponse", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct _cwmp__CancelTransferResponse * SOAP_FMAC4 soap_get__cwmp__CancelTransferResponse(struct soap*, struct _cwmp__CancelTransferResponse *, const char*, const char*);
-
-#ifndef soap_read__cwmp__CancelTransferResponse
-#define soap_read__cwmp__CancelTransferResponse(soap, data) ( ((data) ? (soap_default__cwmp__CancelTransferResponse(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get__cwmp__CancelTransferResponse(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET__cwmp__CancelTransferResponse
-#define soap_GET__cwmp__CancelTransferResponse(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read__cwmp__CancelTransferResponse(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv__cwmp__CancelTransferResponse
-#define soap_POST_recv__cwmp__CancelTransferResponse(soap, data) ( soap_read__cwmp__CancelTransferResponse(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE__cwmp__CancelTransfer_DEFINED
-#define SOAP_TYPE__cwmp__CancelTransfer_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default__cwmp__CancelTransfer(struct soap*, struct _cwmp__CancelTransfer *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize__cwmp__CancelTransfer(struct soap*, const struct _cwmp__CancelTransfer *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out__cwmp__CancelTransfer(struct soap*, const char*, int, const struct _cwmp__CancelTransfer *, const char*);
-SOAP_FMAC3 struct _cwmp__CancelTransfer * SOAP_FMAC4 soap_in__cwmp__CancelTransfer(struct soap*, const char*, struct _cwmp__CancelTransfer *, const char*);
-
-SOAP_FMAC3 struct _cwmp__CancelTransfer * SOAP_FMAC4 soap_new__cwmp__CancelTransfer(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put__cwmp__CancelTransfer(struct soap*, const struct _cwmp__CancelTransfer *, const char*, const char*);
-
-#ifndef soap_write__cwmp__CancelTransfer
-#define soap_write__cwmp__CancelTransfer(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize__cwmp__CancelTransfer(soap, data), 0) || soap_put__cwmp__CancelTransfer(soap, data, "cwmp:CancelTransfer", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT__cwmp__CancelTransfer
-#define soap_PUT__cwmp__CancelTransfer(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize__cwmp__CancelTransfer(soap, data), 0) || soap_put__cwmp__CancelTransfer(soap, data, "cwmp:CancelTransfer", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send__cwmp__CancelTransfer
-#define soap_POST_send__cwmp__CancelTransfer(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize__cwmp__CancelTransfer(soap, data), 0) || soap_put__cwmp__CancelTransfer(soap, data, "cwmp:CancelTransfer", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct _cwmp__CancelTransfer * SOAP_FMAC4 soap_get__cwmp__CancelTransfer(struct soap*, struct _cwmp__CancelTransfer *, const char*, const char*);
-
-#ifndef soap_read__cwmp__CancelTransfer
-#define soap_read__cwmp__CancelTransfer(soap, data) ( ((data) ? (soap_default__cwmp__CancelTransfer(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get__cwmp__CancelTransfer(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET__cwmp__CancelTransfer
-#define soap_GET__cwmp__CancelTransfer(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read__cwmp__CancelTransfer(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv__cwmp__CancelTransfer
-#define soap_POST_recv__cwmp__CancelTransfer(soap, data) ( soap_read__cwmp__CancelTransfer(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE__cwmp__ScheduleDownloadResponse_DEFINED
-#define SOAP_TYPE__cwmp__ScheduleDownloadResponse_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default__cwmp__ScheduleDownloadResponse(struct soap*, struct _cwmp__ScheduleDownloadResponse *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize__cwmp__ScheduleDownloadResponse(struct soap*, const struct _cwmp__ScheduleDownloadResponse *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out__cwmp__ScheduleDownloadResponse(struct soap*, const char*, int, const struct _cwmp__ScheduleDownloadResponse *, const char*);
-SOAP_FMAC3 struct _cwmp__ScheduleDownloadResponse * SOAP_FMAC4 soap_in__cwmp__ScheduleDownloadResponse(struct soap*, const char*, struct _cwmp__ScheduleDownloadResponse *, const char*);
-
-SOAP_FMAC3 struct _cwmp__ScheduleDownloadResponse * SOAP_FMAC4 soap_new__cwmp__ScheduleDownloadResponse(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put__cwmp__ScheduleDownloadResponse(struct soap*, const struct _cwmp__ScheduleDownloadResponse *, const char*, const char*);
-
-#ifndef soap_write__cwmp__ScheduleDownloadResponse
-#define soap_write__cwmp__ScheduleDownloadResponse(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize__cwmp__ScheduleDownloadResponse(soap, data), 0) || soap_put__cwmp__ScheduleDownloadResponse(soap, data, "cwmp:ScheduleDownloadResponse", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT__cwmp__ScheduleDownloadResponse
-#define soap_PUT__cwmp__ScheduleDownloadResponse(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize__cwmp__ScheduleDownloadResponse(soap, data), 0) || soap_put__cwmp__ScheduleDownloadResponse(soap, data, "cwmp:ScheduleDownloadResponse", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send__cwmp__ScheduleDownloadResponse
-#define soap_POST_send__cwmp__ScheduleDownloadResponse(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize__cwmp__ScheduleDownloadResponse(soap, data), 0) || soap_put__cwmp__ScheduleDownloadResponse(soap, data, "cwmp:ScheduleDownloadResponse", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct _cwmp__ScheduleDownloadResponse * SOAP_FMAC4 soap_get__cwmp__ScheduleDownloadResponse(struct soap*, struct _cwmp__ScheduleDownloadResponse *, const char*, const char*);
-
-#ifndef soap_read__cwmp__ScheduleDownloadResponse
-#define soap_read__cwmp__ScheduleDownloadResponse(soap, data) ( ((data) ? (soap_default__cwmp__ScheduleDownloadResponse(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get__cwmp__ScheduleDownloadResponse(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET__cwmp__ScheduleDownloadResponse
-#define soap_GET__cwmp__ScheduleDownloadResponse(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read__cwmp__ScheduleDownloadResponse(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv__cwmp__ScheduleDownloadResponse
-#define soap_POST_recv__cwmp__ScheduleDownloadResponse(soap, data) ( soap_read__cwmp__ScheduleDownloadResponse(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE_TimeWindowList_DEFINED
-#define SOAP_TYPE_TimeWindowList_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default_TimeWindowList(struct soap*, struct TimeWindowList *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_TimeWindowList(struct soap*, const struct TimeWindowList *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_TimeWindowList(struct soap*, const char*, int, const struct TimeWindowList *, const char*);
-SOAP_FMAC3 struct TimeWindowList * SOAP_FMAC4 soap_in_TimeWindowList(struct soap*, const char*, struct TimeWindowList *, const char*);
-
-SOAP_FMAC3 struct TimeWindowList * SOAP_FMAC4 soap_new_TimeWindowList(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_TimeWindowList(struct soap*, const struct TimeWindowList *, const char*, const char*);
-
-#ifndef soap_write_TimeWindowList
-#define soap_write_TimeWindowList(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize_TimeWindowList(soap, data), 0) || soap_put_TimeWindowList(soap, data, "SOAP-ENC:Array", "cwmp:TimeWindowStruct") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_TimeWindowList
-#define soap_PUT_TimeWindowList(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize_TimeWindowList(soap, data), 0) || soap_put_TimeWindowList(soap, data, "SOAP-ENC:Array", "cwmp:TimeWindowStruct") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_TimeWindowList
-#define soap_POST_send_TimeWindowList(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize_TimeWindowList(soap, data), 0) || soap_put_TimeWindowList(soap, data, "SOAP-ENC:Array", "cwmp:TimeWindowStruct") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct TimeWindowList * SOAP_FMAC4 soap_get_TimeWindowList(struct soap*, struct TimeWindowList *, const char*, const char*);
-
-#ifndef soap_read_TimeWindowList
-#define soap_read_TimeWindowList(soap, data) ( ((data) ? (soap_default_TimeWindowList(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get_TimeWindowList(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_TimeWindowList
-#define soap_GET_TimeWindowList(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_TimeWindowList(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_TimeWindowList
-#define soap_POST_recv_TimeWindowList(soap, data) ( soap_read_TimeWindowList(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE__cwmp__ScheduleDownload_DEFINED
-#define SOAP_TYPE__cwmp__ScheduleDownload_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default__cwmp__ScheduleDownload(struct soap*, struct _cwmp__ScheduleDownload *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize__cwmp__ScheduleDownload(struct soap*, const struct _cwmp__ScheduleDownload *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out__cwmp__ScheduleDownload(struct soap*, const char*, int, const struct _cwmp__ScheduleDownload *, const char*);
-SOAP_FMAC3 struct _cwmp__ScheduleDownload * SOAP_FMAC4 soap_in__cwmp__ScheduleDownload(struct soap*, const char*, struct _cwmp__ScheduleDownload *, const char*);
-
-SOAP_FMAC3 struct _cwmp__ScheduleDownload * SOAP_FMAC4 soap_new__cwmp__ScheduleDownload(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put__cwmp__ScheduleDownload(struct soap*, const struct _cwmp__ScheduleDownload *, const char*, const char*);
-
-#ifndef soap_write__cwmp__ScheduleDownload
-#define soap_write__cwmp__ScheduleDownload(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize__cwmp__ScheduleDownload(soap, data), 0) || soap_put__cwmp__ScheduleDownload(soap, data, "cwmp:ScheduleDownload", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT__cwmp__ScheduleDownload
-#define soap_PUT__cwmp__ScheduleDownload(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize__cwmp__ScheduleDownload(soap, data), 0) || soap_put__cwmp__ScheduleDownload(soap, data, "cwmp:ScheduleDownload", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send__cwmp__ScheduleDownload
-#define soap_POST_send__cwmp__ScheduleDownload(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize__cwmp__ScheduleDownload(soap, data), 0) || soap_put__cwmp__ScheduleDownload(soap, data, "cwmp:ScheduleDownload", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct _cwmp__ScheduleDownload * SOAP_FMAC4 soap_get__cwmp__ScheduleDownload(struct soap*, struct _cwmp__ScheduleDownload *, const char*, const char*);
-
-#ifndef soap_read__cwmp__ScheduleDownload
-#define soap_read__cwmp__ScheduleDownload(soap, data) ( ((data) ? (soap_default__cwmp__ScheduleDownload(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get__cwmp__ScheduleDownload(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET__cwmp__ScheduleDownload
-#define soap_GET__cwmp__ScheduleDownload(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read__cwmp__ScheduleDownload(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv__cwmp__ScheduleDownload
-#define soap_POST_recv__cwmp__ScheduleDownload(soap, data) ( soap_read__cwmp__ScheduleDownload(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE_AllTransferList_DEFINED
-#define SOAP_TYPE_AllTransferList_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default_AllTransferList(struct soap*, struct AllTransferList *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_AllTransferList(struct soap*, const struct AllTransferList *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_AllTransferList(struct soap*, const char*, int, const struct AllTransferList *, const char*);
-SOAP_FMAC3 struct AllTransferList * SOAP_FMAC4 soap_in_AllTransferList(struct soap*, const char*, struct AllTransferList *, const char*);
-
-SOAP_FMAC3 struct AllTransferList * SOAP_FMAC4 soap_new_AllTransferList(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_AllTransferList(struct soap*, const struct AllTransferList *, const char*, const char*);
-
-#ifndef soap_write_AllTransferList
-#define soap_write_AllTransferList(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize_AllTransferList(soap, data), 0) || soap_put_AllTransferList(soap, data, "SOAP-ENC:Array", "cwmp:AllQueuedTransferStruct") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_AllTransferList
-#define soap_PUT_AllTransferList(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize_AllTransferList(soap, data), 0) || soap_put_AllTransferList(soap, data, "SOAP-ENC:Array", "cwmp:AllQueuedTransferStruct") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_AllTransferList
-#define soap_POST_send_AllTransferList(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize_AllTransferList(soap, data), 0) || soap_put_AllTransferList(soap, data, "SOAP-ENC:Array", "cwmp:AllQueuedTransferStruct") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct AllTransferList * SOAP_FMAC4 soap_get_AllTransferList(struct soap*, struct AllTransferList *, const char*, const char*);
-
-#ifndef soap_read_AllTransferList
-#define soap_read_AllTransferList(soap, data) ( ((data) ? (soap_default_AllTransferList(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get_AllTransferList(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_AllTransferList
-#define soap_GET_AllTransferList(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_AllTransferList(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_AllTransferList
-#define soap_POST_recv_AllTransferList(soap, data) ( soap_read_AllTransferList(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE__cwmp__GetAllQueuedTransfersResponse_DEFINED
-#define SOAP_TYPE__cwmp__GetAllQueuedTransfersResponse_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default__cwmp__GetAllQueuedTransfersResponse(struct soap*, struct _cwmp__GetAllQueuedTransfersResponse *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize__cwmp__GetAllQueuedTransfersResponse(struct soap*, const struct _cwmp__GetAllQueuedTransfersResponse *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out__cwmp__GetAllQueuedTransfersResponse(struct soap*, const char*, int, const struct _cwmp__GetAllQueuedTransfersResponse *, const char*);
-SOAP_FMAC3 struct _cwmp__GetAllQueuedTransfersResponse * SOAP_FMAC4 soap_in__cwmp__GetAllQueuedTransfersResponse(struct soap*, const char*, struct _cwmp__GetAllQueuedTransfersResponse *, const char*);
-
-SOAP_FMAC3 struct _cwmp__GetAllQueuedTransfersResponse * SOAP_FMAC4 soap_new__cwmp__GetAllQueuedTransfersResponse(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put__cwmp__GetAllQueuedTransfersResponse(struct soap*, const struct _cwmp__GetAllQueuedTransfersResponse *, const char*, const char*);
-
-#ifndef soap_write__cwmp__GetAllQueuedTransfersResponse
-#define soap_write__cwmp__GetAllQueuedTransfersResponse(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize__cwmp__GetAllQueuedTransfersResponse(soap, data), 0) || soap_put__cwmp__GetAllQueuedTransfersResponse(soap, data, "cwmp:GetAllQueuedTransfersResponse", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT__cwmp__GetAllQueuedTransfersResponse
-#define soap_PUT__cwmp__GetAllQueuedTransfersResponse(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize__cwmp__GetAllQueuedTransfersResponse(soap, data), 0) || soap_put__cwmp__GetAllQueuedTransfersResponse(soap, data, "cwmp:GetAllQueuedTransfersResponse", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send__cwmp__GetAllQueuedTransfersResponse
-#define soap_POST_send__cwmp__GetAllQueuedTransfersResponse(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize__cwmp__GetAllQueuedTransfersResponse(soap, data), 0) || soap_put__cwmp__GetAllQueuedTransfersResponse(soap, data, "cwmp:GetAllQueuedTransfersResponse", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct _cwmp__GetAllQueuedTransfersResponse * SOAP_FMAC4 soap_get__cwmp__GetAllQueuedTransfersResponse(struct soap*, struct _cwmp__GetAllQueuedTransfersResponse *, const char*, const char*);
-
-#ifndef soap_read__cwmp__GetAllQueuedTransfersResponse
-#define soap_read__cwmp__GetAllQueuedTransfersResponse(soap, data) ( ((data) ? (soap_default__cwmp__GetAllQueuedTransfersResponse(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get__cwmp__GetAllQueuedTransfersResponse(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET__cwmp__GetAllQueuedTransfersResponse
-#define soap_GET__cwmp__GetAllQueuedTransfersResponse(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read__cwmp__GetAllQueuedTransfersResponse(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv__cwmp__GetAllQueuedTransfersResponse
-#define soap_POST_recv__cwmp__GetAllQueuedTransfersResponse(soap, data) ( soap_read__cwmp__GetAllQueuedTransfersResponse(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE__cwmp__GetAllQueuedTransfers_DEFINED
-#define SOAP_TYPE__cwmp__GetAllQueuedTransfers_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default__cwmp__GetAllQueuedTransfers(struct soap*, struct _cwmp__GetAllQueuedTransfers *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize__cwmp__GetAllQueuedTransfers(struct soap*, const struct _cwmp__GetAllQueuedTransfers *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out__cwmp__GetAllQueuedTransfers(struct soap*, const char*, int, const struct _cwmp__GetAllQueuedTransfers *, const char*);
-SOAP_FMAC3 struct _cwmp__GetAllQueuedTransfers * SOAP_FMAC4 soap_in__cwmp__GetAllQueuedTransfers(struct soap*, const char*, struct _cwmp__GetAllQueuedTransfers *, const char*);
-
-SOAP_FMAC3 struct _cwmp__GetAllQueuedTransfers * SOAP_FMAC4 soap_new__cwmp__GetAllQueuedTransfers(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put__cwmp__GetAllQueuedTransfers(struct soap*, const struct _cwmp__GetAllQueuedTransfers *, const char*, const char*);
-
-#ifndef soap_write__cwmp__GetAllQueuedTransfers
-#define soap_write__cwmp__GetAllQueuedTransfers(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize__cwmp__GetAllQueuedTransfers(soap, data), 0) || soap_put__cwmp__GetAllQueuedTransfers(soap, data, "cwmp:GetAllQueuedTransfers", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT__cwmp__GetAllQueuedTransfers
-#define soap_PUT__cwmp__GetAllQueuedTransfers(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize__cwmp__GetAllQueuedTransfers(soap, data), 0) || soap_put__cwmp__GetAllQueuedTransfers(soap, data, "cwmp:GetAllQueuedTransfers", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send__cwmp__GetAllQueuedTransfers
-#define soap_POST_send__cwmp__GetAllQueuedTransfers(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize__cwmp__GetAllQueuedTransfers(soap, data), 0) || soap_put__cwmp__GetAllQueuedTransfers(soap, data, "cwmp:GetAllQueuedTransfers", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct _cwmp__GetAllQueuedTransfers * SOAP_FMAC4 soap_get__cwmp__GetAllQueuedTransfers(struct soap*, struct _cwmp__GetAllQueuedTransfers *, const char*, const char*);
-
-#ifndef soap_read__cwmp__GetAllQueuedTransfers
-#define soap_read__cwmp__GetAllQueuedTransfers(soap, data) ( ((data) ? (soap_default__cwmp__GetAllQueuedTransfers(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get__cwmp__GetAllQueuedTransfers(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET__cwmp__GetAllQueuedTransfers
-#define soap_GET__cwmp__GetAllQueuedTransfers(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read__cwmp__GetAllQueuedTransfers(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv__cwmp__GetAllQueuedTransfers
-#define soap_POST_recv__cwmp__GetAllQueuedTransfers(soap, data) ( soap_read__cwmp__GetAllQueuedTransfers(soap, (data)) || soap_closesock(soap), (soap)->error )
 #endif
 
 #endif
@@ -4824,132 +3590,6 @@ SOAP_FMAC3 struct cwmp__OptionStruct * SOAP_FMAC4 soap_get_cwmp__OptionStruct(st
 
 #endif
 
-#ifndef SOAP_TYPE_cwmp__OpResultStruct_DEFINED
-#define SOAP_TYPE_cwmp__OpResultStruct_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default_cwmp__OpResultStruct(struct soap*, struct cwmp__OpResultStruct *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__OpResultStruct(struct soap*, const struct cwmp__OpResultStruct *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__OpResultStruct(struct soap*, const char*, int, const struct cwmp__OpResultStruct *, const char*);
-SOAP_FMAC3 struct cwmp__OpResultStruct * SOAP_FMAC4 soap_in_cwmp__OpResultStruct(struct soap*, const char*, struct cwmp__OpResultStruct *, const char*);
-
-SOAP_FMAC3 struct cwmp__OpResultStruct * SOAP_FMAC4 soap_new_cwmp__OpResultStruct(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__OpResultStruct(struct soap*, const struct cwmp__OpResultStruct *, const char*, const char*);
-
-#ifndef soap_write_cwmp__OpResultStruct
-#define soap_write_cwmp__OpResultStruct(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize_cwmp__OpResultStruct(soap, data), 0) || soap_put_cwmp__OpResultStruct(soap, data, "cwmp:OpResultStruct", "cwmp:OpResultStruct") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__OpResultStruct
-#define soap_PUT_cwmp__OpResultStruct(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize_cwmp__OpResultStruct(soap, data), 0) || soap_put_cwmp__OpResultStruct(soap, data, "cwmp:OpResultStruct", "cwmp:OpResultStruct") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_cwmp__OpResultStruct
-#define soap_POST_send_cwmp__OpResultStruct(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize_cwmp__OpResultStruct(soap, data), 0) || soap_put_cwmp__OpResultStruct(soap, data, "cwmp:OpResultStruct", "cwmp:OpResultStruct") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct cwmp__OpResultStruct * SOAP_FMAC4 soap_get_cwmp__OpResultStruct(struct soap*, struct cwmp__OpResultStruct *, const char*, const char*);
-
-#ifndef soap_read_cwmp__OpResultStruct
-#define soap_read_cwmp__OpResultStruct(soap, data) ( ((data) ? (soap_default_cwmp__OpResultStruct(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get_cwmp__OpResultStruct(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_cwmp__OpResultStruct
-#define soap_GET_cwmp__OpResultStruct(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__OpResultStruct(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_cwmp__OpResultStruct
-#define soap_POST_recv_cwmp__OpResultStruct(soap, data) ( soap_read_cwmp__OpResultStruct(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE_cwmp__OperationStruct_DEFINED
-#define SOAP_TYPE_cwmp__OperationStruct_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default_cwmp__OperationStruct(struct soap*, struct cwmp__OperationStruct *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__OperationStruct(struct soap*, const struct cwmp__OperationStruct *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__OperationStruct(struct soap*, const char*, int, const struct cwmp__OperationStruct *, const char*);
-SOAP_FMAC3 struct cwmp__OperationStruct * SOAP_FMAC4 soap_in_cwmp__OperationStruct(struct soap*, const char*, struct cwmp__OperationStruct *, const char*);
-
-SOAP_FMAC3 struct cwmp__OperationStruct * SOAP_FMAC4 soap_new_cwmp__OperationStruct(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__OperationStruct(struct soap*, const struct cwmp__OperationStruct *, const char*, const char*);
-
-#ifndef soap_write_cwmp__OperationStruct
-#define soap_write_cwmp__OperationStruct(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize_cwmp__OperationStruct(soap, data), 0) || soap_put_cwmp__OperationStruct(soap, data, "cwmp:OperationStruct", "cwmp:OperationStruct") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__OperationStruct
-#define soap_PUT_cwmp__OperationStruct(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize_cwmp__OperationStruct(soap, data), 0) || soap_put_cwmp__OperationStruct(soap, data, "cwmp:OperationStruct", "cwmp:OperationStruct") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_cwmp__OperationStruct
-#define soap_POST_send_cwmp__OperationStruct(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize_cwmp__OperationStruct(soap, data), 0) || soap_put_cwmp__OperationStruct(soap, data, "cwmp:OperationStruct", "cwmp:OperationStruct") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct cwmp__OperationStruct * SOAP_FMAC4 soap_get_cwmp__OperationStruct(struct soap*, struct cwmp__OperationStruct *, const char*, const char*);
-
-#ifndef soap_read_cwmp__OperationStruct
-#define soap_read_cwmp__OperationStruct(soap, data) ( ((data) ? (soap_default_cwmp__OperationStruct(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get_cwmp__OperationStruct(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_cwmp__OperationStruct
-#define soap_GET_cwmp__OperationStruct(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__OperationStruct(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_cwmp__OperationStruct
-#define soap_POST_recv_cwmp__OperationStruct(soap, data) ( soap_read_cwmp__OperationStruct(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE_cwmp__AllQueuedTransferStruct_DEFINED
-#define SOAP_TYPE_cwmp__AllQueuedTransferStruct_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default_cwmp__AllQueuedTransferStruct(struct soap*, struct cwmp__AllQueuedTransferStruct *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__AllQueuedTransferStruct(struct soap*, const struct cwmp__AllQueuedTransferStruct *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__AllQueuedTransferStruct(struct soap*, const char*, int, const struct cwmp__AllQueuedTransferStruct *, const char*);
-SOAP_FMAC3 struct cwmp__AllQueuedTransferStruct * SOAP_FMAC4 soap_in_cwmp__AllQueuedTransferStruct(struct soap*, const char*, struct cwmp__AllQueuedTransferStruct *, const char*);
-
-SOAP_FMAC3 struct cwmp__AllQueuedTransferStruct * SOAP_FMAC4 soap_new_cwmp__AllQueuedTransferStruct(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__AllQueuedTransferStruct(struct soap*, const struct cwmp__AllQueuedTransferStruct *, const char*, const char*);
-
-#ifndef soap_write_cwmp__AllQueuedTransferStruct
-#define soap_write_cwmp__AllQueuedTransferStruct(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize_cwmp__AllQueuedTransferStruct(soap, data), 0) || soap_put_cwmp__AllQueuedTransferStruct(soap, data, "cwmp:AllQueuedTransferStruct", "cwmp:AllQueuedTransferStruct") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__AllQueuedTransferStruct
-#define soap_PUT_cwmp__AllQueuedTransferStruct(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize_cwmp__AllQueuedTransferStruct(soap, data), 0) || soap_put_cwmp__AllQueuedTransferStruct(soap, data, "cwmp:AllQueuedTransferStruct", "cwmp:AllQueuedTransferStruct") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_cwmp__AllQueuedTransferStruct
-#define soap_POST_send_cwmp__AllQueuedTransferStruct(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize_cwmp__AllQueuedTransferStruct(soap, data), 0) || soap_put_cwmp__AllQueuedTransferStruct(soap, data, "cwmp:AllQueuedTransferStruct", "cwmp:AllQueuedTransferStruct") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct cwmp__AllQueuedTransferStruct * SOAP_FMAC4 soap_get_cwmp__AllQueuedTransferStruct(struct soap*, struct cwmp__AllQueuedTransferStruct *, const char*, const char*);
-
-#ifndef soap_read_cwmp__AllQueuedTransferStruct
-#define soap_read_cwmp__AllQueuedTransferStruct(soap, data) ( ((data) ? (soap_default_cwmp__AllQueuedTransferStruct(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get_cwmp__AllQueuedTransferStruct(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_cwmp__AllQueuedTransferStruct
-#define soap_GET_cwmp__AllQueuedTransferStruct(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__AllQueuedTransferStruct(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_cwmp__AllQueuedTransferStruct
-#define soap_POST_recv_cwmp__AllQueuedTransferStruct(soap, data) ( soap_read_cwmp__AllQueuedTransferStruct(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
 #ifndef SOAP_TYPE_cwmp__QueuedTransferStruct_DEFINED
 #define SOAP_TYPE_cwmp__QueuedTransferStruct_DEFINED
 SOAP_FMAC3 void SOAP_FMAC4 soap_default_cwmp__QueuedTransferStruct(struct soap*, struct cwmp__QueuedTransferStruct *);
@@ -4988,48 +3628,6 @@ SOAP_FMAC3 struct cwmp__QueuedTransferStruct * SOAP_FMAC4 soap_get_cwmp__QueuedT
 
 #ifndef soap_POST_recv_cwmp__QueuedTransferStruct
 #define soap_POST_recv_cwmp__QueuedTransferStruct(soap, data) ( soap_read_cwmp__QueuedTransferStruct(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE_cwmp__TimeWindowStruct_DEFINED
-#define SOAP_TYPE_cwmp__TimeWindowStruct_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default_cwmp__TimeWindowStruct(struct soap*, struct cwmp__TimeWindowStruct *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__TimeWindowStruct(struct soap*, const struct cwmp__TimeWindowStruct *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__TimeWindowStruct(struct soap*, const char*, int, const struct cwmp__TimeWindowStruct *, const char*);
-SOAP_FMAC3 struct cwmp__TimeWindowStruct * SOAP_FMAC4 soap_in_cwmp__TimeWindowStruct(struct soap*, const char*, struct cwmp__TimeWindowStruct *, const char*);
-
-SOAP_FMAC3 struct cwmp__TimeWindowStruct * SOAP_FMAC4 soap_new_cwmp__TimeWindowStruct(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__TimeWindowStruct(struct soap*, const struct cwmp__TimeWindowStruct *, const char*, const char*);
-
-#ifndef soap_write_cwmp__TimeWindowStruct
-#define soap_write_cwmp__TimeWindowStruct(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize_cwmp__TimeWindowStruct(soap, data), 0) || soap_put_cwmp__TimeWindowStruct(soap, data, "cwmp:TimeWindowStruct", "cwmp:TimeWindowStruct") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__TimeWindowStruct
-#define soap_PUT_cwmp__TimeWindowStruct(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize_cwmp__TimeWindowStruct(soap, data), 0) || soap_put_cwmp__TimeWindowStruct(soap, data, "cwmp:TimeWindowStruct", "cwmp:TimeWindowStruct") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_cwmp__TimeWindowStruct
-#define soap_POST_send_cwmp__TimeWindowStruct(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize_cwmp__TimeWindowStruct(soap, data), 0) || soap_put_cwmp__TimeWindowStruct(soap, data, "cwmp:TimeWindowStruct", "cwmp:TimeWindowStruct") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct cwmp__TimeWindowStruct * SOAP_FMAC4 soap_get_cwmp__TimeWindowStruct(struct soap*, struct cwmp__TimeWindowStruct *, const char*, const char*);
-
-#ifndef soap_read_cwmp__TimeWindowStruct
-#define soap_read_cwmp__TimeWindowStruct(soap, data) ( ((data) ? (soap_default_cwmp__TimeWindowStruct(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get_cwmp__TimeWindowStruct(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_cwmp__TimeWindowStruct
-#define soap_GET_cwmp__TimeWindowStruct(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__TimeWindowStruct(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_cwmp__TimeWindowStruct
-#define soap_POST_recv_cwmp__TimeWindowStruct(soap, data) ( soap_read_cwmp__TimeWindowStruct(soap, (data)) || soap_closesock(soap), (soap)->error )
 #endif
 
 #endif
@@ -5087,17 +3685,17 @@ SOAP_FMAC3 struct AccessList * SOAP_FMAC4 soap_new_AccessList(struct soap *soap,
 SOAP_FMAC3 int SOAP_FMAC4 soap_put_AccessList(struct soap*, const struct AccessList *, const char*, const char*);
 
 #ifndef soap_write_AccessList
-#define soap_write_AccessList(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize_AccessList(soap, data), 0) || soap_put_AccessList(soap, data, "SOAP-ENC:Array", "cwmp:AccessListValueType") || soap_end_send(soap), (soap)->error )
+#define soap_write_AccessList(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize_AccessList(soap, data), 0) || soap_put_AccessList(soap, data, "SOAP-ENC:Array", "xsd:string") || soap_end_send(soap), (soap)->error )
 #endif
 
 
 #ifndef soap_PUT_AccessList
-#define soap_PUT_AccessList(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize_AccessList(soap, data), 0) || soap_put_AccessList(soap, data, "SOAP-ENC:Array", "cwmp:AccessListValueType") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
+#define soap_PUT_AccessList(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize_AccessList(soap, data), 0) || soap_put_AccessList(soap, data, "SOAP-ENC:Array", "xsd:string") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
 #endif
 
 
 #ifndef soap_POST_send_AccessList
-#define soap_POST_send_AccessList(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize_AccessList(soap, data), 0) || soap_put_AccessList(soap, data, "SOAP-ENC:Array", "cwmp:AccessListValueType") || soap_end_send(soap), (soap)->error )
+#define soap_POST_send_AccessList(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize_AccessList(soap, data), 0) || soap_put_AccessList(soap, data, "SOAP-ENC:Array", "xsd:string") || soap_end_send(soap), (soap)->error )
 #endif
 
 SOAP_FMAC3 struct AccessList * SOAP_FMAC4 soap_get_AccessList(struct soap*, struct AccessList *, const char*, const char*);
@@ -5202,6 +3800,48 @@ SOAP_FMAC3 struct cwmp__ParameterInfoStruct * SOAP_FMAC4 soap_get_cwmp__Paramete
 
 #endif
 
+#ifndef SOAP_TYPE_cwmp__ParameterValueStruct_DEFINED
+#define SOAP_TYPE_cwmp__ParameterValueStruct_DEFINED
+SOAP_FMAC3 void SOAP_FMAC4 soap_default_cwmp__ParameterValueStruct(struct soap*, struct cwmp__ParameterValueStruct *);
+SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__ParameterValueStruct(struct soap*, const struct cwmp__ParameterValueStruct *);
+SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__ParameterValueStruct(struct soap*, const char*, int, const struct cwmp__ParameterValueStruct *, const char*);
+SOAP_FMAC3 struct cwmp__ParameterValueStruct * SOAP_FMAC4 soap_in_cwmp__ParameterValueStruct(struct soap*, const char*, struct cwmp__ParameterValueStruct *, const char*);
+
+SOAP_FMAC3 struct cwmp__ParameterValueStruct * SOAP_FMAC4 soap_new_cwmp__ParameterValueStruct(struct soap *soap, int n);
+SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__ParameterValueStruct(struct soap*, const struct cwmp__ParameterValueStruct *, const char*, const char*);
+
+#ifndef soap_write_cwmp__ParameterValueStruct
+#define soap_write_cwmp__ParameterValueStruct(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize_cwmp__ParameterValueStruct(soap, data), 0) || soap_put_cwmp__ParameterValueStruct(soap, data, "cwmp:ParameterValueStruct", "cwmp:ParameterValueStruct") || soap_end_send(soap), (soap)->error )
+#endif
+
+
+#ifndef soap_PUT_cwmp__ParameterValueStruct
+#define soap_PUT_cwmp__ParameterValueStruct(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize_cwmp__ParameterValueStruct(soap, data), 0) || soap_put_cwmp__ParameterValueStruct(soap, data, "cwmp:ParameterValueStruct", "cwmp:ParameterValueStruct") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
+#endif
+
+
+#ifndef soap_POST_send_cwmp__ParameterValueStruct
+#define soap_POST_send_cwmp__ParameterValueStruct(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize_cwmp__ParameterValueStruct(soap, data), 0) || soap_put_cwmp__ParameterValueStruct(soap, data, "cwmp:ParameterValueStruct", "cwmp:ParameterValueStruct") || soap_end_send(soap), (soap)->error )
+#endif
+
+SOAP_FMAC3 struct cwmp__ParameterValueStruct * SOAP_FMAC4 soap_get_cwmp__ParameterValueStruct(struct soap*, struct cwmp__ParameterValueStruct *, const char*, const char*);
+
+#ifndef soap_read_cwmp__ParameterValueStruct
+#define soap_read_cwmp__ParameterValueStruct(soap, data) ( ((data) ? (soap_default_cwmp__ParameterValueStruct(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get_cwmp__ParameterValueStruct(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
+#endif
+
+
+#ifndef soap_GET_cwmp__ParameterValueStruct
+#define soap_GET_cwmp__ParameterValueStruct(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__ParameterValueStruct(soap, (data)), (soap)->error )
+#endif
+
+
+#ifndef soap_POST_recv_cwmp__ParameterValueStruct
+#define soap_POST_recv_cwmp__ParameterValueStruct(soap, data) ( soap_read_cwmp__ParameterValueStruct(soap, (data)) || soap_closesock(soap), (soap)->error )
+#endif
+
+#endif
+
 #ifndef SOAP_TYPE_cwmp__EventStruct_DEFINED
 #define SOAP_TYPE_cwmp__EventStruct_DEFINED
 SOAP_FMAC3 void SOAP_FMAC4 soap_default_cwmp__EventStruct(struct soap*, struct cwmp__EventStruct *);
@@ -5286,128 +3926,44 @@ SOAP_FMAC3 struct cwmp__DeviceIdStruct * SOAP_FMAC4 soap_get_cwmp__DeviceIdStruc
 
 #endif
 
-#ifndef SOAP_TYPE_cwmp__ParameterValueStruct_DEFINED
-#define SOAP_TYPE_cwmp__ParameterValueStruct_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default_cwmp__ParameterValueStruct(struct soap*, struct cwmp__ParameterValueStruct *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__ParameterValueStruct(struct soap*, const struct cwmp__ParameterValueStruct *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__ParameterValueStruct(struct soap*, const char*, int, const struct cwmp__ParameterValueStruct *, const char*);
-SOAP_FMAC3 struct cwmp__ParameterValueStruct * SOAP_FMAC4 soap_in_cwmp__ParameterValueStruct(struct soap*, const char*, struct cwmp__ParameterValueStruct *, const char*);
+#ifndef SOAP_TYPE_cwmp__FaultStruct_DEFINED
+#define SOAP_TYPE_cwmp__FaultStruct_DEFINED
+SOAP_FMAC3 void SOAP_FMAC4 soap_default_cwmp__FaultStruct(struct soap*, struct cwmp__FaultStruct *);
+SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__FaultStruct(struct soap*, const struct cwmp__FaultStruct *);
+SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__FaultStruct(struct soap*, const char*, int, const struct cwmp__FaultStruct *, const char*);
+SOAP_FMAC3 struct cwmp__FaultStruct * SOAP_FMAC4 soap_in_cwmp__FaultStruct(struct soap*, const char*, struct cwmp__FaultStruct *, const char*);
 
-SOAP_FMAC3 struct cwmp__ParameterValueStruct * SOAP_FMAC4 soap_new_cwmp__ParameterValueStruct(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__ParameterValueStruct(struct soap*, const struct cwmp__ParameterValueStruct *, const char*, const char*);
+SOAP_FMAC3 struct cwmp__FaultStruct * SOAP_FMAC4 soap_new_cwmp__FaultStruct(struct soap *soap, int n);
+SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__FaultStruct(struct soap*, const struct cwmp__FaultStruct *, const char*, const char*);
 
-#ifndef soap_write_cwmp__ParameterValueStruct
-#define soap_write_cwmp__ParameterValueStruct(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize_cwmp__ParameterValueStruct(soap, data), 0) || soap_put_cwmp__ParameterValueStruct(soap, data, "cwmp:ParameterValueStruct", "cwmp:ParameterValueStruct") || soap_end_send(soap), (soap)->error )
+#ifndef soap_write_cwmp__FaultStruct
+#define soap_write_cwmp__FaultStruct(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize_cwmp__FaultStruct(soap, data), 0) || soap_put_cwmp__FaultStruct(soap, data, "cwmp:FaultStruct", "cwmp:FaultStruct") || soap_end_send(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_PUT_cwmp__ParameterValueStruct
-#define soap_PUT_cwmp__ParameterValueStruct(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize_cwmp__ParameterValueStruct(soap, data), 0) || soap_put_cwmp__ParameterValueStruct(soap, data, "cwmp:ParameterValueStruct", "cwmp:ParameterValueStruct") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
+#ifndef soap_PUT_cwmp__FaultStruct
+#define soap_PUT_cwmp__FaultStruct(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize_cwmp__FaultStruct(soap, data), 0) || soap_put_cwmp__FaultStruct(soap, data, "cwmp:FaultStruct", "cwmp:FaultStruct") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_POST_send_cwmp__ParameterValueStruct
-#define soap_POST_send_cwmp__ParameterValueStruct(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize_cwmp__ParameterValueStruct(soap, data), 0) || soap_put_cwmp__ParameterValueStruct(soap, data, "cwmp:ParameterValueStruct", "cwmp:ParameterValueStruct") || soap_end_send(soap), (soap)->error )
+#ifndef soap_POST_send_cwmp__FaultStruct
+#define soap_POST_send_cwmp__FaultStruct(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize_cwmp__FaultStruct(soap, data), 0) || soap_put_cwmp__FaultStruct(soap, data, "cwmp:FaultStruct", "cwmp:FaultStruct") || soap_end_send(soap), (soap)->error )
 #endif
 
-SOAP_FMAC3 struct cwmp__ParameterValueStruct * SOAP_FMAC4 soap_get_cwmp__ParameterValueStruct(struct soap*, struct cwmp__ParameterValueStruct *, const char*, const char*);
+SOAP_FMAC3 struct cwmp__FaultStruct * SOAP_FMAC4 soap_get_cwmp__FaultStruct(struct soap*, struct cwmp__FaultStruct *, const char*, const char*);
 
-#ifndef soap_read_cwmp__ParameterValueStruct
-#define soap_read_cwmp__ParameterValueStruct(soap, data) ( ((data) ? (soap_default_cwmp__ParameterValueStruct(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get_cwmp__ParameterValueStruct(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_cwmp__ParameterValueStruct
-#define soap_GET_cwmp__ParameterValueStruct(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__ParameterValueStruct(soap, (data)), (soap)->error )
+#ifndef soap_read_cwmp__FaultStruct
+#define soap_read_cwmp__FaultStruct(soap, data) ( ((data) ? (soap_default_cwmp__FaultStruct(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get_cwmp__FaultStruct(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_POST_recv_cwmp__ParameterValueStruct
-#define soap_POST_recv_cwmp__ParameterValueStruct(soap, data) ( soap_read_cwmp__ParameterValueStruct(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE_cwmp__DeploymentUnitFaultStruct_DEFINED
-#define SOAP_TYPE_cwmp__DeploymentUnitFaultStruct_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default_cwmp__DeploymentUnitFaultStruct(struct soap*, struct cwmp__DeploymentUnitFaultStruct *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__DeploymentUnitFaultStruct(struct soap*, const struct cwmp__DeploymentUnitFaultStruct *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__DeploymentUnitFaultStruct(struct soap*, const char*, int, const struct cwmp__DeploymentUnitFaultStruct *, const char*);
-SOAP_FMAC3 struct cwmp__DeploymentUnitFaultStruct * SOAP_FMAC4 soap_in_cwmp__DeploymentUnitFaultStruct(struct soap*, const char*, struct cwmp__DeploymentUnitFaultStruct *, const char*);
-
-SOAP_FMAC3 struct cwmp__DeploymentUnitFaultStruct * SOAP_FMAC4 soap_new_cwmp__DeploymentUnitFaultStruct(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__DeploymentUnitFaultStruct(struct soap*, const struct cwmp__DeploymentUnitFaultStruct *, const char*, const char*);
-
-#ifndef soap_write_cwmp__DeploymentUnitFaultStruct
-#define soap_write_cwmp__DeploymentUnitFaultStruct(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize_cwmp__DeploymentUnitFaultStruct(soap, data), 0) || soap_put_cwmp__DeploymentUnitFaultStruct(soap, data, "cwmp:DeploymentUnitFaultStruct", "cwmp:DeploymentUnitFaultStruct") || soap_end_send(soap), (soap)->error )
+#ifndef soap_GET_cwmp__FaultStruct
+#define soap_GET_cwmp__FaultStruct(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__FaultStruct(soap, (data)), (soap)->error )
 #endif
 
 
-#ifndef soap_PUT_cwmp__DeploymentUnitFaultStruct
-#define soap_PUT_cwmp__DeploymentUnitFaultStruct(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize_cwmp__DeploymentUnitFaultStruct(soap, data), 0) || soap_put_cwmp__DeploymentUnitFaultStruct(soap, data, "cwmp:DeploymentUnitFaultStruct", "cwmp:DeploymentUnitFaultStruct") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_cwmp__DeploymentUnitFaultStruct
-#define soap_POST_send_cwmp__DeploymentUnitFaultStruct(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize_cwmp__DeploymentUnitFaultStruct(soap, data), 0) || soap_put_cwmp__DeploymentUnitFaultStruct(soap, data, "cwmp:DeploymentUnitFaultStruct", "cwmp:DeploymentUnitFaultStruct") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct cwmp__DeploymentUnitFaultStruct * SOAP_FMAC4 soap_get_cwmp__DeploymentUnitFaultStruct(struct soap*, struct cwmp__DeploymentUnitFaultStruct *, const char*, const char*);
-
-#ifndef soap_read_cwmp__DeploymentUnitFaultStruct
-#define soap_read_cwmp__DeploymentUnitFaultStruct(soap, data) ( ((data) ? (soap_default_cwmp__DeploymentUnitFaultStruct(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get_cwmp__DeploymentUnitFaultStruct(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_cwmp__DeploymentUnitFaultStruct
-#define soap_GET_cwmp__DeploymentUnitFaultStruct(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__DeploymentUnitFaultStruct(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_cwmp__DeploymentUnitFaultStruct
-#define soap_POST_recv_cwmp__DeploymentUnitFaultStruct(soap, data) ( soap_read_cwmp__DeploymentUnitFaultStruct(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE_cwmp__TransferCompleteFaultStruct_DEFINED
-#define SOAP_TYPE_cwmp__TransferCompleteFaultStruct_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default_cwmp__TransferCompleteFaultStruct(struct soap*, struct cwmp__TransferCompleteFaultStruct *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__TransferCompleteFaultStruct(struct soap*, const struct cwmp__TransferCompleteFaultStruct *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__TransferCompleteFaultStruct(struct soap*, const char*, int, const struct cwmp__TransferCompleteFaultStruct *, const char*);
-SOAP_FMAC3 struct cwmp__TransferCompleteFaultStruct * SOAP_FMAC4 soap_in_cwmp__TransferCompleteFaultStruct(struct soap*, const char*, struct cwmp__TransferCompleteFaultStruct *, const char*);
-
-SOAP_FMAC3 struct cwmp__TransferCompleteFaultStruct * SOAP_FMAC4 soap_new_cwmp__TransferCompleteFaultStruct(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__TransferCompleteFaultStruct(struct soap*, const struct cwmp__TransferCompleteFaultStruct *, const char*, const char*);
-
-#ifndef soap_write_cwmp__TransferCompleteFaultStruct
-#define soap_write_cwmp__TransferCompleteFaultStruct(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize_cwmp__TransferCompleteFaultStruct(soap, data), 0) || soap_put_cwmp__TransferCompleteFaultStruct(soap, data, "cwmp:TransferCompleteFaultStruct", "cwmp:TransferCompleteFaultStruct") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__TransferCompleteFaultStruct
-#define soap_PUT_cwmp__TransferCompleteFaultStruct(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize_cwmp__TransferCompleteFaultStruct(soap, data), 0) || soap_put_cwmp__TransferCompleteFaultStruct(soap, data, "cwmp:TransferCompleteFaultStruct", "cwmp:TransferCompleteFaultStruct") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_cwmp__TransferCompleteFaultStruct
-#define soap_POST_send_cwmp__TransferCompleteFaultStruct(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize_cwmp__TransferCompleteFaultStruct(soap, data), 0) || soap_put_cwmp__TransferCompleteFaultStruct(soap, data, "cwmp:TransferCompleteFaultStruct", "cwmp:TransferCompleteFaultStruct") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct cwmp__TransferCompleteFaultStruct * SOAP_FMAC4 soap_get_cwmp__TransferCompleteFaultStruct(struct soap*, struct cwmp__TransferCompleteFaultStruct *, const char*, const char*);
-
-#ifndef soap_read_cwmp__TransferCompleteFaultStruct
-#define soap_read_cwmp__TransferCompleteFaultStruct(soap, data) ( ((data) ? (soap_default_cwmp__TransferCompleteFaultStruct(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get_cwmp__TransferCompleteFaultStruct(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_cwmp__TransferCompleteFaultStruct
-#define soap_GET_cwmp__TransferCompleteFaultStruct(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__TransferCompleteFaultStruct(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_cwmp__TransferCompleteFaultStruct
-#define soap_POST_recv_cwmp__TransferCompleteFaultStruct(soap, data) ( soap_read_cwmp__TransferCompleteFaultStruct(soap, (data)) || soap_closesock(soap), (soap)->error )
+#ifndef soap_POST_recv_cwmp__FaultStruct
+#define soap_POST_recv_cwmp__FaultStruct(soap, data) ( soap_read_cwmp__FaultStruct(soap, (data)) || soap_closesock(soap), (soap)->error )
 #endif
 
 #endif
@@ -5549,33 +4105,6 @@ SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerToSOAP_ENC__base64(struct soap*, struc
 SOAP_FMAC3 struct SOAP_ENC__base64 ** SOAP_FMAC4 soap_get_PointerToSOAP_ENC__base64(struct soap*, struct SOAP_ENC__base64 **, const char*, const char*);
 #endif
 
-#ifndef SOAP_TYPE_PointerToxsd__anyURI_DEFINED
-#define SOAP_TYPE_PointerToxsd__anyURI_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerToxsd__anyURI(struct soap*, char **const*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerToxsd__anyURI(struct soap*, const char *, int, char **const*, const char *);
-SOAP_FMAC3 char *** SOAP_FMAC4 soap_in_PointerToxsd__anyURI(struct soap*, const char*, char ***, const char*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerToxsd__anyURI(struct soap*, char **const*, const char*, const char*);
-SOAP_FMAC3 char *** SOAP_FMAC4 soap_get_PointerToxsd__anyURI(struct soap*, char ***, const char*, const char*);
-#endif
-
-#ifndef SOAP_TYPE_PointerToPointerTocwmp__AllQueuedTransferStruct_DEFINED
-#define SOAP_TYPE_PointerToPointerTocwmp__AllQueuedTransferStruct_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerToPointerTocwmp__AllQueuedTransferStruct(struct soap*, struct cwmp__AllQueuedTransferStruct **const*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerToPointerTocwmp__AllQueuedTransferStruct(struct soap*, const char *, int, struct cwmp__AllQueuedTransferStruct **const*, const char *);
-SOAP_FMAC3 struct cwmp__AllQueuedTransferStruct *** SOAP_FMAC4 soap_in_PointerToPointerTocwmp__AllQueuedTransferStruct(struct soap*, const char*, struct cwmp__AllQueuedTransferStruct ***, const char*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerToPointerTocwmp__AllQueuedTransferStruct(struct soap*, struct cwmp__AllQueuedTransferStruct **const*, const char*, const char*);
-SOAP_FMAC3 struct cwmp__AllQueuedTransferStruct *** SOAP_FMAC4 soap_get_PointerToPointerTocwmp__AllQueuedTransferStruct(struct soap*, struct cwmp__AllQueuedTransferStruct ***, const char*, const char*);
-#endif
-
-#ifndef SOAP_TYPE_PointerTocwmp__AllQueuedTransferStruct_DEFINED
-#define SOAP_TYPE_PointerTocwmp__AllQueuedTransferStruct_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerTocwmp__AllQueuedTransferStruct(struct soap*, struct cwmp__AllQueuedTransferStruct *const*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerTocwmp__AllQueuedTransferStruct(struct soap*, const char *, int, struct cwmp__AllQueuedTransferStruct *const*, const char *);
-SOAP_FMAC3 struct cwmp__AllQueuedTransferStruct ** SOAP_FMAC4 soap_in_PointerTocwmp__AllQueuedTransferStruct(struct soap*, const char*, struct cwmp__AllQueuedTransferStruct **, const char*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTocwmp__AllQueuedTransferStruct(struct soap*, struct cwmp__AllQueuedTransferStruct *const*, const char*, const char*);
-SOAP_FMAC3 struct cwmp__AllQueuedTransferStruct ** SOAP_FMAC4 soap_get_PointerTocwmp__AllQueuedTransferStruct(struct soap*, struct cwmp__AllQueuedTransferStruct **, const char*, const char*);
-#endif
-
 #ifndef SOAP_TYPE_PointerToPointerTocwmp__QueuedTransferStruct_DEFINED
 #define SOAP_TYPE_PointerToPointerTocwmp__QueuedTransferStruct_DEFINED
 SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerToPointerTocwmp__QueuedTransferStruct(struct soap*, struct cwmp__QueuedTransferStruct **const*);
@@ -5592,24 +4121,6 @@ SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerTocwmp__QueuedTransferStruct(struct so
 SOAP_FMAC3 struct cwmp__QueuedTransferStruct ** SOAP_FMAC4 soap_in_PointerTocwmp__QueuedTransferStruct(struct soap*, const char*, struct cwmp__QueuedTransferStruct **, const char*);
 SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTocwmp__QueuedTransferStruct(struct soap*, struct cwmp__QueuedTransferStruct *const*, const char*, const char*);
 SOAP_FMAC3 struct cwmp__QueuedTransferStruct ** SOAP_FMAC4 soap_get_PointerTocwmp__QueuedTransferStruct(struct soap*, struct cwmp__QueuedTransferStruct **, const char*, const char*);
-#endif
-
-#ifndef SOAP_TYPE_PointerToPointerTocwmp__TimeWindowStruct_DEFINED
-#define SOAP_TYPE_PointerToPointerTocwmp__TimeWindowStruct_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerToPointerTocwmp__TimeWindowStruct(struct soap*, struct cwmp__TimeWindowStruct **const*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerToPointerTocwmp__TimeWindowStruct(struct soap*, const char *, int, struct cwmp__TimeWindowStruct **const*, const char *);
-SOAP_FMAC3 struct cwmp__TimeWindowStruct *** SOAP_FMAC4 soap_in_PointerToPointerTocwmp__TimeWindowStruct(struct soap*, const char*, struct cwmp__TimeWindowStruct ***, const char*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerToPointerTocwmp__TimeWindowStruct(struct soap*, struct cwmp__TimeWindowStruct **const*, const char*, const char*);
-SOAP_FMAC3 struct cwmp__TimeWindowStruct *** SOAP_FMAC4 soap_get_PointerToPointerTocwmp__TimeWindowStruct(struct soap*, struct cwmp__TimeWindowStruct ***, const char*, const char*);
-#endif
-
-#ifndef SOAP_TYPE_PointerTocwmp__TimeWindowStruct_DEFINED
-#define SOAP_TYPE_PointerTocwmp__TimeWindowStruct_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerTocwmp__TimeWindowStruct(struct soap*, struct cwmp__TimeWindowStruct *const*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerTocwmp__TimeWindowStruct(struct soap*, const char *, int, struct cwmp__TimeWindowStruct *const*, const char *);
-SOAP_FMAC3 struct cwmp__TimeWindowStruct ** SOAP_FMAC4 soap_in_PointerTocwmp__TimeWindowStruct(struct soap*, const char*, struct cwmp__TimeWindowStruct **, const char*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTocwmp__TimeWindowStruct(struct soap*, struct cwmp__TimeWindowStruct *const*, const char*, const char*);
-SOAP_FMAC3 struct cwmp__TimeWindowStruct ** SOAP_FMAC4 soap_get_PointerTocwmp__TimeWindowStruct(struct soap*, struct cwmp__TimeWindowStruct **, const char*, const char*);
 #endif
 
 #ifndef SOAP_TYPE_PointerToPointerTocwmp__ParameterAttributeStruct_DEFINED
@@ -5648,15 +4159,6 @@ SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTocwmp__SetParameterAttributesStruct(s
 SOAP_FMAC3 struct cwmp__SetParameterAttributesStruct ** SOAP_FMAC4 soap_get_PointerTocwmp__SetParameterAttributesStruct(struct soap*, struct cwmp__SetParameterAttributesStruct **, const char*, const char*);
 #endif
 
-#ifndef SOAP_TYPE_PointerTocwmp__AccessListValueType_DEFINED
-#define SOAP_TYPE_PointerTocwmp__AccessListValueType_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerTocwmp__AccessListValueType(struct soap*, enum cwmp__AccessListValueType *const*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerTocwmp__AccessListValueType(struct soap*, const char *, int, enum cwmp__AccessListValueType *const*, const char *);
-SOAP_FMAC3 enum cwmp__AccessListValueType ** SOAP_FMAC4 soap_in_PointerTocwmp__AccessListValueType(struct soap*, const char*, enum cwmp__AccessListValueType **, const char*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTocwmp__AccessListValueType(struct soap*, enum cwmp__AccessListValueType *const*, const char*, const char*);
-SOAP_FMAC3 enum cwmp__AccessListValueType ** SOAP_FMAC4 soap_get_PointerTocwmp__AccessListValueType(struct soap*, enum cwmp__AccessListValueType **, const char*, const char*);
-#endif
-
 #ifndef SOAP_TYPE_PointerToPointerTocwmp__ParameterInfoStruct_DEFINED
 #define SOAP_TYPE_PointerToPointerTocwmp__ParameterInfoStruct_DEFINED
 SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerToPointerTocwmp__ParameterInfoStruct(struct soap*, struct cwmp__ParameterInfoStruct **const*);
@@ -5673,24 +4175,6 @@ SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerTocwmp__ParameterInfoStruct(struct soa
 SOAP_FMAC3 struct cwmp__ParameterInfoStruct ** SOAP_FMAC4 soap_in_PointerTocwmp__ParameterInfoStruct(struct soap*, const char*, struct cwmp__ParameterInfoStruct **, const char*);
 SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTocwmp__ParameterInfoStruct(struct soap*, struct cwmp__ParameterInfoStruct *const*, const char*, const char*);
 SOAP_FMAC3 struct cwmp__ParameterInfoStruct ** SOAP_FMAC4 soap_get_PointerTocwmp__ParameterInfoStruct(struct soap*, struct cwmp__ParameterInfoStruct **, const char*, const char*);
-#endif
-
-#ifndef SOAP_TYPE_PointerToPointerTocwmp__EventStruct_DEFINED
-#define SOAP_TYPE_PointerToPointerTocwmp__EventStruct_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerToPointerTocwmp__EventStruct(struct soap*, struct cwmp__EventStruct **const*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerToPointerTocwmp__EventStruct(struct soap*, const char *, int, struct cwmp__EventStruct **const*, const char *);
-SOAP_FMAC3 struct cwmp__EventStruct *** SOAP_FMAC4 soap_in_PointerToPointerTocwmp__EventStruct(struct soap*, const char*, struct cwmp__EventStruct ***, const char*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerToPointerTocwmp__EventStruct(struct soap*, struct cwmp__EventStruct **const*, const char*, const char*);
-SOAP_FMAC3 struct cwmp__EventStruct *** SOAP_FMAC4 soap_get_PointerToPointerTocwmp__EventStruct(struct soap*, struct cwmp__EventStruct ***, const char*, const char*);
-#endif
-
-#ifndef SOAP_TYPE_PointerTocwmp__EventStruct_DEFINED
-#define SOAP_TYPE_PointerTocwmp__EventStruct_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerTocwmp__EventStruct(struct soap*, struct cwmp__EventStruct *const*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerTocwmp__EventStruct(struct soap*, const char *, int, struct cwmp__EventStruct *const*, const char *);
-SOAP_FMAC3 struct cwmp__EventStruct ** SOAP_FMAC4 soap_in_PointerTocwmp__EventStruct(struct soap*, const char*, struct cwmp__EventStruct **, const char*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTocwmp__EventStruct(struct soap*, struct cwmp__EventStruct *const*, const char*, const char*);
-SOAP_FMAC3 struct cwmp__EventStruct ** SOAP_FMAC4 soap_get_PointerTocwmp__EventStruct(struct soap*, struct cwmp__EventStruct **, const char*, const char*);
 #endif
 
 #ifndef SOAP_TYPE_PointerToPointerTocwmp__ParameterValueStruct_DEFINED
@@ -5711,31 +4195,22 @@ SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTocwmp__ParameterValueStruct(struct so
 SOAP_FMAC3 struct cwmp__ParameterValueStruct ** SOAP_FMAC4 soap_get_PointerTocwmp__ParameterValueStruct(struct soap*, struct cwmp__ParameterValueStruct **, const char*, const char*);
 #endif
 
-#ifndef SOAP_TYPE_PointerTostring_DEFINED
-#define SOAP_TYPE_PointerTostring_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerTostring(struct soap*, char **const*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerTostring(struct soap*, const char *, int, char **const*, const char *);
-SOAP_FMAC3 char *** SOAP_FMAC4 soap_in_PointerTostring(struct soap*, const char*, char ***, const char*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTostring(struct soap*, char **const*, const char*, const char*);
-SOAP_FMAC3 char *** SOAP_FMAC4 soap_get_PointerTostring(struct soap*, char ***, const char*, const char*);
+#ifndef SOAP_TYPE_PointerToPointerTocwmp__EventStruct_DEFINED
+#define SOAP_TYPE_PointerToPointerTocwmp__EventStruct_DEFINED
+SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerToPointerTocwmp__EventStruct(struct soap*, struct cwmp__EventStruct **const*);
+SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerToPointerTocwmp__EventStruct(struct soap*, const char *, int, struct cwmp__EventStruct **const*, const char *);
+SOAP_FMAC3 struct cwmp__EventStruct *** SOAP_FMAC4 soap_in_PointerToPointerTocwmp__EventStruct(struct soap*, const char*, struct cwmp__EventStruct ***, const char*);
+SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerToPointerTocwmp__EventStruct(struct soap*, struct cwmp__EventStruct **const*, const char*, const char*);
+SOAP_FMAC3 struct cwmp__EventStruct *** SOAP_FMAC4 soap_get_PointerToPointerTocwmp__EventStruct(struct soap*, struct cwmp__EventStruct ***, const char*, const char*);
 #endif
 
-#ifndef SOAP_TYPE_PointerTocwmp__AutonOpResultStruct_DEFINED
-#define SOAP_TYPE_PointerTocwmp__AutonOpResultStruct_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerTocwmp__AutonOpResultStruct(struct soap*, struct cwmp__AutonOpResultStruct *const*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerTocwmp__AutonOpResultStruct(struct soap*, const char *, int, struct cwmp__AutonOpResultStruct *const*, const char *);
-SOAP_FMAC3 struct cwmp__AutonOpResultStruct ** SOAP_FMAC4 soap_in_PointerTocwmp__AutonOpResultStruct(struct soap*, const char*, struct cwmp__AutonOpResultStruct **, const char*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTocwmp__AutonOpResultStruct(struct soap*, struct cwmp__AutonOpResultStruct *const*, const char*, const char*);
-SOAP_FMAC3 struct cwmp__AutonOpResultStruct ** SOAP_FMAC4 soap_get_PointerTocwmp__AutonOpResultStruct(struct soap*, struct cwmp__AutonOpResultStruct **, const char*, const char*);
-#endif
-
-#ifndef SOAP_TYPE_PointerTocwmp__OpResultStruct_DEFINED
-#define SOAP_TYPE_PointerTocwmp__OpResultStruct_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerTocwmp__OpResultStruct(struct soap*, struct cwmp__OpResultStruct *const*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerTocwmp__OpResultStruct(struct soap*, const char *, int, struct cwmp__OpResultStruct *const*, const char *);
-SOAP_FMAC3 struct cwmp__OpResultStruct ** SOAP_FMAC4 soap_in_PointerTocwmp__OpResultStruct(struct soap*, const char*, struct cwmp__OpResultStruct **, const char*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTocwmp__OpResultStruct(struct soap*, struct cwmp__OpResultStruct *const*, const char*, const char*);
-SOAP_FMAC3 struct cwmp__OpResultStruct ** SOAP_FMAC4 soap_get_PointerTocwmp__OpResultStruct(struct soap*, struct cwmp__OpResultStruct **, const char*, const char*);
+#ifndef SOAP_TYPE_PointerTocwmp__EventStruct_DEFINED
+#define SOAP_TYPE_PointerTocwmp__EventStruct_DEFINED
+SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerTocwmp__EventStruct(struct soap*, struct cwmp__EventStruct *const*);
+SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerTocwmp__EventStruct(struct soap*, const char *, int, struct cwmp__EventStruct *const*, const char *);
+SOAP_FMAC3 struct cwmp__EventStruct ** SOAP_FMAC4 soap_in_PointerTocwmp__EventStruct(struct soap*, const char*, struct cwmp__EventStruct **, const char*);
+SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTocwmp__EventStruct(struct soap*, struct cwmp__EventStruct *const*, const char*, const char*);
+SOAP_FMAC3 struct cwmp__EventStruct ** SOAP_FMAC4 soap_get_PointerTocwmp__EventStruct(struct soap*, struct cwmp__EventStruct **, const char*, const char*);
 #endif
 
 #ifndef SOAP_TYPE_PointerToFileTypeArg_DEFINED
@@ -5747,13 +4222,13 @@ SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerToFileTypeArg(struct soap*, struct Fil
 SOAP_FMAC3 struct FileTypeArg ** SOAP_FMAC4 soap_get_PointerToFileTypeArg(struct soap*, struct FileTypeArg **, const char*, const char*);
 #endif
 
-#ifndef SOAP_TYPE_PointerTocwmp__TransferCompleteFaultStruct_DEFINED
-#define SOAP_TYPE_PointerTocwmp__TransferCompleteFaultStruct_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerTocwmp__TransferCompleteFaultStruct(struct soap*, struct cwmp__TransferCompleteFaultStruct *const*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerTocwmp__TransferCompleteFaultStruct(struct soap*, const char *, int, struct cwmp__TransferCompleteFaultStruct *const*, const char *);
-SOAP_FMAC3 struct cwmp__TransferCompleteFaultStruct ** SOAP_FMAC4 soap_in_PointerTocwmp__TransferCompleteFaultStruct(struct soap*, const char*, struct cwmp__TransferCompleteFaultStruct **, const char*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTocwmp__TransferCompleteFaultStruct(struct soap*, struct cwmp__TransferCompleteFaultStruct *const*, const char*, const char*);
-SOAP_FMAC3 struct cwmp__TransferCompleteFaultStruct ** SOAP_FMAC4 soap_get_PointerTocwmp__TransferCompleteFaultStruct(struct soap*, struct cwmp__TransferCompleteFaultStruct **, const char*, const char*);
+#ifndef SOAP_TYPE_PointerTocwmp__FaultStruct_DEFINED
+#define SOAP_TYPE_PointerTocwmp__FaultStruct_DEFINED
+SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerTocwmp__FaultStruct(struct soap*, struct cwmp__FaultStruct *const*);
+SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerTocwmp__FaultStruct(struct soap*, const char *, int, struct cwmp__FaultStruct *const*, const char *);
+SOAP_FMAC3 struct cwmp__FaultStruct ** SOAP_FMAC4 soap_in_PointerTocwmp__FaultStruct(struct soap*, const char*, struct cwmp__FaultStruct **, const char*);
+SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTocwmp__FaultStruct(struct soap*, struct cwmp__FaultStruct *const*, const char*, const char*);
+SOAP_FMAC3 struct cwmp__FaultStruct ** SOAP_FMAC4 soap_get_PointerTocwmp__FaultStruct(struct soap*, struct cwmp__FaultStruct **, const char*, const char*);
 #endif
 
 #ifndef SOAP_TYPE_PointerToEventList_DEFINED
@@ -5772,33 +4247,6 @@ SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerTocwmp__DeviceIdStruct(struct soap*, c
 SOAP_FMAC3 struct cwmp__DeviceIdStruct ** SOAP_FMAC4 soap_in_PointerTocwmp__DeviceIdStruct(struct soap*, const char*, struct cwmp__DeviceIdStruct **, const char*);
 SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTocwmp__DeviceIdStruct(struct soap*, struct cwmp__DeviceIdStruct *const*, const char*, const char*);
 SOAP_FMAC3 struct cwmp__DeviceIdStruct ** SOAP_FMAC4 soap_get_PointerTocwmp__DeviceIdStruct(struct soap*, struct cwmp__DeviceIdStruct **, const char*, const char*);
-#endif
-
-#ifndef SOAP_TYPE_PointerTocwmp__OperationStruct_DEFINED
-#define SOAP_TYPE_PointerTocwmp__OperationStruct_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerTocwmp__OperationStruct(struct soap*, struct cwmp__OperationStruct *const*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerTocwmp__OperationStruct(struct soap*, const char *, int, struct cwmp__OperationStruct *const*, const char *);
-SOAP_FMAC3 struct cwmp__OperationStruct ** SOAP_FMAC4 soap_in_PointerTocwmp__OperationStruct(struct soap*, const char*, struct cwmp__OperationStruct **, const char*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTocwmp__OperationStruct(struct soap*, struct cwmp__OperationStruct *const*, const char*, const char*);
-SOAP_FMAC3 struct cwmp__OperationStruct ** SOAP_FMAC4 soap_get_PointerTocwmp__OperationStruct(struct soap*, struct cwmp__OperationStruct **, const char*, const char*);
-#endif
-
-#ifndef SOAP_TYPE_PointerToTimeWindowList_DEFINED
-#define SOAP_TYPE_PointerToTimeWindowList_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerToTimeWindowList(struct soap*, struct TimeWindowList *const*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerToTimeWindowList(struct soap*, const char *, int, struct TimeWindowList *const*, const char *);
-SOAP_FMAC3 struct TimeWindowList ** SOAP_FMAC4 soap_in_PointerToTimeWindowList(struct soap*, const char*, struct TimeWindowList **, const char*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerToTimeWindowList(struct soap*, struct TimeWindowList *const*, const char*, const char*);
-SOAP_FMAC3 struct TimeWindowList ** SOAP_FMAC4 soap_get_PointerToTimeWindowList(struct soap*, struct TimeWindowList **, const char*, const char*);
-#endif
-
-#ifndef SOAP_TYPE_PointerToAllTransferList_DEFINED
-#define SOAP_TYPE_PointerToAllTransferList_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerToAllTransferList(struct soap*, struct AllTransferList *const*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerToAllTransferList(struct soap*, const char *, int, struct AllTransferList *const*, const char *);
-SOAP_FMAC3 struct AllTransferList ** SOAP_FMAC4 soap_in_PointerToAllTransferList(struct soap*, const char*, struct AllTransferList **, const char*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerToAllTransferList(struct soap*, struct AllTransferList *const*, const char*, const char*);
-SOAP_FMAC3 struct AllTransferList ** SOAP_FMAC4 soap_get_PointerToAllTransferList(struct soap*, struct AllTransferList **, const char*, const char*);
 #endif
 
 #ifndef SOAP_TYPE_PointerToOptionList_DEFINED
@@ -5900,15 +4348,6 @@ SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTodateTime(struct soap*, time_t *const
 SOAP_FMAC3 time_t ** SOAP_FMAC4 soap_get_PointerTodateTime(struct soap*, time_t **, const char*, const char*);
 #endif
 
-#ifndef SOAP_TYPE_PointerTocwmp__DeploymentUnitFaultStruct_DEFINED
-#define SOAP_TYPE_PointerTocwmp__DeploymentUnitFaultStruct_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerTocwmp__DeploymentUnitFaultStruct(struct soap*, struct cwmp__DeploymentUnitFaultStruct *const*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerTocwmp__DeploymentUnitFaultStruct(struct soap*, const char *, int, struct cwmp__DeploymentUnitFaultStruct *const*, const char *);
-SOAP_FMAC3 struct cwmp__DeploymentUnitFaultStruct ** SOAP_FMAC4 soap_in_PointerTocwmp__DeploymentUnitFaultStruct(struct soap*, const char*, struct cwmp__DeploymentUnitFaultStruct **, const char*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTocwmp__DeploymentUnitFaultStruct(struct soap*, struct cwmp__DeploymentUnitFaultStruct *const*, const char*, const char*);
-SOAP_FMAC3 struct cwmp__DeploymentUnitFaultStruct ** SOAP_FMAC4 soap_get_PointerTocwmp__DeploymentUnitFaultStruct(struct soap*, struct cwmp__DeploymentUnitFaultStruct **, const char*, const char*);
-#endif
-
 #ifndef SOAP_TYPE_PointerToAccessList_DEFINED
 #define SOAP_TYPE_PointerToAccessList_DEFINED
 SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerToAccessList(struct soap*, struct AccessList *const*);
@@ -5918,106 +4357,13 @@ SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerToAccessList(struct soap*, struct Acce
 SOAP_FMAC3 struct AccessList ** SOAP_FMAC4 soap_get_PointerToAccessList(struct soap*, struct AccessList **, const char*, const char*);
 #endif
 
-#ifndef SOAP_TYPE_cwmp__DeploymentUnitUUID_DEFINED
-#define SOAP_TYPE_cwmp__DeploymentUnitUUID_DEFINED
-
-#ifdef SOAP_DEFAULT_cwmp__DeploymentUnitUUID
-#define soap_default_cwmp__DeploymentUnitUUID(soap, a) (*(a) = SOAP_DEFAULT_cwmp__DeploymentUnitUUID)
-#else
-#define soap_default_cwmp__DeploymentUnitUUID(soap, a) (*(a) = (char *)0)
-#endif
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__DeploymentUnitUUID(struct soap*, char *const*);
-
-#define soap_cwmp__DeploymentUnitUUID2s(soap, a) (a)
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__DeploymentUnitUUID(struct soap*, const char*, int, char*const*, const char*);
-
-#define soap_s2cwmp__DeploymentUnitUUID(soap, s, a) soap_s2char((soap), (s), (char**)(a), 0, -1, "[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}")
-SOAP_FMAC3 char * * SOAP_FMAC4 soap_in_cwmp__DeploymentUnitUUID(struct soap*, const char*, char **, const char*);
-#define soap_new_cwmp__DeploymentUnitUUID soap_new_string
-
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__DeploymentUnitUUID(struct soap*, char *const*, const char*, const char*);
-
-#ifndef soap_write_cwmp__DeploymentUnitUUID
-#define soap_write_cwmp__DeploymentUnitUUID(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_cwmp__DeploymentUnitUUID(soap, data, "cwmp:DeploymentUnitUUID", "cwmp:DeploymentUnitUUID") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__DeploymentUnitUUID
-#define soap_PUT_cwmp__DeploymentUnitUUID(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_cwmp__DeploymentUnitUUID(soap, data, "cwmp:DeploymentUnitUUID", "cwmp:DeploymentUnitUUID") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_cwmp__DeploymentUnitUUID
-#define soap_POST_send_cwmp__DeploymentUnitUUID(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_cwmp__DeploymentUnitUUID(soap, data, "cwmp:DeploymentUnitUUID", "cwmp:DeploymentUnitUUID") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 char ** SOAP_FMAC4 soap_get_cwmp__DeploymentUnitUUID(struct soap*, char **, const char*, const char*);
-
-#ifndef soap_read_cwmp__DeploymentUnitUUID
-#define soap_read_cwmp__DeploymentUnitUUID(soap, data) ( soap_begin_recv(soap) || !soap_get_cwmp__DeploymentUnitUUID(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_cwmp__DeploymentUnitUUID
-#define soap_GET_cwmp__DeploymentUnitUUID(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__DeploymentUnitUUID(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_cwmp__DeploymentUnitUUID
-#define soap_POST_recv_cwmp__DeploymentUnitUUID(soap, data) ( soap_read_cwmp__DeploymentUnitUUID(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE_cwmp__ParameterKeyType_DEFINED
-#define SOAP_TYPE_cwmp__ParameterKeyType_DEFINED
-
-#ifdef SOAP_DEFAULT_cwmp__ParameterKeyType
-#define soap_default_cwmp__ParameterKeyType(soap, a) (*(a) = SOAP_DEFAULT_cwmp__ParameterKeyType)
-#else
-#define soap_default_cwmp__ParameterKeyType(soap, a) (*(a) = (char *)0)
-#endif
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__ParameterKeyType(struct soap*, char *const*);
-
-#define soap_cwmp__ParameterKeyType2s(soap, a) (a)
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__ParameterKeyType(struct soap*, const char*, int, char*const*, const char*);
-
-#define soap_s2cwmp__ParameterKeyType(soap, s, a) soap_s2char((soap), (s), (char**)(a), 0, 32, NULL)
-SOAP_FMAC3 char * * SOAP_FMAC4 soap_in_cwmp__ParameterKeyType(struct soap*, const char*, char **, const char*);
-#define soap_new_cwmp__ParameterKeyType soap_new_string
-
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__ParameterKeyType(struct soap*, char *const*, const char*, const char*);
-
-#ifndef soap_write_cwmp__ParameterKeyType
-#define soap_write_cwmp__ParameterKeyType(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_cwmp__ParameterKeyType(soap, data, "cwmp:ParameterKeyType", "cwmp:ParameterKeyType") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__ParameterKeyType
-#define soap_PUT_cwmp__ParameterKeyType(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_cwmp__ParameterKeyType(soap, data, "cwmp:ParameterKeyType", "cwmp:ParameterKeyType") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_cwmp__ParameterKeyType
-#define soap_POST_send_cwmp__ParameterKeyType(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_cwmp__ParameterKeyType(soap, data, "cwmp:ParameterKeyType", "cwmp:ParameterKeyType") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 char ** SOAP_FMAC4 soap_get_cwmp__ParameterKeyType(struct soap*, char **, const char*, const char*);
-
-#ifndef soap_read_cwmp__ParameterKeyType
-#define soap_read_cwmp__ParameterKeyType(soap, data) ( soap_begin_recv(soap) || !soap_get_cwmp__ParameterKeyType(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_cwmp__ParameterKeyType
-#define soap_GET_cwmp__ParameterKeyType(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__ParameterKeyType(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_cwmp__ParameterKeyType
-#define soap_POST_recv_cwmp__ParameterKeyType(soap, data) ( soap_read_cwmp__ParameterKeyType(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
+#ifndef SOAP_TYPE_PointerTostring_DEFINED
+#define SOAP_TYPE_PointerTostring_DEFINED
+SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerTostring(struct soap*, char **const*);
+SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerTostring(struct soap*, const char *, int, char **const*, const char *);
+SOAP_FMAC3 char *** SOAP_FMAC4 soap_in_PointerTostring(struct soap*, const char*, char ***, const char*);
+SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTostring(struct soap*, char **const*, const char*, const char*);
+SOAP_FMAC3 char *** SOAP_FMAC4 soap_get_PointerTostring(struct soap*, char ***, const char*, const char*);
 #endif
 
 #ifndef SOAP_TYPE_cwmp__ObjectNameType_DEFINED
@@ -6122,359 +4468,104 @@ SOAP_FMAC3 char ** SOAP_FMAC4 soap_get_cwmp__CommandKeyType(struct soap*, char *
 
 #endif
 
-#ifndef SOAP_TYPE_cwmp__TimeWindowModeValueType_DEFINED
-#define SOAP_TYPE_cwmp__TimeWindowModeValueType_DEFINED
+#ifndef SOAP_TYPE_cwmp__ParameterKeyType_DEFINED
+#define SOAP_TYPE_cwmp__ParameterKeyType_DEFINED
 
-#ifdef SOAP_DEFAULT_cwmp__TimeWindowModeValueType
-#define soap_default_cwmp__TimeWindowModeValueType(soap, a) (*(a) = SOAP_DEFAULT_cwmp__TimeWindowModeValueType)
+#ifdef SOAP_DEFAULT_cwmp__ParameterKeyType
+#define soap_default_cwmp__ParameterKeyType(soap, a) (*(a) = SOAP_DEFAULT_cwmp__ParameterKeyType)
 #else
-#define soap_default_cwmp__TimeWindowModeValueType(soap, a) (*(a) = (char *)0)
+#define soap_default_cwmp__ParameterKeyType(soap, a) (*(a) = (char *)0)
 #endif
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__TimeWindowModeValueType(struct soap*, char *const*);
+SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__ParameterKeyType(struct soap*, char *const*);
 
-#define soap_cwmp__TimeWindowModeValueType2s(soap, a) (a)
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__TimeWindowModeValueType(struct soap*, const char*, int, char*const*, const char*);
+#define soap_cwmp__ParameterKeyType2s(soap, a) (a)
+SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__ParameterKeyType(struct soap*, const char*, int, char*const*, const char*);
 
-#define soap_s2cwmp__TimeWindowModeValueType(soap, s, a) soap_s2char((soap), (s), (char**)(a), 0, 64, "[1-9]\\d*( \\S+)+|X [0-9A-F]{6} .+|X \\S+ .+")
-SOAP_FMAC3 char * * SOAP_FMAC4 soap_in_cwmp__TimeWindowModeValueType(struct soap*, const char*, char **, const char*);
-#define soap_new_cwmp__TimeWindowModeValueType soap_new_string
+#define soap_s2cwmp__ParameterKeyType(soap, s, a) soap_s2char((soap), (s), (char**)(a), 0, 32, NULL)
+SOAP_FMAC3 char * * SOAP_FMAC4 soap_in_cwmp__ParameterKeyType(struct soap*, const char*, char **, const char*);
+#define soap_new_cwmp__ParameterKeyType soap_new_string
 
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__TimeWindowModeValueType(struct soap*, char *const*, const char*, const char*);
+SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__ParameterKeyType(struct soap*, char *const*, const char*, const char*);
 
-#ifndef soap_write_cwmp__TimeWindowModeValueType
-#define soap_write_cwmp__TimeWindowModeValueType(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_cwmp__TimeWindowModeValueType(soap, data, "cwmp:TimeWindowModeValueType", "cwmp:TimeWindowModeValueType") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__TimeWindowModeValueType
-#define soap_PUT_cwmp__TimeWindowModeValueType(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_cwmp__TimeWindowModeValueType(soap, data, "cwmp:TimeWindowModeValueType", "cwmp:TimeWindowModeValueType") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
+#ifndef soap_write_cwmp__ParameterKeyType
+#define soap_write_cwmp__ParameterKeyType(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_cwmp__ParameterKeyType(soap, data, "cwmp:ParameterKeyType", "cwmp:ParameterKeyType") || soap_end_send(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_POST_send_cwmp__TimeWindowModeValueType
-#define soap_POST_send_cwmp__TimeWindowModeValueType(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_cwmp__TimeWindowModeValueType(soap, data, "cwmp:TimeWindowModeValueType", "cwmp:TimeWindowModeValueType") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 char ** SOAP_FMAC4 soap_get_cwmp__TimeWindowModeValueType(struct soap*, char **, const char*, const char*);
-
-#ifndef soap_read_cwmp__TimeWindowModeValueType
-#define soap_read_cwmp__TimeWindowModeValueType(soap, data) ( soap_begin_recv(soap) || !soap_get_cwmp__TimeWindowModeValueType(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
+#ifndef soap_PUT_cwmp__ParameterKeyType
+#define soap_PUT_cwmp__ParameterKeyType(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_cwmp__ParameterKeyType(soap, data, "cwmp:ParameterKeyType", "cwmp:ParameterKeyType") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_GET_cwmp__TimeWindowModeValueType
-#define soap_GET_cwmp__TimeWindowModeValueType(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__TimeWindowModeValueType(soap, (data)), (soap)->error )
+#ifndef soap_POST_send_cwmp__ParameterKeyType
+#define soap_POST_send_cwmp__ParameterKeyType(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_cwmp__ParameterKeyType(soap, data, "cwmp:ParameterKeyType", "cwmp:ParameterKeyType") || soap_end_send(soap), (soap)->error )
+#endif
+
+SOAP_FMAC3 char ** SOAP_FMAC4 soap_get_cwmp__ParameterKeyType(struct soap*, char **, const char*, const char*);
+
+#ifndef soap_read_cwmp__ParameterKeyType
+#define soap_read_cwmp__ParameterKeyType(soap, data) ( soap_begin_recv(soap) || !soap_get_cwmp__ParameterKeyType(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_POST_recv_cwmp__TimeWindowModeValueType
-#define soap_POST_recv_cwmp__TimeWindowModeValueType(soap, data) ( soap_read_cwmp__TimeWindowModeValueType(soap, (data)) || soap_closesock(soap), (soap)->error )
+#ifndef soap_GET_cwmp__ParameterKeyType
+#define soap_GET_cwmp__ParameterKeyType(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__ParameterKeyType(soap, (data)), (soap)->error )
+#endif
+
+
+#ifndef soap_POST_recv_cwmp__ParameterKeyType
+#define soap_POST_recv_cwmp__ParameterKeyType(soap, data) ( soap_read_cwmp__ParameterKeyType(soap, (data)) || soap_closesock(soap), (soap)->error )
 #endif
 
 #endif
 
-#ifndef SOAP_TYPE_cwmp__EventCodeType_DEFINED
-#define SOAP_TYPE_cwmp__EventCodeType_DEFINED
+#ifndef SOAP_TYPE_cwmp__FaultCodeType_DEFINED
+#define SOAP_TYPE_cwmp__FaultCodeType_DEFINED
 
-#ifdef SOAP_DEFAULT_cwmp__EventCodeType
-#define soap_default_cwmp__EventCodeType(soap, a) (*(a) = SOAP_DEFAULT_cwmp__EventCodeType)
+#ifdef SOAP_DEFAULT_cwmp__FaultCodeType
+#define soap_default_cwmp__FaultCodeType(soap, a) (*(a) = SOAP_DEFAULT_cwmp__FaultCodeType)
 #else
-#define soap_default_cwmp__EventCodeType(soap, a) (*(a) = (char *)0)
+#define soap_default_cwmp__FaultCodeType(soap, a) (*(a) = (char *)0)
 #endif
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__EventCodeType(struct soap*, char *const*);
+SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__FaultCodeType(struct soap*, char *const*);
 
-#define soap_cwmp__EventCodeType2s(soap, a) (a)
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__EventCodeType(struct soap*, const char*, int, char*const*, const char*);
+#define soap_cwmp__FaultCodeType2s(soap, a) (a)
+SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__FaultCodeType(struct soap*, const char*, int, char*const*, const char*);
 
-#define soap_s2cwmp__EventCodeType(soap, s, a) soap_s2char((soap), (s), (char**)(a), 0, 64, "\\d+( \\S+)+|M \\S+|M X_\\S+|X [0-9A-F]{6} .+|X \\S+ .+")
-SOAP_FMAC3 char * * SOAP_FMAC4 soap_in_cwmp__EventCodeType(struct soap*, const char*, char **, const char*);
-#define soap_new_cwmp__EventCodeType soap_new_string
+#define soap_s2cwmp__FaultCodeType(soap, s, a) soap_s2char((soap), (s), (char**)(a), 0, -1, NULL)
+SOAP_FMAC3 char * * SOAP_FMAC4 soap_in_cwmp__FaultCodeType(struct soap*, const char*, char **, const char*);
+#define soap_new_cwmp__FaultCodeType soap_new_string
 
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__EventCodeType(struct soap*, char *const*, const char*, const char*);
+SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__FaultCodeType(struct soap*, char *const*, const char*, const char*);
 
-#ifndef soap_write_cwmp__EventCodeType
-#define soap_write_cwmp__EventCodeType(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_cwmp__EventCodeType(soap, data, "cwmp:EventCodeType", "cwmp:EventCodeType") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__EventCodeType
-#define soap_PUT_cwmp__EventCodeType(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_cwmp__EventCodeType(soap, data, "cwmp:EventCodeType", "cwmp:EventCodeType") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
+#ifndef soap_write_cwmp__FaultCodeType
+#define soap_write_cwmp__FaultCodeType(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_cwmp__FaultCodeType(soap, data, "cwmp:FaultCodeType", "cwmp:FaultCodeType") || soap_end_send(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_POST_send_cwmp__EventCodeType
-#define soap_POST_send_cwmp__EventCodeType(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_cwmp__EventCodeType(soap, data, "cwmp:EventCodeType", "cwmp:EventCodeType") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 char ** SOAP_FMAC4 soap_get_cwmp__EventCodeType(struct soap*, char **, const char*, const char*);
-
-#ifndef soap_read_cwmp__EventCodeType
-#define soap_read_cwmp__EventCodeType(soap, data) ( soap_begin_recv(soap) || !soap_get_cwmp__EventCodeType(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
+#ifndef soap_PUT_cwmp__FaultCodeType
+#define soap_PUT_cwmp__FaultCodeType(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_cwmp__FaultCodeType(soap, data, "cwmp:FaultCodeType", "cwmp:FaultCodeType") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_GET_cwmp__EventCodeType
-#define soap_GET_cwmp__EventCodeType(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__EventCodeType(soap, (data)), (soap)->error )
+#ifndef soap_POST_send_cwmp__FaultCodeType
+#define soap_POST_send_cwmp__FaultCodeType(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_cwmp__FaultCodeType(soap, data, "cwmp:FaultCodeType", "cwmp:FaultCodeType") || soap_end_send(soap), (soap)->error )
+#endif
+
+SOAP_FMAC3 char ** SOAP_FMAC4 soap_get_cwmp__FaultCodeType(struct soap*, char **, const char*, const char*);
+
+#ifndef soap_read_cwmp__FaultCodeType
+#define soap_read_cwmp__FaultCodeType(soap, data) ( soap_begin_recv(soap) || !soap_get_cwmp__FaultCodeType(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_POST_recv_cwmp__EventCodeType
-#define soap_POST_recv_cwmp__EventCodeType(soap, data) ( soap_read_cwmp__EventCodeType(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE_cwmp__UploadFileType_DEFINED
-#define SOAP_TYPE_cwmp__UploadFileType_DEFINED
-
-#ifdef SOAP_DEFAULT_cwmp__UploadFileType
-#define soap_default_cwmp__UploadFileType(soap, a) (*(a) = SOAP_DEFAULT_cwmp__UploadFileType)
-#else
-#define soap_default_cwmp__UploadFileType(soap, a) (*(a) = (char *)0)
-#endif
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__UploadFileType(struct soap*, char *const*);
-
-#define soap_cwmp__UploadFileType2s(soap, a) (a)
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__UploadFileType(struct soap*, const char*, int, char*const*, const char*);
-
-#define soap_s2cwmp__UploadFileType(soap, s, a) soap_s2char((soap), (s), (char**)(a), 0, 64, "[1-9]\\d*( \\S+)+|[1-9]\\d*( \\S+)+ [1-9]\\d*|X [0-9A-F]{6} .+|X \\S+ .+")
-SOAP_FMAC3 char * * SOAP_FMAC4 soap_in_cwmp__UploadFileType(struct soap*, const char*, char **, const char*);
-#define soap_new_cwmp__UploadFileType soap_new_string
-
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__UploadFileType(struct soap*, char *const*, const char*, const char*);
-
-#ifndef soap_write_cwmp__UploadFileType
-#define soap_write_cwmp__UploadFileType(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_cwmp__UploadFileType(soap, data, "cwmp:UploadFileType", "cwmp:UploadFileType") || soap_end_send(soap), (soap)->error )
+#ifndef soap_GET_cwmp__FaultCodeType
+#define soap_GET_cwmp__FaultCodeType(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__FaultCodeType(soap, (data)), (soap)->error )
 #endif
 
 
-#ifndef soap_PUT_cwmp__UploadFileType
-#define soap_PUT_cwmp__UploadFileType(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_cwmp__UploadFileType(soap, data, "cwmp:UploadFileType", "cwmp:UploadFileType") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_cwmp__UploadFileType
-#define soap_POST_send_cwmp__UploadFileType(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_cwmp__UploadFileType(soap, data, "cwmp:UploadFileType", "cwmp:UploadFileType") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 char ** SOAP_FMAC4 soap_get_cwmp__UploadFileType(struct soap*, char **, const char*, const char*);
-
-#ifndef soap_read_cwmp__UploadFileType
-#define soap_read_cwmp__UploadFileType(soap, data) ( soap_begin_recv(soap) || !soap_get_cwmp__UploadFileType(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_cwmp__UploadFileType
-#define soap_GET_cwmp__UploadFileType(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__UploadFileType(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_cwmp__UploadFileType
-#define soap_POST_recv_cwmp__UploadFileType(soap, data) ( soap_read_cwmp__UploadFileType(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE_cwmp__DownloadFileType_DEFINED
-#define SOAP_TYPE_cwmp__DownloadFileType_DEFINED
-
-#ifdef SOAP_DEFAULT_cwmp__DownloadFileType
-#define soap_default_cwmp__DownloadFileType(soap, a) (*(a) = SOAP_DEFAULT_cwmp__DownloadFileType)
-#else
-#define soap_default_cwmp__DownloadFileType(soap, a) (*(a) = (char *)0)
-#endif
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__DownloadFileType(struct soap*, char *const*);
-
-#define soap_cwmp__DownloadFileType2s(soap, a) (a)
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__DownloadFileType(struct soap*, const char*, int, char*const*, const char*);
-
-#define soap_s2cwmp__DownloadFileType(soap, s, a) soap_s2char((soap), (s), (char**)(a), 0, 64, "[1-9]\\d*( \\S+)+|X [0-9A-F]{6} .+|X \\S+ .+")
-SOAP_FMAC3 char * * SOAP_FMAC4 soap_in_cwmp__DownloadFileType(struct soap*, const char*, char **, const char*);
-#define soap_new_cwmp__DownloadFileType soap_new_string
-
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__DownloadFileType(struct soap*, char *const*, const char*, const char*);
-
-#ifndef soap_write_cwmp__DownloadFileType
-#define soap_write_cwmp__DownloadFileType(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_cwmp__DownloadFileType(soap, data, "cwmp:DownloadFileType", "cwmp:DownloadFileType") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__DownloadFileType
-#define soap_PUT_cwmp__DownloadFileType(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_cwmp__DownloadFileType(soap, data, "cwmp:DownloadFileType", "cwmp:DownloadFileType") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_cwmp__DownloadFileType
-#define soap_POST_send_cwmp__DownloadFileType(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_cwmp__DownloadFileType(soap, data, "cwmp:DownloadFileType", "cwmp:DownloadFileType") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 char ** SOAP_FMAC4 soap_get_cwmp__DownloadFileType(struct soap*, char **, const char*, const char*);
-
-#ifndef soap_read_cwmp__DownloadFileType
-#define soap_read_cwmp__DownloadFileType(soap, data) ( soap_begin_recv(soap) || !soap_get_cwmp__DownloadFileType(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_cwmp__DownloadFileType
-#define soap_GET_cwmp__DownloadFileType(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__DownloadFileType(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_cwmp__DownloadFileType
-#define soap_POST_recv_cwmp__DownloadFileType(soap, data) ( soap_read_cwmp__DownloadFileType(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE_cwmp__TransferFileType_DEFINED
-#define SOAP_TYPE_cwmp__TransferFileType_DEFINED
-
-#ifdef SOAP_DEFAULT_cwmp__TransferFileType
-#define soap_default_cwmp__TransferFileType(soap, a) (*(a) = SOAP_DEFAULT_cwmp__TransferFileType)
-#else
-#define soap_default_cwmp__TransferFileType(soap, a) (*(a) = (char *)0)
-#endif
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__TransferFileType(struct soap*, char *const*);
-
-#define soap_cwmp__TransferFileType2s(soap, a) (a)
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__TransferFileType(struct soap*, const char*, int, char*const*, const char*);
-
-#define soap_s2cwmp__TransferFileType(soap, s, a) soap_s2char((soap), (s), (char**)(a), 0, 64, "[1-9]\\d*( \\S+)+|[1-9]\\d*( \\S+)+ [1-9]\\d*|X [0-9A-F]{6} .+|X \\S+ .+")
-SOAP_FMAC3 char * * SOAP_FMAC4 soap_in_cwmp__TransferFileType(struct soap*, const char*, char **, const char*);
-#define soap_new_cwmp__TransferFileType soap_new_string
-
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__TransferFileType(struct soap*, char *const*, const char*, const char*);
-
-#ifndef soap_write_cwmp__TransferFileType
-#define soap_write_cwmp__TransferFileType(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_cwmp__TransferFileType(soap, data, "cwmp:TransferFileType", "cwmp:TransferFileType") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__TransferFileType
-#define soap_PUT_cwmp__TransferFileType(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_cwmp__TransferFileType(soap, data, "cwmp:TransferFileType", "cwmp:TransferFileType") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_cwmp__TransferFileType
-#define soap_POST_send_cwmp__TransferFileType(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_cwmp__TransferFileType(soap, data, "cwmp:TransferFileType", "cwmp:TransferFileType") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 char ** SOAP_FMAC4 soap_get_cwmp__TransferFileType(struct soap*, char **, const char*, const char*);
-
-#ifndef soap_read_cwmp__TransferFileType
-#define soap_read_cwmp__TransferFileType(soap, data) ( soap_begin_recv(soap) || !soap_get_cwmp__TransferFileType(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_cwmp__TransferFileType
-#define soap_GET_cwmp__TransferFileType(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__TransferFileType(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_cwmp__TransferFileType
-#define soap_POST_recv_cwmp__TransferFileType(soap, data) ( soap_read_cwmp__TransferFileType(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE_cwmp__DeploymentUnitOperationType_DEFINED
-#define SOAP_TYPE_cwmp__DeploymentUnitOperationType_DEFINED
-
-#ifdef SOAP_DEFAULT_cwmp__DeploymentUnitOperationType
-#define soap_default_cwmp__DeploymentUnitOperationType(soap, a) (*(a) = SOAP_DEFAULT_cwmp__DeploymentUnitOperationType)
-#else
-#define soap_default_cwmp__DeploymentUnitOperationType(soap, a) (*(a) = (char *)0)
-#endif
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__DeploymentUnitOperationType(struct soap*, char *const*);
-
-#define soap_cwmp__DeploymentUnitOperationType2s(soap, a) (a)
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__DeploymentUnitOperationType(struct soap*, const char*, int, char*const*, const char*);
-
-#define soap_s2cwmp__DeploymentUnitOperationType(soap, s, a) soap_s2char((soap), (s), (char**)(a), 0, -1, NULL)
-SOAP_FMAC3 char * * SOAP_FMAC4 soap_in_cwmp__DeploymentUnitOperationType(struct soap*, const char*, char **, const char*);
-#define soap_new_cwmp__DeploymentUnitOperationType soap_new_string
-
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__DeploymentUnitOperationType(struct soap*, char *const*, const char*, const char*);
-
-#ifndef soap_write_cwmp__DeploymentUnitOperationType
-#define soap_write_cwmp__DeploymentUnitOperationType(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_cwmp__DeploymentUnitOperationType(soap, data, "cwmp:DeploymentUnitOperationType", "cwmp:DeploymentUnitOperationType") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_cwmp__DeploymentUnitOperationType
-#define soap_PUT_cwmp__DeploymentUnitOperationType(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_cwmp__DeploymentUnitOperationType(soap, data, "cwmp:DeploymentUnitOperationType", "cwmp:DeploymentUnitOperationType") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_cwmp__DeploymentUnitOperationType
-#define soap_POST_send_cwmp__DeploymentUnitOperationType(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_cwmp__DeploymentUnitOperationType(soap, data, "cwmp:DeploymentUnitOperationType", "cwmp:DeploymentUnitOperationType") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 char ** SOAP_FMAC4 soap_get_cwmp__DeploymentUnitOperationType(struct soap*, char **, const char*, const char*);
-
-#ifndef soap_read_cwmp__DeploymentUnitOperationType
-#define soap_read_cwmp__DeploymentUnitOperationType(soap, data) ( soap_begin_recv(soap) || !soap_get_cwmp__DeploymentUnitOperationType(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_cwmp__DeploymentUnitOperationType
-#define soap_GET_cwmp__DeploymentUnitOperationType(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_cwmp__DeploymentUnitOperationType(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_cwmp__DeploymentUnitOperationType
-#define soap_POST_recv_cwmp__DeploymentUnitOperationType(soap, data) ( soap_read_cwmp__DeploymentUnitOperationType(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE_xsd__anyURI_DEFINED
-#define SOAP_TYPE_xsd__anyURI_DEFINED
-
-#ifdef SOAP_DEFAULT_xsd__anyURI
-#define soap_default_xsd__anyURI(soap, a) (*(a) = SOAP_DEFAULT_xsd__anyURI)
-#else
-#define soap_default_xsd__anyURI(soap, a) (*(a) = (char *)0)
-#endif
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_xsd__anyURI(struct soap*, char *const*);
-
-#define soap_xsd__anyURI2s(soap, a) (a)
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_xsd__anyURI(struct soap*, const char*, int, char*const*, const char*);
-
-#define soap_s2xsd__anyURI(soap, s, a) soap_s2char((soap), (s), (char**)(a), 0, -1, NULL)
-SOAP_FMAC3 char * * SOAP_FMAC4 soap_in_xsd__anyURI(struct soap*, const char*, char **, const char*);
-#define soap_new_xsd__anyURI soap_new_string
-
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_xsd__anyURI(struct soap*, char *const*, const char*, const char*);
-
-#ifndef soap_write_xsd__anyURI
-#define soap_write_xsd__anyURI(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_xsd__anyURI(soap, data, "xsd:anyURI", "xsd:anyURI") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_xsd__anyURI
-#define soap_PUT_xsd__anyURI(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_xsd__anyURI(soap, data, "xsd:anyURI", "xsd:anyURI") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_xsd__anyURI
-#define soap_POST_send_xsd__anyURI(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_xsd__anyURI(soap, data, "xsd:anyURI", "xsd:anyURI") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 char ** SOAP_FMAC4 soap_get_xsd__anyURI(struct soap*, char **, const char*, const char*);
-
-#ifndef soap_read_xsd__anyURI
-#define soap_read_xsd__anyURI(soap, data) ( soap_begin_recv(soap) || !soap_get_xsd__anyURI(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_xsd__anyURI
-#define soap_GET_xsd__anyURI(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_xsd__anyURI(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_xsd__anyURI
-#define soap_POST_recv_xsd__anyURI(soap, data) ( soap_read_xsd__anyURI(soap, (data)) || soap_closesock(soap), (soap)->error )
+#ifndef soap_POST_recv_cwmp__FaultCodeType
+#define soap_POST_recv_cwmp__FaultCodeType(soap, data) ( soap_read_cwmp__FaultCodeType(soap, (data)) || soap_closesock(soap), (soap)->error )
 #endif
 
 #endif

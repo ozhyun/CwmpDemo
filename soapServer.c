@@ -20,7 +20,7 @@ A commercial use license is available from Genivia Inc., contact@genivia.com
 extern "C" {
 #endif
 
-SOAP_SOURCE_STAMP("@(#) soapServer.c ver 2.8.44 2017-03-09 09:34:19 GMT")
+SOAP_SOURCE_STAMP("@(#) soapServer.c ver 2.8.44 2017-03-11 04:50:58 GMT")
 SOAP_FMAC5 int SOAP_FMAC6 soap_serve(struct soap *soap)
 {
 #ifndef WITH_FASTCGI

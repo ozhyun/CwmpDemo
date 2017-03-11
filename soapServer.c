@@ -20,7 +20,7 @@ A commercial use license is available from Genivia Inc., contact@genivia.com
 extern "C" {
 #endif
 
-SOAP_SOURCE_STAMP("@(#) soapServer.c ver 2.8.44 2017-03-11 04:50:58 GMT")
+SOAP_SOURCE_STAMP("@(#) soapServer.c ver 2.8.44 2017-03-11 09:23:32 GMT")
 SOAP_FMAC5 int SOAP_FMAC6 soap_serve(struct soap *soap)
 {
 #ifndef WITH_FASTCGI
@@ -61,6 +61,10 @@ SOAP_FMAC5 int SOAP_FMAC6 soap_serve_request(struct soap *soap)
 	soap_peek_element(soap);
 	if (!soap_match_tag(soap, soap->tag, "cwmp:Inform"))
 		return soap_serve_cwmp__Inform(soap);
+	if (!soap_match_tag(soap, soap->tag, "cwmp:GetParameterValues"))
+		return soap_serve_cwmp__GetParameterValues(soap);
+	if (!soap_match_tag(soap, soap->tag, "cwmp:Reboot"))
+		return soap_serve_cwmp__Reboot(soap);
 	return soap->error = SOAP_NO_METHOD;
 }
 #endif
@@ -99,6 +103,91 @@ SOAP_FMAC5 int SOAP_FMAC6 soap_serve_cwmp__Inform(struct soap *soap)
 	 || soap_putheader(soap)
 	 || soap_body_begin_out(soap)
 	 || soap_put_cwmp__InformResponse(soap, &response, "cwmp:InformResponse", "")
+	 || soap_body_end_out(soap)
+	 || soap_envelope_end_out(soap)
+	 || soap_end_send(soap))
+		return soap->error;
+	return soap_closesock(soap);
+}
+
+SOAP_FMAC5 int SOAP_FMAC6 soap_serve_cwmp__GetParameterValues(struct soap *soap)
+{	struct cwmp__GetParameterValues soap_tmp_cwmp__GetParameterValues;
+	struct cwmp__GetParameterValuesResponse soap_tmp_cwmp__GetParameterValuesResponse;
+	struct ParameterValueList soap_tmp_ParameterValueList;
+	soap_default_cwmp__GetParameterValuesResponse(soap, &soap_tmp_cwmp__GetParameterValuesResponse);
+	soap_default_ParameterValueList(soap, &soap_tmp_ParameterValueList);
+	soap_tmp_cwmp__GetParameterValuesResponse.ParameterList = &soap_tmp_ParameterValueList;
+	soap_default_cwmp__GetParameterValues(soap, &soap_tmp_cwmp__GetParameterValues);
+	if (!soap_get_cwmp__GetParameterValues(soap, &soap_tmp_cwmp__GetParameterValues, "cwmp:GetParameterValues", NULL))
+		return soap->error;
+	if (soap_body_end_in(soap)
+	 || soap_envelope_end_in(soap)
+	 || soap_end_recv(soap))
+		return soap->error;
+	soap->error = cwmp__GetParameterValues(soap, soap_tmp_cwmp__GetParameterValues.ParameterNames, soap_tmp_cwmp__GetParameterValuesResponse.ParameterList);
+	if (soap->error)
+		return soap->error;
+	soap->encodingStyle = "";
+	soap_serializeheader(soap);
+	soap_serialize_cwmp__GetParameterValuesResponse(soap, &soap_tmp_cwmp__GetParameterValuesResponse);
+	if (soap_begin_count(soap))
+		return soap->error;
+	if (soap->mode & SOAP_IO_LENGTH)
+	{	if (soap_envelope_begin_out(soap)
+		 || soap_putheader(soap)
+		 || soap_body_begin_out(soap)
+		 || soap_put_cwmp__GetParameterValuesResponse(soap, &soap_tmp_cwmp__GetParameterValuesResponse, "cwmp:GetParameterValuesResponse", "")
+		 || soap_body_end_out(soap)
+		 || soap_envelope_end_out(soap))
+			 return soap->error;
+	};
+	if (soap_end_count(soap)
+	 || soap_response(soap, SOAP_OK)
+	 || soap_envelope_begin_out(soap)
+	 || soap_putheader(soap)
+	 || soap_body_begin_out(soap)
+	 || soap_put_cwmp__GetParameterValuesResponse(soap, &soap_tmp_cwmp__GetParameterValuesResponse, "cwmp:GetParameterValuesResponse", "")
+	 || soap_body_end_out(soap)
+	 || soap_envelope_end_out(soap)
+	 || soap_end_send(soap))
+		return soap->error;
+	return soap_closesock(soap);
+}
+
+SOAP_FMAC5 int SOAP_FMAC6 soap_serve_cwmp__Reboot(struct soap *soap)
+{	struct cwmp__Reboot soap_tmp_cwmp__Reboot;
+	struct cwmp__RebootResponse res;
+	soap_default_cwmp__RebootResponse(soap, &res);
+	soap_default_cwmp__Reboot(soap, &soap_tmp_cwmp__Reboot);
+	if (!soap_get_cwmp__Reboot(soap, &soap_tmp_cwmp__Reboot, "cwmp:Reboot", NULL))
+		return soap->error;
+	if (soap_body_end_in(soap)
+	 || soap_envelope_end_in(soap)
+	 || soap_end_recv(soap))
+		return soap->error;
+	soap->error = cwmp__Reboot(soap, soap_tmp_cwmp__Reboot.Commandkey, &res);
+	if (soap->error)
+		return soap->error;
+	soap->encodingStyle = "";
+	soap_serializeheader(soap);
+	soap_serialize_cwmp__RebootResponse(soap, &res);
+	if (soap_begin_count(soap))
+		return soap->error;
+	if (soap->mode & SOAP_IO_LENGTH)
+	{	if (soap_envelope_begin_out(soap)
+		 || soap_putheader(soap)
+		 || soap_body_begin_out(soap)
+		 || soap_put_cwmp__RebootResponse(soap, &res, "cwmp:RebootResponse", "")
+		 || soap_body_end_out(soap)
+		 || soap_envelope_end_out(soap))
+			 return soap->error;
+	};
+	if (soap_end_count(soap)
+	 || soap_response(soap, SOAP_OK)
+	 || soap_envelope_begin_out(soap)
+	 || soap_putheader(soap)
+	 || soap_body_begin_out(soap)
+	 || soap_put_cwmp__RebootResponse(soap, &res, "cwmp:RebootResponse", "")
 	 || soap_body_end_out(soap)
 	 || soap_envelope_end_out(soap)
 	 || soap_end_send(soap))

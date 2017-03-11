@@ -22,7 +22,7 @@ A commercial use license is available from Genivia Inc., contact@genivia.com
 extern "C" {
 #endif
 
-SOAP_SOURCE_STAMP("@(#) soapC.c ver 2.8.44 2017-03-11 04:50:58 GMT")
+SOAP_SOURCE_STAMP("@(#) soapC.c ver 2.8.44 2017-03-11 09:23:32 GMT")
 
 
 #ifndef WITH_NOGLOBAL
@@ -226,6 +226,14 @@ SOAP_FMAC3 void * SOAP_FMAC4 soap_getelement(struct soap *soap, int *type)
 		return soap_in__cwmp__FaultStruct_FaultCode(soap, NULL, NULL, "cwmp:FaultStruct-FaultCode");
 	case SOAP_TYPE_xsd__boolean:
 		return soap_in_xsd__boolean(soap, NULL, NULL, "xsd:boolean");
+	case SOAP_TYPE_cwmp__Reboot:
+		return soap_in_cwmp__Reboot(soap, NULL, NULL, "cwmp:Reboot");
+	case SOAP_TYPE_cwmp__RebootResponse:
+		return soap_in_cwmp__RebootResponse(soap, NULL, NULL, "cwmp:RebootResponse");
+	case SOAP_TYPE_cwmp__GetParameterValues:
+		return soap_in_cwmp__GetParameterValues(soap, NULL, NULL, "cwmp:GetParameterValues");
+	case SOAP_TYPE_cwmp__GetParameterValuesResponse:
+		return soap_in_cwmp__GetParameterValuesResponse(soap, NULL, NULL, "cwmp:GetParameterValuesResponse");
 	case SOAP_TYPE_cwmp__Inform:
 		return soap_in_cwmp__Inform(soap, NULL, NULL, "cwmp:Inform");
 	case SOAP_TYPE_cwmp__InformResponse:
@@ -276,6 +284,8 @@ SOAP_FMAC3 void * SOAP_FMAC4 soap_getelement(struct soap *soap, int *type)
 		return soap_in_cwmp__FaultStruct(soap, NULL, NULL, "cwmp:FaultStruct");
 	case SOAP_TYPE_SOAP_ENC__base64:
 		return soap_in_SOAP_ENC__base64(soap, NULL, NULL, "SOAP-ENC:base64");
+	case SOAP_TYPE_PointerTocwmp__RebootResponse:
+		return soap_in_PointerTocwmp__RebootResponse(soap, NULL, NULL, "cwmp:RebootResponse");
 	case SOAP_TYPE_PointerTocwmp__InformResponse:
 		return soap_in_PointerTocwmp__InformResponse(soap, NULL, NULL, "cwmp:InformResponse");
 	case SOAP_TYPE_PointerToPointerTocwmp__ArgStruct:
@@ -461,6 +471,22 @@ SOAP_FMAC3 void * SOAP_FMAC4 soap_getelement(struct soap *soap, int *type)
 		if (!soap_match_tag(soap, t, "xsd:boolean"))
 		{	*type = SOAP_TYPE_xsd__boolean;
 			return soap_in_xsd__boolean(soap, NULL, NULL, NULL);
+		}
+		if (!soap_match_tag(soap, t, "cwmp:Reboot"))
+		{	*type = SOAP_TYPE_cwmp__Reboot;
+			return soap_in_cwmp__Reboot(soap, NULL, NULL, NULL);
+		}
+		if (!soap_match_tag(soap, t, "cwmp:RebootResponse"))
+		{	*type = SOAP_TYPE_cwmp__RebootResponse;
+			return soap_in_cwmp__RebootResponse(soap, NULL, NULL, NULL);
+		}
+		if (!soap_match_tag(soap, t, "cwmp:GetParameterValues"))
+		{	*type = SOAP_TYPE_cwmp__GetParameterValues;
+			return soap_in_cwmp__GetParameterValues(soap, NULL, NULL, NULL);
+		}
+		if (!soap_match_tag(soap, t, "cwmp:GetParameterValuesResponse"))
+		{	*type = SOAP_TYPE_cwmp__GetParameterValuesResponse;
+			return soap_in_cwmp__GetParameterValuesResponse(soap, NULL, NULL, NULL);
 		}
 		if (!soap_match_tag(soap, t, "cwmp:Inform"))
 		{	*type = SOAP_TYPE_cwmp__Inform;
@@ -871,6 +897,14 @@ SOAP_FMAC3 int SOAP_FMAC4 soap_putelement(struct soap *soap, const void *ptr, co
 		return soap_out__cwmp__FaultStruct_FaultCode(soap, tag, id, (const enum _cwmp__FaultStruct_FaultCode *)ptr, "cwmp:FaultStruct-FaultCode");
 	case SOAP_TYPE_xsd__boolean:
 		return soap_out_xsd__boolean(soap, tag, id, (const enum xsd__boolean *)ptr, "xsd:boolean");
+	case SOAP_TYPE_cwmp__Reboot:
+		return soap_out_cwmp__Reboot(soap, tag, id, (const struct cwmp__Reboot *)ptr, "cwmp:Reboot");
+	case SOAP_TYPE_cwmp__RebootResponse:
+		return soap_out_cwmp__RebootResponse(soap, tag, id, (const struct cwmp__RebootResponse *)ptr, "cwmp:RebootResponse");
+	case SOAP_TYPE_cwmp__GetParameterValues:
+		return soap_out_cwmp__GetParameterValues(soap, tag, id, (const struct cwmp__GetParameterValues *)ptr, "cwmp:GetParameterValues");
+	case SOAP_TYPE_cwmp__GetParameterValuesResponse:
+		return soap_out_cwmp__GetParameterValuesResponse(soap, tag, id, (const struct cwmp__GetParameterValuesResponse *)ptr, "cwmp:GetParameterValuesResponse");
 	case SOAP_TYPE_cwmp__Inform:
 		return soap_out_cwmp__Inform(soap, tag, id, (const struct cwmp__Inform *)ptr, "cwmp:Inform");
 	case SOAP_TYPE_cwmp__InformResponse:
@@ -1009,6 +1043,8 @@ SOAP_FMAC3 int SOAP_FMAC4 soap_putelement(struct soap *soap, const void *ptr, co
 		return soap_out_cwmp__FaultStruct(soap, tag, id, (const struct cwmp__FaultStruct *)ptr, "cwmp:FaultStruct");
 	case SOAP_TYPE_SOAP_ENC__base64:
 		return soap_out_SOAP_ENC__base64(soap, tag, id, (const struct SOAP_ENC__base64 *)ptr, "SOAP-ENC:base64");
+	case SOAP_TYPE_PointerTocwmp__RebootResponse:
+		return soap_out_PointerTocwmp__RebootResponse(soap, tag, id, (struct cwmp__RebootResponse *const*)ptr, "cwmp:RebootResponse");
 	case SOAP_TYPE_PointerTocwmp__InformResponse:
 		return soap_out_PointerTocwmp__InformResponse(soap, tag, id, (struct cwmp__InformResponse *const*)ptr, "cwmp:InformResponse");
 	case SOAP_TYPE_PointerToPointerTocwmp__ArgStruct:
@@ -1105,6 +1141,18 @@ SOAP_FMAC3 void SOAP_FMAC4 soap_markelement(struct soap *soap, const void *ptr, 
 	(void)soap; (void)ptr; (void)type; /* appease -Wall -Werror */
 	switch (type)
 	{
+	case SOAP_TYPE_cwmp__Reboot:
+		soap_serialize_cwmp__Reboot(soap, (const struct cwmp__Reboot *)ptr);
+		break;
+	case SOAP_TYPE_cwmp__RebootResponse:
+		soap_serialize_cwmp__RebootResponse(soap, (const struct cwmp__RebootResponse *)ptr);
+		break;
+	case SOAP_TYPE_cwmp__GetParameterValues:
+		soap_serialize_cwmp__GetParameterValues(soap, (const struct cwmp__GetParameterValues *)ptr);
+		break;
+	case SOAP_TYPE_cwmp__GetParameterValuesResponse:
+		soap_serialize_cwmp__GetParameterValuesResponse(soap, (const struct cwmp__GetParameterValuesResponse *)ptr);
+		break;
 	case SOAP_TYPE_cwmp__Inform:
 		soap_serialize_cwmp__Inform(soap, (const struct cwmp__Inform *)ptr);
 		break;
@@ -1311,6 +1359,9 @@ SOAP_FMAC3 void SOAP_FMAC4 soap_markelement(struct soap *soap, const void *ptr, 
 		break;
 	case SOAP_TYPE_SOAP_ENC__base64:
 		soap_serialize_SOAP_ENC__base64(soap, (const struct SOAP_ENC__base64 *)ptr);
+		break;
+	case SOAP_TYPE_PointerTocwmp__RebootResponse:
+		soap_serialize_PointerTocwmp__RebootResponse(soap, (struct cwmp__RebootResponse *const*)ptr);
 		break;
 	case SOAP_TYPE_PointerTocwmp__InformResponse:
 		soap_serialize_PointerTocwmp__InformResponse(soap, (struct cwmp__InformResponse *const*)ptr);
@@ -3163,6 +3214,340 @@ SOAP_FMAC3 struct SOAP_ENV__Code * SOAP_FMAC4 soap_get_SOAP_ENV__Code(struct soa
 }
 
 #endif
+
+SOAP_FMAC3 void SOAP_FMAC4 soap_default_cwmp__Reboot(struct soap *soap, struct cwmp__Reboot *a)
+{
+	(void)soap; (void)a; /* appease -Wall -Werror */
+	soap_default_string(soap, &a->Commandkey);
+}
+
+SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__Reboot(struct soap *soap, const struct cwmp__Reboot *a)
+{
+	(void)soap; (void)a; /* appease -Wall -Werror */
+#ifndef WITH_NOIDREF
+	soap_serialize_string(soap, (char*const*)&a->Commandkey);
+#endif
+}
+
+SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__Reboot(struct soap *soap, const char *tag, int id, const struct cwmp__Reboot *a, const char *type)
+{
+	if (!type)
+		type = "cwmp:Reboot";
+	(void)soap; (void)tag; (void)id; (void)a; (void)type; /* appease -Wall -Werror */
+	if (soap_element_begin_out(soap, tag, soap_embedded_id(soap, id, a, SOAP_TYPE_cwmp__Reboot), type))
+		return soap->error;
+	if (soap_out_string(soap, "Commandkey", -1, (char*const*)&a->Commandkey, "xsd:string"))
+		return soap->error;
+	return soap_element_end_out(soap, tag);
+}
+
+SOAP_FMAC3 struct cwmp__Reboot * SOAP_FMAC4 soap_in_cwmp__Reboot(struct soap *soap, const char *tag, struct cwmp__Reboot *a, const char *type)
+{
+	size_t soap_flag_Commandkey = 1;
+	if (soap_element_begin_in(soap, tag, 0, type))
+		return NULL;
+	a = (struct cwmp__Reboot *)soap_id_enter(soap, soap->id, a, SOAP_TYPE_cwmp__Reboot, sizeof(struct cwmp__Reboot), NULL, NULL, NULL, NULL);
+	if (!a)
+		return NULL;
+	soap_default_cwmp__Reboot(soap, a);
+	if (soap->body && !*soap->href)
+	{
+		for (;;)
+		{	soap->error = SOAP_TAG_MISMATCH;
+			if (soap_flag_Commandkey && (soap->error == SOAP_TAG_MISMATCH || soap->error == SOAP_NO_TAG))
+				if (soap_in_string(soap, "Commandkey", (char**)&a->Commandkey, "xsd:string"))
+				{	soap_flag_Commandkey--;
+					continue;
+				}
+			if (soap->error == SOAP_TAG_MISMATCH)
+				soap->error = soap_ignore_element(soap);
+			if (soap->error == SOAP_NO_TAG)
+				break;
+			if (soap->error)
+				return NULL;
+		}
+		if (soap_element_end_in(soap, tag))
+			return NULL;
+	}
+	else
+	{	a = (struct cwmp__Reboot *)soap_id_forward(soap, soap->href, (void*)a, 0, SOAP_TYPE_cwmp__Reboot, SOAP_TYPE_cwmp__Reboot, sizeof(struct cwmp__Reboot), 0, NULL, NULL);
+		if (soap->body && soap_element_end_in(soap, tag))
+			return NULL;
+	}
+	return a;
+}
+
+SOAP_FMAC3 struct cwmp__Reboot * SOAP_FMAC4 soap_new_cwmp__Reboot(struct soap *soap, int n)
+{
+	struct cwmp__Reboot *p;
+	struct cwmp__Reboot *a = (struct cwmp__Reboot*)soap_malloc((soap), (n = (n < 0 ? 1 : n)) * sizeof(struct cwmp__Reboot));
+	for (p = a; p && n--; p++)
+		soap_default_cwmp__Reboot(soap, p);
+	return a;
+}
+
+SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__Reboot(struct soap *soap, const struct cwmp__Reboot *a, const char *tag, const char *type)
+{
+	if (soap_out_cwmp__Reboot(soap, tag ? tag : "cwmp:Reboot", -2, a, type))
+		return soap->error;
+	return soap_putindependent(soap);
+}
+
+SOAP_FMAC3 struct cwmp__Reboot * SOAP_FMAC4 soap_get_cwmp__Reboot(struct soap *soap, struct cwmp__Reboot *p, const char *tag, const char *type)
+{
+	if ((p = soap_in_cwmp__Reboot(soap, tag, p, type)))
+		if (soap_getindependent(soap))
+			return NULL;
+	return p;
+}
+
+SOAP_FMAC3 void SOAP_FMAC4 soap_default_cwmp__RebootResponse(struct soap *soap, struct cwmp__RebootResponse *a)
+{
+	(void)soap; (void)a; /* appease -Wall -Werror */
+}
+
+SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__RebootResponse(struct soap *soap, const struct cwmp__RebootResponse *a)
+{
+	(void)soap; (void)a; /* appease -Wall -Werror */
+#ifndef WITH_NOIDREF
+#endif
+}
+
+SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__RebootResponse(struct soap *soap, const char *tag, int id, const struct cwmp__RebootResponse *a, const char *type)
+{
+	if (!type)
+		type = "cwmp:RebootResponse";
+	(void)soap; (void)tag; (void)id; (void)a; (void)type; /* appease -Wall -Werror */
+	if (soap_element_begin_out(soap, tag, soap_embedded_id(soap, id, a, SOAP_TYPE_cwmp__RebootResponse), type))
+		return soap->error;
+	return soap_element_end_out(soap, tag);
+}
+
+SOAP_FMAC3 struct cwmp__RebootResponse * SOAP_FMAC4 soap_in_cwmp__RebootResponse(struct soap *soap, const char *tag, struct cwmp__RebootResponse *a, const char *type)
+{
+	if (soap_element_begin_in(soap, tag, 0, type))
+		return NULL;
+	a = (struct cwmp__RebootResponse *)soap_id_enter(soap, soap->id, a, SOAP_TYPE_cwmp__RebootResponse, sizeof(struct cwmp__RebootResponse), NULL, NULL, NULL, NULL);
+	if (!a)
+		return NULL;
+	soap_default_cwmp__RebootResponse(soap, a);
+	if (soap->body && !*soap->href)
+	{
+		for (;;)
+		{	soap->error = SOAP_TAG_MISMATCH;
+			if (soap->error == SOAP_TAG_MISMATCH)
+				soap->error = soap_ignore_element(soap);
+			if (soap->error == SOAP_NO_TAG)
+				break;
+			if (soap->error)
+				return NULL;
+		}
+		if (soap_element_end_in(soap, tag))
+			return NULL;
+	}
+	else
+	{	a = (struct cwmp__RebootResponse *)soap_id_forward(soap, soap->href, (void*)a, 0, SOAP_TYPE_cwmp__RebootResponse, SOAP_TYPE_cwmp__RebootResponse, sizeof(struct cwmp__RebootResponse), 0, NULL, NULL);
+		if (soap->body && soap_element_end_in(soap, tag))
+			return NULL;
+	}
+	return a;
+}
+
+SOAP_FMAC3 struct cwmp__RebootResponse * SOAP_FMAC4 soap_new_cwmp__RebootResponse(struct soap *soap, int n)
+{
+	struct cwmp__RebootResponse *p;
+	struct cwmp__RebootResponse *a = (struct cwmp__RebootResponse*)soap_malloc((soap), (n = (n < 0 ? 1 : n)) * sizeof(struct cwmp__RebootResponse));
+	for (p = a; p && n--; p++)
+		soap_default_cwmp__RebootResponse(soap, p);
+	return a;
+}
+
+SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__RebootResponse(struct soap *soap, const struct cwmp__RebootResponse *a, const char *tag, const char *type)
+{
+	if (soap_out_cwmp__RebootResponse(soap, tag ? tag : "cwmp:RebootResponse", -2, a, type))
+		return soap->error;
+	return soap_putindependent(soap);
+}
+
+SOAP_FMAC3 struct cwmp__RebootResponse * SOAP_FMAC4 soap_get_cwmp__RebootResponse(struct soap *soap, struct cwmp__RebootResponse *p, const char *tag, const char *type)
+{
+	if ((p = soap_in_cwmp__RebootResponse(soap, tag, p, type)))
+		if (soap_getindependent(soap))
+			return NULL;
+	return p;
+}
+
+SOAP_FMAC3 void SOAP_FMAC4 soap_default_cwmp__GetParameterValues(struct soap *soap, struct cwmp__GetParameterValues *a)
+{
+	(void)soap; (void)a; /* appease -Wall -Werror */
+	a->ParameterNames = NULL;
+}
+
+SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__GetParameterValues(struct soap *soap, const struct cwmp__GetParameterValues *a)
+{
+	(void)soap; (void)a; /* appease -Wall -Werror */
+#ifndef WITH_NOIDREF
+	soap_serialize_PointerToParameterNames(soap, &a->ParameterNames);
+#endif
+}
+
+SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__GetParameterValues(struct soap *soap, const char *tag, int id, const struct cwmp__GetParameterValues *a, const char *type)
+{
+	if (!type)
+		type = "cwmp:GetParameterValues";
+	(void)soap; (void)tag; (void)id; (void)a; (void)type; /* appease -Wall -Werror */
+	if (soap_element_begin_out(soap, tag, soap_embedded_id(soap, id, a, SOAP_TYPE_cwmp__GetParameterValues), type))
+		return soap->error;
+	if (soap_out_PointerToParameterNames(soap, "ParameterNames", -1, &a->ParameterNames, "xsd:string"))
+		return soap->error;
+	return soap_element_end_out(soap, tag);
+}
+
+SOAP_FMAC3 struct cwmp__GetParameterValues * SOAP_FMAC4 soap_in_cwmp__GetParameterValues(struct soap *soap, const char *tag, struct cwmp__GetParameterValues *a, const char *type)
+{
+	size_t soap_flag_ParameterNames = 1;
+	if (soap_element_begin_in(soap, tag, 0, type))
+		return NULL;
+	a = (struct cwmp__GetParameterValues *)soap_id_enter(soap, soap->id, a, SOAP_TYPE_cwmp__GetParameterValues, sizeof(struct cwmp__GetParameterValues), NULL, NULL, NULL, NULL);
+	if (!a)
+		return NULL;
+	soap_default_cwmp__GetParameterValues(soap, a);
+	if (soap->body && !*soap->href)
+	{
+		for (;;)
+		{	soap->error = SOAP_TAG_MISMATCH;
+			if (soap_flag_ParameterNames && soap->error == SOAP_TAG_MISMATCH)
+				if (soap_in_PointerToParameterNames(soap, "ParameterNames", &a->ParameterNames, "xsd:string"))
+				{	soap_flag_ParameterNames--;
+					continue;
+				}
+			if (soap->error == SOAP_TAG_MISMATCH)
+				soap->error = soap_ignore_element(soap);
+			if (soap->error == SOAP_NO_TAG)
+				break;
+			if (soap->error)
+				return NULL;
+		}
+		if (soap_element_end_in(soap, tag))
+			return NULL;
+	}
+	else
+	{	a = (struct cwmp__GetParameterValues *)soap_id_forward(soap, soap->href, (void*)a, 0, SOAP_TYPE_cwmp__GetParameterValues, SOAP_TYPE_cwmp__GetParameterValues, sizeof(struct cwmp__GetParameterValues), 0, NULL, NULL);
+		if (soap->body && soap_element_end_in(soap, tag))
+			return NULL;
+	}
+	return a;
+}
+
+SOAP_FMAC3 struct cwmp__GetParameterValues * SOAP_FMAC4 soap_new_cwmp__GetParameterValues(struct soap *soap, int n)
+{
+	struct cwmp__GetParameterValues *p;
+	struct cwmp__GetParameterValues *a = (struct cwmp__GetParameterValues*)soap_malloc((soap), (n = (n < 0 ? 1 : n)) * sizeof(struct cwmp__GetParameterValues));
+	for (p = a; p && n--; p++)
+		soap_default_cwmp__GetParameterValues(soap, p);
+	return a;
+}
+
+SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__GetParameterValues(struct soap *soap, const struct cwmp__GetParameterValues *a, const char *tag, const char *type)
+{
+	if (soap_out_cwmp__GetParameterValues(soap, tag ? tag : "cwmp:GetParameterValues", -2, a, type))
+		return soap->error;
+	return soap_putindependent(soap);
+}
+
+SOAP_FMAC3 struct cwmp__GetParameterValues * SOAP_FMAC4 soap_get_cwmp__GetParameterValues(struct soap *soap, struct cwmp__GetParameterValues *p, const char *tag, const char *type)
+{
+	if ((p = soap_in_cwmp__GetParameterValues(soap, tag, p, type)))
+		if (soap_getindependent(soap))
+			return NULL;
+	return p;
+}
+
+SOAP_FMAC3 void SOAP_FMAC4 soap_default_cwmp__GetParameterValuesResponse(struct soap *soap, struct cwmp__GetParameterValuesResponse *a)
+{
+	(void)soap; (void)a; /* appease -Wall -Werror */
+	a->ParameterList = NULL;
+}
+
+SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_cwmp__GetParameterValuesResponse(struct soap *soap, const struct cwmp__GetParameterValuesResponse *a)
+{
+	(void)soap; (void)a; /* appease -Wall -Werror */
+#ifndef WITH_NOIDREF
+	soap_serialize_PointerToParameterValueList(soap, &a->ParameterList);
+#endif
+}
+
+SOAP_FMAC3 int SOAP_FMAC4 soap_out_cwmp__GetParameterValuesResponse(struct soap *soap, const char *tag, int id, const struct cwmp__GetParameterValuesResponse *a, const char *type)
+{
+	if (!type)
+		type = "cwmp:GetParameterValuesResponse";
+	(void)soap; (void)tag; (void)id; (void)a; (void)type; /* appease -Wall -Werror */
+	if (soap_element_begin_out(soap, tag, soap_embedded_id(soap, id, a, SOAP_TYPE_cwmp__GetParameterValuesResponse), type))
+		return soap->error;
+	if (soap_out_PointerToParameterValueList(soap, "ParameterList", -1, &a->ParameterList, "cwmp:ParameterValueStruct"))
+		return soap->error;
+	return soap_element_end_out(soap, tag);
+}
+
+SOAP_FMAC3 struct cwmp__GetParameterValuesResponse * SOAP_FMAC4 soap_in_cwmp__GetParameterValuesResponse(struct soap *soap, const char *tag, struct cwmp__GetParameterValuesResponse *a, const char *type)
+{
+	size_t soap_flag_ParameterList = 1;
+	if (soap_element_begin_in(soap, tag, 0, type))
+		return NULL;
+	a = (struct cwmp__GetParameterValuesResponse *)soap_id_enter(soap, soap->id, a, SOAP_TYPE_cwmp__GetParameterValuesResponse, sizeof(struct cwmp__GetParameterValuesResponse), NULL, NULL, NULL, NULL);
+	if (!a)
+		return NULL;
+	soap_default_cwmp__GetParameterValuesResponse(soap, a);
+	if (soap->body && !*soap->href)
+	{
+		for (;;)
+		{	soap->error = SOAP_TAG_MISMATCH;
+			if (soap_flag_ParameterList && soap->error == SOAP_TAG_MISMATCH)
+				if (soap_in_PointerToParameterValueList(soap, "ParameterList", &a->ParameterList, "cwmp:ParameterValueStruct"))
+				{	soap_flag_ParameterList--;
+					continue;
+				}
+			if (soap->error == SOAP_TAG_MISMATCH)
+				soap->error = soap_ignore_element(soap);
+			if (soap->error == SOAP_NO_TAG)
+				break;
+			if (soap->error)
+				return NULL;
+		}
+		if (soap_element_end_in(soap, tag))
+			return NULL;
+	}
+	else
+	{	a = (struct cwmp__GetParameterValuesResponse *)soap_id_forward(soap, soap->href, (void*)a, 0, SOAP_TYPE_cwmp__GetParameterValuesResponse, SOAP_TYPE_cwmp__GetParameterValuesResponse, sizeof(struct cwmp__GetParameterValuesResponse), 0, NULL, NULL);
+		if (soap->body && soap_element_end_in(soap, tag))
+			return NULL;
+	}
+	return a;
+}
+
+SOAP_FMAC3 struct cwmp__GetParameterValuesResponse * SOAP_FMAC4 soap_new_cwmp__GetParameterValuesResponse(struct soap *soap, int n)
+{
+	struct cwmp__GetParameterValuesResponse *p;
+	struct cwmp__GetParameterValuesResponse *a = (struct cwmp__GetParameterValuesResponse*)soap_malloc((soap), (n = (n < 0 ? 1 : n)) * sizeof(struct cwmp__GetParameterValuesResponse));
+	for (p = a; p && n--; p++)
+		soap_default_cwmp__GetParameterValuesResponse(soap, p);
+	return a;
+}
+
+SOAP_FMAC3 int SOAP_FMAC4 soap_put_cwmp__GetParameterValuesResponse(struct soap *soap, const struct cwmp__GetParameterValuesResponse *a, const char *tag, const char *type)
+{
+	if (soap_out_cwmp__GetParameterValuesResponse(soap, tag ? tag : "cwmp:GetParameterValuesResponse", -2, a, type))
+		return soap->error;
+	return soap_putindependent(soap);
+}
+
+SOAP_FMAC3 struct cwmp__GetParameterValuesResponse * SOAP_FMAC4 soap_get_cwmp__GetParameterValuesResponse(struct soap *soap, struct cwmp__GetParameterValuesResponse *p, const char *tag, const char *type)
+{
+	if ((p = soap_in_cwmp__GetParameterValuesResponse(soap, tag, p, type)))
+		if (soap_getindependent(soap))
+			return NULL;
+	return p;
+}
 
 SOAP_FMAC3 void SOAP_FMAC4 soap_default_cwmp__Inform(struct soap *soap, struct cwmp__Inform *a)
 {
@@ -11140,6 +11525,60 @@ SOAP_FMAC3 struct SOAP_ENV__Code ** SOAP_FMAC4 soap_get_PointerToSOAP_ENV__Code(
 }
 
 #endif
+
+SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerTocwmp__RebootResponse(struct soap *soap, struct cwmp__RebootResponse *const*a)
+{
+	(void)soap; (void)a; /* appease -Wall -Werror */
+#ifndef WITH_NOIDREF
+	if (!soap_reference(soap, *a, SOAP_TYPE_cwmp__RebootResponse))
+		soap_serialize_cwmp__RebootResponse(soap, *a);
+#endif
+}
+
+SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerTocwmp__RebootResponse(struct soap *soap, const char *tag, int id, struct cwmp__RebootResponse *const*a, const char *type)
+{
+	id = soap_element_id(soap, tag, id, *a, NULL, 0, type, SOAP_TYPE_cwmp__RebootResponse, NULL);
+	if (id < 0)
+		return soap->error;
+	return soap_out_cwmp__RebootResponse(soap, tag, id, *a, type);
+}
+
+SOAP_FMAC3 struct cwmp__RebootResponse ** SOAP_FMAC4 soap_in_PointerTocwmp__RebootResponse(struct soap *soap, const char *tag, struct cwmp__RebootResponse **a, const char *type)
+{
+	(void)type; /* appease -Wall -Werror */
+	if (soap_element_begin_in(soap, tag, 1, NULL))
+		return NULL;
+	if (!a)
+		if (!(a = (struct cwmp__RebootResponse **)soap_malloc(soap, sizeof(struct cwmp__RebootResponse *))))
+			return NULL;
+	*a = NULL;
+	if (!soap->null && *soap->href != '#')
+	{	soap_revert(soap);
+		if (!(*a = soap_in_cwmp__RebootResponse(soap, tag, *a, type)))
+			return NULL;
+	}
+	else
+	{	a = (struct cwmp__RebootResponse **)soap_id_lookup(soap, soap->href, (void**)a, SOAP_TYPE_cwmp__RebootResponse, sizeof(struct cwmp__RebootResponse), 0, NULL);
+		if (soap->body && soap_element_end_in(soap, tag))
+			return NULL;
+	}
+	return a;
+}
+
+SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTocwmp__RebootResponse(struct soap *soap, struct cwmp__RebootResponse *const*a, const char *tag, const char *type)
+{
+	if (soap_out_PointerTocwmp__RebootResponse(soap, tag ? tag : "cwmp:RebootResponse", -2, a, type))
+		return soap->error;
+	return soap_putindependent(soap);
+}
+
+SOAP_FMAC3 struct cwmp__RebootResponse ** SOAP_FMAC4 soap_get_PointerTocwmp__RebootResponse(struct soap *soap, struct cwmp__RebootResponse **p, const char *tag, const char *type)
+{
+	if ((p = soap_in_PointerTocwmp__RebootResponse(soap, tag, p, type)))
+		if (soap_getindependent(soap))
+			return NULL;
+	return p;
+}
 
 SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerTocwmp__InformResponse(struct soap *soap, struct cwmp__InformResponse *const*a)
 {

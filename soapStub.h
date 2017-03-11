@@ -252,7 +252,11 @@ struct FileTypeArg;	/* cwmp.h:1415 */
 struct _cwmp__ID;	/* cwmp.h:1686 */
 struct _cwmp__HoldRequests;	/* cwmp.h:1704 */
 struct cwmp__InformResponse;	/* tr069.h:22 */
-struct cwmp__Inform;	/* tr069.h:33 */
+struct cwmp__Inform;	/* tr069.h:37 */
+struct cwmp__GetParameterValuesResponse;	/* tr069.h:49 */
+struct cwmp__GetParameterValues;	/* tr069.h:49 */
+struct cwmp__RebootResponse;	/* tr069.h:62 */
+struct cwmp__Reboot;	/* tr069.h:63 */
 
 /* cwmp.h:130 */
 #ifndef SOAP_TYPE_SOAP_ENC__base64
@@ -1085,7 +1089,7 @@ struct cwmp__InformResponse {
 };
 #endif
 
-/* tr069.h:33 */
+/* tr069.h:37 */
 #ifndef SOAP_TYPE_cwmp__Inform
 #define SOAP_TYPE_cwmp__Inform (134)
 /* complex XSD type 'cwmp:Inform': */
@@ -1105,10 +1109,51 @@ struct cwmp__Inform {
 };
 #endif
 
-/* tr069.h:35 */
+/* tr069.h:49 */
+#ifndef SOAP_TYPE_cwmp__GetParameterValuesResponse
+#define SOAP_TYPE_cwmp__GetParameterValuesResponse (136)
+/* complex XSD type 'cwmp:GetParameterValuesResponse': */
+struct cwmp__GetParameterValuesResponse {
+        /** Optional element 'ParameterList' of XSD type 'ArrayOfParameterValueStruct' */
+        struct ParameterValueList *ParameterList;
+};
+#endif
+
+/* tr069.h:49 */
+#ifndef SOAP_TYPE_cwmp__GetParameterValues
+#define SOAP_TYPE_cwmp__GetParameterValues (137)
+/* complex XSD type 'cwmp:GetParameterValues': */
+struct cwmp__GetParameterValues {
+        /** Optional element 'ParameterNames' of XSD type 'ArrayOfstring' */
+        struct ParameterNames *ParameterNames;
+};
+#endif
+
+/* tr069.h:62 */
+#ifndef SOAP_TYPE_cwmp__RebootResponse
+#define SOAP_TYPE_cwmp__RebootResponse (138)
+/* complex XSD type 'cwmp:RebootResponse': */
+struct cwmp__RebootResponse {
+#ifdef WITH_NOEMPTYSTRUCT
+	char dummy;	/* empty struct is a GNU extension */
+#endif
+};
+#endif
+
+/* tr069.h:63 */
+#ifndef SOAP_TYPE_cwmp__Reboot
+#define SOAP_TYPE_cwmp__Reboot (141)
+/* complex XSD type 'cwmp:Reboot': */
+struct cwmp__Reboot {
+        /** Optional element 'Commandkey' of XSD type 'xsd:string' */
+        char *Commandkey;
+};
+#endif
+
+/* tr069.h:66 */
 #ifndef WITH_NOGLOBAL
 #ifndef SOAP_TYPE_SOAP_ENV__Code
-#define SOAP_TYPE_SOAP_ENV__Code (135)
+#define SOAP_TYPE_SOAP_ENV__Code (142)
 /* Type SOAP_ENV__Code is a recursive data type, (in)directly referencing itself through its (base or derived class) members */
 /* SOAP_ENV__Code: */
 struct SOAP_ENV__Code {
@@ -1120,10 +1165,10 @@ struct SOAP_ENV__Code {
 #endif
 #endif
 
-/* tr069.h:35 */
+/* tr069.h:66 */
 #ifndef WITH_NOGLOBAL
 #ifndef SOAP_TYPE_SOAP_ENV__Detail
-#define SOAP_TYPE_SOAP_ENV__Detail (137)
+#define SOAP_TYPE_SOAP_ENV__Detail (144)
 /* SOAP_ENV__Detail: */
 struct SOAP_ENV__Detail {
         char *__any;
@@ -1135,10 +1180,10 @@ struct SOAP_ENV__Detail {
 #endif
 #endif
 
-/* tr069.h:35 */
+/* tr069.h:66 */
 #ifndef WITH_NOGLOBAL
 #ifndef SOAP_TYPE_SOAP_ENV__Reason
-#define SOAP_TYPE_SOAP_ENV__Reason (140)
+#define SOAP_TYPE_SOAP_ENV__Reason (147)
 /* SOAP_ENV__Reason: */
 struct SOAP_ENV__Reason {
         /** Optional element 'SOAP-ENV:Text' of XSD type 'xsd:string' */
@@ -1147,10 +1192,10 @@ struct SOAP_ENV__Reason {
 #endif
 #endif
 
-/* tr069.h:35 */
+/* tr069.h:66 */
 #ifndef WITH_NOGLOBAL
 #ifndef SOAP_TYPE_SOAP_ENV__Fault
-#define SOAP_TYPE_SOAP_ENV__Fault (141)
+#define SOAP_TYPE_SOAP_ENV__Fault (148)
 /* SOAP_ENV__Fault: */
 struct SOAP_ENV__Fault {
         /** Optional element 'faultcode' of XSD type 'xsd:QName' */
@@ -1323,22 +1368,42 @@ typedef char *cwmp__ObjectNameType;
 
 /* struct SOAP_ENV__Fault has binding name 'SOAP_ENV__Fault' for type '' */
 #ifndef SOAP_TYPE_SOAP_ENV__Fault
-#define SOAP_TYPE_SOAP_ENV__Fault (141)
+#define SOAP_TYPE_SOAP_ENV__Fault (148)
 #endif
 
 /* struct SOAP_ENV__Reason has binding name 'SOAP_ENV__Reason' for type '' */
 #ifndef SOAP_TYPE_SOAP_ENV__Reason
-#define SOAP_TYPE_SOAP_ENV__Reason (140)
+#define SOAP_TYPE_SOAP_ENV__Reason (147)
 #endif
 
 /* struct SOAP_ENV__Detail has binding name 'SOAP_ENV__Detail' for type '' */
 #ifndef SOAP_TYPE_SOAP_ENV__Detail
-#define SOAP_TYPE_SOAP_ENV__Detail (137)
+#define SOAP_TYPE_SOAP_ENV__Detail (144)
 #endif
 
 /* struct SOAP_ENV__Code has binding name 'SOAP_ENV__Code' for type '' */
 #ifndef SOAP_TYPE_SOAP_ENV__Code
-#define SOAP_TYPE_SOAP_ENV__Code (135)
+#define SOAP_TYPE_SOAP_ENV__Code (142)
+#endif
+
+/* struct cwmp__Reboot has binding name 'cwmp__Reboot' for type 'cwmp:Reboot' */
+#ifndef SOAP_TYPE_cwmp__Reboot
+#define SOAP_TYPE_cwmp__Reboot (141)
+#endif
+
+/* struct cwmp__RebootResponse has binding name 'cwmp__RebootResponse' for type 'cwmp:RebootResponse' */
+#ifndef SOAP_TYPE_cwmp__RebootResponse
+#define SOAP_TYPE_cwmp__RebootResponse (138)
+#endif
+
+/* struct cwmp__GetParameterValues has binding name 'cwmp__GetParameterValues' for type 'cwmp:GetParameterValues' */
+#ifndef SOAP_TYPE_cwmp__GetParameterValues
+#define SOAP_TYPE_cwmp__GetParameterValues (137)
+#endif
+
+/* struct cwmp__GetParameterValuesResponse has binding name 'cwmp__GetParameterValuesResponse' for type 'cwmp:GetParameterValuesResponse' */
+#ifndef SOAP_TYPE_cwmp__GetParameterValuesResponse
+#define SOAP_TYPE_cwmp__GetParameterValuesResponse (136)
 #endif
 
 /* struct cwmp__Inform has binding name 'cwmp__Inform' for type 'cwmp:Inform' */
@@ -1693,17 +1758,22 @@ typedef char *cwmp__ObjectNameType;
 
 /* struct SOAP_ENV__Reason * has binding name 'PointerToSOAP_ENV__Reason' for type '' */
 #ifndef SOAP_TYPE_PointerToSOAP_ENV__Reason
-#define SOAP_TYPE_PointerToSOAP_ENV__Reason (143)
+#define SOAP_TYPE_PointerToSOAP_ENV__Reason (150)
 #endif
 
 /* struct SOAP_ENV__Detail * has binding name 'PointerToSOAP_ENV__Detail' for type '' */
 #ifndef SOAP_TYPE_PointerToSOAP_ENV__Detail
-#define SOAP_TYPE_PointerToSOAP_ENV__Detail (142)
+#define SOAP_TYPE_PointerToSOAP_ENV__Detail (149)
 #endif
 
 /* struct SOAP_ENV__Code * has binding name 'PointerToSOAP_ENV__Code' for type '' */
 #ifndef SOAP_TYPE_PointerToSOAP_ENV__Code
-#define SOAP_TYPE_PointerToSOAP_ENV__Code (136)
+#define SOAP_TYPE_PointerToSOAP_ENV__Code (143)
+#endif
+
+/* struct cwmp__RebootResponse * has binding name 'PointerTocwmp__RebootResponse' for type 'cwmp:RebootResponse' */
+#ifndef SOAP_TYPE_PointerTocwmp__RebootResponse
+#define SOAP_TYPE_PointerTocwmp__RebootResponse (139)
 #endif
 
 /* struct cwmp__InformResponse * has binding name 'PointerTocwmp__InformResponse' for type 'cwmp:InformResponse' */
@@ -1940,6 +2010,8 @@ typedef char *cwmp__ObjectNameType;
 \******************************************************************************/
 
     SOAP_FMAC5 int SOAP_FMAC6 soap_call_cwmp__Inform(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct cwmp__DeviceIdStruct *DeviceId, struct EventList *Event, unsigned int MaxEnvelopes, time_t CurrentTime, unsigned int RetryCount, struct ParameterValueList *ParameterList, struct cwmp__InformResponse *response);
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call_cwmp__GetParameterValues(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct ParameterNames *ParameterNames, struct ParameterValueList *ParameterList);
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call_cwmp__Reboot(struct soap *soap, const char *soap_endpoint, const char *soap_action, char *Commandkey, struct cwmp__RebootResponse *res);
 
 /******************************************************************************\
  *                                                                            *
@@ -1949,6 +2021,10 @@ typedef char *cwmp__ObjectNameType;
 
     /** Web service operation 'cwmp__Inform' (returns SOAP_OK or error code) */
     SOAP_FMAC5 int SOAP_FMAC6 cwmp__Inform(struct soap*, struct cwmp__DeviceIdStruct *DeviceId, struct EventList *Event, unsigned int MaxEnvelopes, time_t CurrentTime, unsigned int RetryCount, struct ParameterValueList *ParameterList, struct cwmp__InformResponse *response);
+    /** Web service operation 'cwmp__GetParameterValues' (returns SOAP_OK or error code) */
+    SOAP_FMAC5 int SOAP_FMAC6 cwmp__GetParameterValues(struct soap*, struct ParameterNames *ParameterNames, struct ParameterValueList *ParameterList);
+    /** Web service operation 'cwmp__Reboot' (returns SOAP_OK or error code) */
+    SOAP_FMAC5 int SOAP_FMAC6 cwmp__Reboot(struct soap*, char *Commandkey, struct cwmp__RebootResponse *res);
 
 /******************************************************************************\
  *                                                                            *
@@ -1961,6 +2037,10 @@ SOAP_FMAC5 int SOAP_FMAC6 soap_serve(struct soap*);
 SOAP_FMAC5 int SOAP_FMAC6 soap_serve_request(struct soap*);
 
 SOAP_FMAC5 int SOAP_FMAC6 soap_serve_cwmp__Inform(struct soap*);
+
+SOAP_FMAC5 int SOAP_FMAC6 soap_serve_cwmp__GetParameterValues(struct soap*);
+
+SOAP_FMAC5 int SOAP_FMAC6 soap_serve_cwmp__Reboot(struct soap*);
 
 #ifdef __cplusplus
 }

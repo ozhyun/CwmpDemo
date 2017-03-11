@@ -103,6 +103,9 @@ SOAP_SOURCE_STAMP("@(#) stdsoap2.c ver 2.8.44 2017-03-04 00:00:00 GMT")
 # endif
 #endif
 
+#define HTTP_SERVER_NAME	"udhttp/1.0"
+//#define HTTP_SERVER_NAME	"gSOAP/2.8"
+
 /*      EOF=-1 */
 #define SOAP_LT (soap_wchar)(-2) /* XML-specific '<' */
 #define SOAP_TT (soap_wchar)(-3) /* XML-specific '</' */
@@ -6790,7 +6793,7 @@ http_post(struct soap *soap, const char *endpoint, const char *host, int port, c
   err = soap->fposthdr(soap, "Host", soap->tmpbuf);
   if (err)
     return err;
-  err = soap->fposthdr(soap, "User-Agent", "gSOAP/2.8");
+  err = soap->fposthdr(soap, "User-Agent", HTTP_SERVER_NAME);
   if (err)
     return err;
   if (soap->origin)
@@ -6982,7 +6985,7 @@ http_response(struct soap *soap, int status, size_t count)
       return err;
   }
 #endif
-  err = soap->fposthdr(soap, "Server", "gSOAP/2.8");
+  err = soap->fposthdr(soap, "Server", HTTP_SERVER_NAME);
   if (err)
     return err;
   if (soap->cors_origin)

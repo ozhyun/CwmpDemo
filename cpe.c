@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 
 	if (argc < 2)
 	{
-		fprintf(stderr, "Usage: [Inform|SetParameterValues|GetParameterValues] \n");
+		fprintf(stderr, "Usage: [Inform|GetParameterValues|Reboot] \n");
 		exit(0);
 	}
 
@@ -97,6 +97,19 @@ int main(int argc, char **argv)
 			printf("result = %ld\n", response.__size);
 		}
 
+		break;
+	}
+	case 'R':
+	{
+		struct cwmp__RebootResponse response;
+		soap_call_cwmp__Reboot(&soap, server, "", "REBOOT", &response);
+		if (soap.error)	{
+			soap_print_fault(&soap, stderr);
+			exit(1);
+		}
+		else {
+			printf("call reboot success.\n");
+		}
 
 		break;
 	}

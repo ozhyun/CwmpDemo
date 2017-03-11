@@ -106,3 +106,16 @@ int cwmp__GetParameterValues(struct soap *soap, struct ParameterNames *Parameter
 
 	return SOAP_OK;
 }
+
+
+int cwmp__Reboot(struct soap *soap, char *CommandKey, struct cwmp__RebootResponse *res)
+{
+
+    if(soap->header) {
+        fprintf(stderr, "%s: get header ID:%s\n", __FUNCTION__, soap->header->cwmp__ID);
+    }
+
+	fprintf(stderr, "%s: %s\n", __FUNCTION__, CommandKey);
+
+	return SOAP_OK;
+} 

@@ -55,4 +55,11 @@ int cwmp__GetParameterValues(struct ParameterNames *ParameterNames, struct Param
  */
 //int cwmp__SetParameterValues(struct ParameterValueList *values, char *ParamterKey);
 
+/**
+ * impliment in CPE for ACS calling
+ *
+ */
+struct cwmp__RebootResponse {};
+int cwmp__Reboot(char *Commandkey, struct cwmp__RebootResponse *res);
+
 
